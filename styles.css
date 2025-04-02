@@ -13,7 +13,8 @@ body {
 }
 
 p {
-    font-size: 24px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 120px; /* Original was 24px, now 5x larger */
     color: black;
     margin: 0;
 }
