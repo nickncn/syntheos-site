@@ -1,13 +1,50 @@
-body {
+* {
     margin: 0;
     padding: 0;
-    background-color: #0a0a0a;
-    color: #ffffff;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 
-section {
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #1a1a1a, #000);
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 120px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-top: 20px;
+    opacity: 0.8;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 50px;
+    font-size: 16px;
+    opacity: 0.6;
+    animation: bounce 2s infinite;
+}
+
+.section {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -15,56 +52,118 @@ section {
     align-items: center;
     text-align: center;
     padding: 0 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.hero {
-    background: linear-gradient(135deg, #1a1a1a, #0a0a0a);
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.hero h1 {
-    font-family: 'Orbitron', sans-serif;
+.yield {
+    background: linear-gradient(135deg, #0d1b2a, #000);
+}
+
+.transfer {
+    background: linear-gradient(135deg, #1b263b, #000);
+}
+
+.future {
+    background: linear-gradient(135deg, #2b2d42, #000);
+}
+
+.section h2 {
     font-size: 72px;
-    margin: 0;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
 }
 
-.subtitle {
-    font-family: 'Roboto', sans-serif;
+.section p {
     font-size: 24px;
-    font-weight: 300;
-    margin: 20px 0;
-    color: #cccccc;
-}
-
-.launch {
-    font-family: 'Exo 2', sans-serif;
-    font-size: 18px;
-    color: #00ffcc;
-    margin-top: 30px;
-}
-
-.feature {
-    background-color: #0f0f0f;
-}
-
-.feature h2 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 48px;
-    margin: 0;
-    color: #00ffcc;
-}
-
-.feature p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    font-weight: 300;
     max-width: 600px;
-    color: #bbbbbb;
+    opacity: 0.9;
 }
 
-.footer {
-    background-color: #1a1a1a;
-    font-family: 'Exo 2', sans-serif;
+/* New styles for the form column */
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    gap: 50px;
+}
+
+.text-column, .form-column {
+    flex: 1;
+    min-width: 300px;
+}
+
+.form-column h3 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.form-column p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input {
+    padding: 12px;
     font-size: 16px;
-    color: #888888;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    border-radius: 5px;
+    outline: none;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+button {
+    padding: 12px;
+    font-size: 16px;
+    background: #00d4ff;
+    border: none;
+    color: #000;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #00b8d4;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+}
+
+@media (max-width: 768px) {
+    .hero h1 { font-size: 60px; }
+    .hero p { font-size: 18px; }
+    .section h2 { font-size: 48px; }
+    .section p { font-size: 18px; }
+    .content-wrapper { flex-direction: column; gap: 30px; }
+    .form-column h3 { font-size: 28px; }
 }
