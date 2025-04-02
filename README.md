@@ -1,1 +1,1 @@
-# yieldeon-site
+# syntheos site
