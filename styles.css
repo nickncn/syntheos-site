@@ -30,10 +30,16 @@ body {
     animation: fadeIn 2s ease-in-out;
 }
 
-.hero p {
+.hero .subtitle {
     font-size: 24px;
     margin-top: 20px;
     opacity: 0.8;
+}
+
+.hero .launch {
+    font-size: 18px;
+    margin-top: 10px;
+    opacity: 0.7;
 }
 
 .scroll-indicator {
@@ -86,7 +92,7 @@ body {
     opacity: 0.9;
 }
 
-/* New styles for the form column */
+/* Styles for the form column */
 .content-wrapper {
     display: flex;
     justify-content: center;
@@ -161,7 +167,8 @@ button:hover {
 
 @media (max-width: 768px) {
     .hero h1 { font-size: 60px; }
-    .hero p { font-size: 18px; }
+    .hero .subtitle { font-size: 18px; }
+    .hero .launch { font-size: 14px; }
     .section h2 { font-size: 48px; }
     .section p { font-size: 18px; }
     .content-wrapper { flex-direction: column; gap: 30px; }
