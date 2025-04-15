@@ -5,11 +5,15 @@
 }
 
 body {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Inter', sans-serif;
     background-color: #000;
     color: #fff;
     overflow-x: hidden;
     line-height: 1.6;
+}
+
+.orbitron {
+    font-family: 'Orbitron', sans-serif;
 }
 
 .hero {
@@ -87,6 +91,7 @@ body {
 .form-column h3 {
     font-size: 36px;
     margin-bottom: 10px;
+    font-weight: 700;
 }
 
 .form-column p {
@@ -106,7 +111,7 @@ input {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.3);
     color: #fff;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Inter', sans-serif;
     border-radius: 5px;
     outline: none;
 }
@@ -121,11 +126,12 @@ button {
     background: #00d4ff;
     border: none;
     color: #000;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Inter', sans-serif;
     text-transform: uppercase;
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease;
+    font-weight: 700;
 }
 
 button:hover {
@@ -175,6 +181,7 @@ button:hover {
     font-size: 72px;
     letter-spacing: 3px;
     margin-bottom: 20px;
+    font-weight: 700;
 }
 
 .section p {
