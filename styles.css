@@ -12,10 +12,6 @@ body {
     line-height: 1.6;
 }
 
-.orbitron {
-    font-family: 'Orbitron', sans-serif;
-}
-
 .hero {
     height: 100vh;
     display: flex;
@@ -62,6 +58,7 @@ body {
 }
 
 .hero h1 {
+    font-family: 'Orbitron', sans-serif;
     font-size: 120px;
     letter-spacing: 5px;
     text-transform: uppercase;
@@ -70,6 +67,7 @@ body {
 }
 
 .hero .subtitle {
+    font-family: 'Orbitron', sans-serif;
     font-size: 24px;
     margin-top: 20px;
     opacity: 0.8;
@@ -77,6 +75,7 @@ body {
 }
 
 .hero .launch {
+    font-family: 'Orbitron', sans-serif;
     font-size: 18px;
     margin-top: 10px;
     opacity: 0.7;
@@ -91,7 +90,6 @@ body {
 .form-column h3 {
     font-size: 36px;
     margin-bottom: 10px;
-    font-weight: 700;
 }
 
 .form-column p {
@@ -131,7 +129,6 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease;
-    font-weight: 700;
 }
 
 button:hover {
@@ -169,6 +166,21 @@ button:hover {
     background: linear-gradient(135deg, #0d1b2a, #000);
 }
 
+.yield .content {
+    max-width: 800px;
+}
+
+.yield .content p, .yield .content ol {
+    margin-bottom: 20px;
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+.yield .content ol {
+    text-align: left;
+    padding-left: 40px;
+}
+
 .transfer {
     background: linear-gradient(135deg, #1b263b, #000);
 }
@@ -178,10 +190,10 @@ button:hover {
 }
 
 .section h2 {
+    font-family: 'Orbitron', sans-serif;
     font-size: 72px;
     letter-spacing: 3px;
     margin-bottom: 20px;
-    font-weight: 700;
 }
 
 .section p {
@@ -205,6 +217,7 @@ button:hover {
     .hero .subtitle { font-size: 18px; }
     .hero .launch { font-size: 14px; }
     .section h2 { font-size: 48px; }
-    .section p { font-size: 18px; }
+    .section p, .yield .content p, .yield .content ol { font-size: 18px; }
     .form-column h3 { font-size: 28px; }
+    .yield .content ol { padding-left: 20px; }
 }
