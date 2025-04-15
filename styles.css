@@ -147,6 +147,15 @@ button:hover {
 }
 
 .section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    position: relative;
+    overflow: hidden;
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.8s ease, transform 0.8s ease;
@@ -160,6 +169,7 @@ button:hover {
 .yield {
     background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05) 0%, transparent 70%),
                 linear-gradient(135deg, #1a2636, #0a0a0a);
+}
 
 .yield .content {
     max-width: 800px;
@@ -200,28 +210,6 @@ button:hover {
 @keyframes breathe {
     0%, 100% { transform: scale(1); }
     50% { transform: scale(1.1); }
-}
-
-@media (max-width: 768px) {
-    .powered-by {
-        bottom: 20px;
-        right: 20px;
-        gap: 12px;
-    }
-    .powered-by span {
-        font-size: 8px;
-    }
-    .powered-by .logo {
-        width: 68px;
-        height: 68px;
-    }
-}
-}
-
-@media (max-width: 768px) {
-    .powered-by { bottom: 20px; right: 20px; }
-    .powered-by span { font-size: 10px; }
-    .powered-by .logo { width: 30px; height: 30px; }
 }
 
 .transfer {
@@ -267,7 +255,16 @@ button:hover {
     .section p, .yield .content p, .yield .content ol { font-size: 18px; }
     .form-column h3 { font-size: 28px; }
     .yield .content ol { padding-left: 20px; }
-    .powered-by { bottom: 20px; right: 20px; }
-    .powered-by span { font-size: 12px; }
-    .powered-by .logo { width: 30px; height: 30px; }
+    .powered-by {
+        bottom: 20px;
+        right: 20px;
+        gap: 12px;
+    }
+    .powered-by span {
+        font-size: 8px;
+    }
+    .powered-by .logo {
+        width: 68px;
+        height: 68px;
+    }
 }
