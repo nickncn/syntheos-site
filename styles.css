@@ -161,6 +161,7 @@ button:hover {
 
 .yield .content {
     max-width: 800px;
+    text-align: left;
 }
 
 .yield .content p, .yield .content ol {
@@ -170,7 +171,6 @@ button:hover {
 }
 
 .yield .content ol {
-    text-align: left;
     padding-left: 40px;
 }
 
