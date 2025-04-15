@@ -192,18 +192,49 @@ button:hover {
 }
 
 .yield .content {
-    max-width: 800px;
-    text-align: left;
+    max-width: 1000px;
+    text-align: center;
 }
 
-.yield .content p, .yield .content ol {
+.yield .content p {
     margin-bottom: 20px;
     font-size: 20px;
     opacity: 0.9;
 }
 
-.yield .content ol {
-    padding-left: 40px;
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.step-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    animation: fadeInStep 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+.step-card .step-number {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #00d4ff;
+    margin-bottom: 10px;
+}
+
+.step-card p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+@keyframes fadeInStep {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .yield-diagram {
@@ -211,6 +242,8 @@ button:hover {
     width: 100%;
     margin-top: 20px;
     border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
 .powered-by {
@@ -268,8 +301,9 @@ button:hover {
     text-align: center;
 }
 
-.feature-card .icon-placeholder {
-    font-size: 40px;
+.feature-card .feature-icon {
+    width: 40px;
+    height: 40px;
     margin-bottom: 10px;
 }
 
@@ -287,6 +321,68 @@ button:hover {
 .future {
     background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05) 0%, transparent 70%),
                 linear-gradient(135deg, #363846, #0a0a0a);
+}
+
+.faq {
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05) 0%, transparent 70%),
+                linear-gradient(135deg, #1a2636, #0a0a0a);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+.faq-content {
+    flex: 4;
+    max-width: 800px;
+    width: 100%;
+    padding: 40px 20px;
+    text-align: left;
+}
+
+.faq-content h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 72px;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+.founder-quote {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.05);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    text-align: center;
+    font-style: italic;
+}
+
+.founder-quote p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.founder-quote .author {
+    font-size: 14px;
+    font-weight: 700;
+    color: #00d4ff;
+    margin-top: 10px;
 }
 
 .section h2 {
@@ -319,10 +415,12 @@ button:hover {
     .hero .subtitle { font-size: 18px; }
     .hero .launch { font-size: 12px; }
     .section h2 { font-size: 48px; }
-    .section p, .yield .content p, .yield .content ol { font-size: 18px; }
+    .section p, .yield .content p { font-size: 18px; }
     .form-column h3 { font-size: 28px; }
-    .yield .content ol { padding-left: 20px; }
     .yield-diagram { max-width: 100%; }
+    .steps { grid-template-columns: 1fr; }
+    .step-card p { font-size: 14px; }
+    .step-card .step-number { font-size: 20px; }
     .powered-by {
         bottom: 20px;
         right: 20px;
@@ -342,13 +440,32 @@ button:hover {
         width: 100%;
         max-width: 300px;
     }
-    .feature-card .icon-placeholder {
-        font-size: 32px;
+    .feature-card .feature-icon {
+        width: 32px;
+        height: 32px;
     }
     .feature-card h3 {
         font-size: 18px;
     }
     .feature-card p {
         font-size: 14px;
+    }
+    .faq-content {
+        padding: 20px;
+    }
+    .faq-content h2 {
+        font-size: 48px;
+    }
+    .faq-item h3 {
+        font-size: 20px;
+    }
+    .faq-item p {
+        font-size: 16px;
+    }
+    .founder-quote p {
+        font-size: 14px;
+    }
+    .founder-quote .author {
+        font-size: 12px;
     }
 }
