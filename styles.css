@@ -12,7 +12,7 @@ body {
     line-height: 1.6;
 }
 
-.hero, .section {
+.hero {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -22,6 +22,8 @@ body {
     padding: 0 20px;
     position: relative;
     overflow: hidden;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05) 0%, transparent 70%),
+                linear-gradient(135deg, #1a2636, #0a0a0a);
 }
 
 .stars-background {
@@ -156,8 +158,8 @@ button:hover {
 }
 
 .yield {
-    background: linear-gradient(135deg, #0d1b2a, #000);
-}
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05) 0%, transparent 70%),
+                linear-gradient(135deg, #1a2636, #0a0a0a);
 
 .yield .content {
     max-width: 800px;
@@ -180,34 +182,38 @@ button:hover {
     right: 30px;
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 15px;
     z-index: 1;
 }
+
 .powered-by span {
     font-size: 10px;
     opacity: 0.8;
 }
+
 .powered-by .logo {
-    width: 60px;
-    height: 60px;
+    width: 90px;
+    height: 90px;
     animation: breathe 2s ease-in-out infinite;
 }
+
 @keyframes breathe {
     0%, 100% { transform: scale(1); }
     50% { transform: scale(1.1); }
 }
+
 @media (max-width: 768px) {
     .powered-by {
         bottom: 20px;
         right: 20px;
-        gap: 10px;
+        gap: 12px;
     }
     .powered-by span {
         font-size: 8px;
     }
     .powered-by .logo {
-        width: 45px;
-        height: 45px;
+        width: 68px;
+        height: 68px;
     }
 }
 }
@@ -219,11 +225,13 @@ button:hover {
 }
 
 .transfer {
-    background: linear-gradient(135deg, #1b263b, #000);
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05) 0%, transparent 70%),
+                linear-gradient(135deg, #263346, #0a0a0a);
 }
 
 .future {
-    background: linear-gradient(135deg, #2b2d42, #000);
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05) 0%, transparent 70%),
+                linear-gradient(135deg, #363846, #0a0a0a);
 }
 
 .section h2 {
