@@ -185,13 +185,19 @@ button:hover {
 }
 
 .powered-by span {
-    font-size: 14px;
+    font-size: 12px;
     opacity: 0.8;
 }
 
 .powered-by .logo {
     width: 40px;
     height: 40px;
+}
+
+@media (max-width: 768px) {
+    .powered-by { bottom: 20px; right: 20px; }
+    .powered-by span { font-size: 10px; }
+    .powered-by .logo { width: 30px; height: 30px; }
 }
 
 .transfer {
