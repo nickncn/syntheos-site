@@ -348,7 +348,7 @@ button:hover {
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
-     z-index: 1;
+    position: relative;
 }
 
 .faq-content {
@@ -356,25 +356,26 @@ button:hover {
     max-width: 800px;
     width: 100%;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 80px 20px 40px 20px;
     text-align: left;
-     z-index: 1;
+    position: relative;
 }
 
 .faq-content h2 {
     font-family: 'Orbitron', sans-serif;
-    font-size: 48px;
+    font-size: 40px;
     letter-spacing: 3px;
     margin-bottom: 30px;
     position: absolute;
-    top: 40px;
+    top: 0;
     left: 0;
     width: 100%;
-    padding-left: 20px;
+    padding-left: 15px;
     white-space: nowrap;
     color: #ffffff;
     opacity: 1;
     z-index: 1;
+    transform: translateX(0);
 }
 
 .faq-item {
@@ -395,27 +396,27 @@ button:hover {
 }
 
 .founder-quote {
-    flex: 0.4;
+    flex: 0.2;
     background: rgba(255, 255, 255, 0.05);
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     width: 100%;
     margin: 0;
-    padding: 10px 20px;
+    padding: 5px 20px;
     text-align: center;
     font-style: italic;
 }
 
 .founder-quote p {
-    font-size: 5px;
-    margin-bottom: 4px;
+    font-size: 2.5px;
+    margin-bottom: 2px;
     opacity: 0.9;
 }
 
 .founder-quote .author {
-    font-size: 4.5px;
+    font-size: 2.25px;
     font-weight: 700;
     color: #00d4ff;
-    margin-top: 4px;
+    margin-top: 2px;
 }
 
 .section h2 {
@@ -423,12 +424,14 @@ button:hover {
     font-size: 72px;
     letter-spacing: 3px;
     margin-bottom: 20px;
+    z-index: 1;
 }
 
 .section p {
     font-size: 24px;
     max-width: 600px;
     opacity: 0.9;
+    z-index: 1;
 }
 
 @keyframes fadeIn {
@@ -481,12 +484,12 @@ button:hover {
         font-size: 14px;
     }
     .faq-content {
-        padding: 20px;
+        padding: 60px 20px 20px 20px;
     }
     .faq-content h2 {
-        font-size: 32px;
+        font-size: 28px;
         padding-left: 10px;
-        top: 20px;
+        top: 0;
     }
     .faq-item h3 {
         font-size: 20px;
@@ -495,14 +498,14 @@ button:hover {
         font-size: 16px;
     }
     .founder-quote {
-        padding: 8px 10px;
+        padding: 4px 10px;
     }
     .founder-quote p {
-        font-size: 4px;
-        margin-bottom: 3px;
+        font-size: 2px;
+        margin-bottom: 1px;
     }
     .founder-quote .author {
-        font-size: 3.5px;
-        margin-top: 3px;
+        font-size: 1.75px;
+        margin-top: 1px;
     }
 }
