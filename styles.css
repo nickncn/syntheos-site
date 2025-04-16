@@ -405,7 +405,7 @@ button:hover {
 
 .section h2 {
     font-family: 'Orbitron', sans-serif;
-    font-size: 80px;
+    font-size: 60px;
     font-weight: 700;
     letter-spacing: 3px;
     margin-bottom: 20px;
@@ -428,7 +428,7 @@ button:hover {
     .hero .subtitle { font-size: 18px; }
     .hero .launch { font-size: 12px; }
     .section h2 { font-size: 56px; }
-    .section p, .yield .content p { font-size: 22px; }
+    .section p, .yield .content p { font-size: 18px; }
     .form-column h3 { font-size: 28px; }
     .steps { grid-template-columns: 1fr; }
     .step-card p { font-size: 14px; }
