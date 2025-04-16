@@ -348,7 +348,7 @@ button:hover {
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
-    position: relative;
+     z-index: 1;
 }
 
 .faq-content {
@@ -358,7 +358,7 @@ button:hover {
     margin: 0 auto;
     padding: 40px 20px;
     text-align: left;
-    position: relative;
+     z-index: 1;
 }
 
 .faq-content h2 {
@@ -423,14 +423,12 @@ button:hover {
     font-size: 72px;
     letter-spacing: 3px;
     margin-bottom: 20px;
-    z-index: 1;
 }
 
 .section p {
     font-size: 24px;
     max-width: 600px;
     opacity: 0.9;
-    z-index: 1;
 }
 
 @keyframes fadeIn {
