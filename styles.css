@@ -323,7 +323,6 @@ button:hover {
 
 .future {
     background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05) 0%, transparent 70%),
-         font-size: 20px;
                 linear-gradient(135deg, #363846, #0a0a0a);
 }
 
@@ -429,7 +428,7 @@ button:hover {
     .hero .subtitle { font-size: 18px; }
     .hero .launch { font-size: 12px; }
     .section h2 { font-size: 56px; }
-    .section p, .yield .content p { font-size: 18px; }
+    .section p, .yield .content p { font-size: 22px; }
     .form-column h3 { font-size: 28px; }
     .steps { grid-template-columns: 1fr; }
     .step-card p { font-size: 14px; }
