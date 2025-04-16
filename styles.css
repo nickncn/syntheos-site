@@ -323,13 +323,14 @@ button:hover {
 
 .future {
     background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05) 0%, transparent 70%),
+         font-size: 20px;
                 linear-gradient(135deg, #363846, #0a0a0a);
 }
 
 .get-in-touch {
     margin-top: 20px;
     padding: 12px 24px;
-    font-size: 16px;
+    font-size: 20px;
     background: #ffffff;
     border: none;
     color: #000;
