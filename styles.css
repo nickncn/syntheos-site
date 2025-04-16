@@ -67,6 +67,8 @@ body {
     text-transform: uppercase;
     animation: fadeIn 2s ease-in-out;
     z-index: 1;
+    white-space: nowrap; /* Prevent text wrapping */
+    max-width: 100%; /* Ensure it fits viewport */
 }
 
 .hero .subtitle {
@@ -149,15 +151,15 @@ button:hover {
 }
 
 .section {
-    min-height: 100vh; /* Changed from height to min-height */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0 15px; /* Reduced padding for mobile */
+    padding: 0 15px;
     position: relative;
-    overflow-x: hidden; /* Added to prevent horizontal overflow */
+    overflow-x: hidden;
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.8s ease, transform 0.8s ease;
@@ -174,10 +176,10 @@ button:hover {
 }
 
 .yield .content {
-    max-width: 100%; /* Changed to 100% to fit viewport */
+    max-width: 100%;
     width: 100%;
     text-align: center;
-    padding: 0 10px; /* Added padding for content */
+    padding: 0 10px;
 }
 
 .yield .content p {
@@ -193,8 +195,8 @@ button:hover {
 
 .steps {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Reduced min width */
-    gap: 15px; /* Reduced gap */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
     margin: 20px 0;
     width: 100%;
 }
@@ -203,9 +205,9 @@ button:hover {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 10px;
-    padding: 15px; /* Reduced padding */
+    padding: 15px;
     text-align: center;
-    width: 100%; /* Ensure cards fit container */
+    width: 100%;
 }
 
 .step-card .step-number {
@@ -231,7 +233,7 @@ button:hover {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    will-change: opacity, transform; /* Optimize animation performance */
+    will-change: opacity, transform;
 }
 
 .fade-in.visible {
@@ -241,8 +243,8 @@ button:hover {
 
 .powered-by {
     position: absolute;
-    bottom: 20px; /* Adjusted for mobile */
-    right: 10px; /* Adjusted for mobile */
+    bottom: 20px;
+    right: 10px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -257,11 +259,11 @@ button:hover {
 
 .powered-by .logo-container {
     display: flex;
-    gap: 10px; /* Reduced gap */
+    gap: 10px;
 }
 
 .powered-by .logo {
-    width: 70px; /* Reduced size for mobile */
+    width: 70px;
     height: 70px;
     animation: breathe 2s ease-in-out infinite;
 }
@@ -280,20 +282,20 @@ button:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px; /* Reduced gap */
+    gap: 15px;
     margin-top: 30px;
-    max-width: 100%; /* Changed to 100% to fit viewport */
+    max-width: 100%;
     width: 100%;
-    padding: 0 10px; /* Added padding */
+    padding: 0 10px;
 }
 
 .feature-card {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 10px;
-    padding: 15px; /* Reduced padding */
-    width: 100%; /* Changed to 100% */
-    max-width: 340px; /* Added max-width for larger screens */
+    padding: 15px;
+    width: 100%;
+    max-width: 340px;
     text-align: center;
 }
 
@@ -356,23 +358,23 @@ button:hover {
 }
 
 .section.faq {
-    min-height: 100vh; /* Changed from height to min-height */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0 15px; /* Reduced padding */
+    padding: 0 15px;
     position: relative;
-    overflow-x: hidden; /* Added to prevent overflow */
+    overflow-x: hidden;
     background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05) 0%, transparent 70%),
                 linear-gradient(135deg, #1a2636, #0a0a0a);
 }
 
 .faq-content {
-    max-width: 100%; /* Changed to 100% */
+    max-width: 100%;
     width: 100%;
-    padding: 20px; /* Reduced padding */
+    padding: 20px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 16px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
@@ -380,7 +382,7 @@ button:hover {
 
 .faq-item {
     margin-bottom: 20px;
-    padding: 15px; /* Reduced padding */
+    padding: 15px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 12px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -450,16 +452,40 @@ button:hover {
 }
 
 @media (max-width: 768px) {
-    .hero h1 { font-size: 48px; }
-    .hero .subtitle { font-size: 18px; }
-    .hero .launch { font-size: 12px; }
-    .section h2 { font-size: 48px; } /* Reduced further */
-    .section p { font-size: 16px; } /* Reduced */
-    .highlight-text { font-size: 18px; } /* Reduced */
-    .form-column h3 { font-size: 28px; }
-    .steps { grid-template-columns: 1fr; }
-    .step-card p { font-size: 14px; }
-    .step-card .step-number { font-size: 20px; }
+    .hero {
+        padding: 0 15px; /* Reduced padding for mobile */
+    }
+    .hero h1 {
+        font-size: 48px; /* Reduced from 60px */
+        letter-spacing: 3px; /* Reduced from 5px */
+    }
+    .hero .subtitle {
+        font-size: 18px;
+    }
+    .hero .launch {
+        font-size: 12px;
+    }
+    .section h2 {
+        font-size: 48px;
+    }
+    .section p {
+        font-size: 16px;
+    }
+    .highlight-text {
+        font-size: 18px;
+    }
+    .form-column h3 {
+        font-size: 28px;
+    }
+    .steps {
+        grid-template-columns: 1fr;
+    }
+    .step-card p {
+        font-size: 14px;
+    }
+    .step-card .step-number {
+        font-size: 20px;
+    }
     .powered-by {
         bottom: 15px;
         right: 10px;
@@ -472,13 +498,15 @@ button:hover {
         gap: 8px;
     }
     .powered-by .logo {
-        width: 50px; /* Further reduced */
+        width: 50px;
         height: 50px;
     }
-    .features { max-width: 100%; }
+    .features {
+        max-width: 100%;
+    }
     .feature-card {
-        width: 100%; /* Ensure full width */
-        max-width: 300px; /* Reduced max-width */
+        width: 100%;
+        max-width: 300px;
     }
     .feature-card .feature-icon {
         width: 32px;
@@ -495,7 +523,7 @@ button:hover {
         padding: 15px;
     }
     .faq-content h2 {
-        font-size: 32px; /* Reduced */
+        font-size: 32px;
     }
     .faq-item h3 {
         font-size: 1.2rem;
@@ -506,11 +534,25 @@ button:hover {
 }
 
 @media (max-width: 480px) {
+    .hero {
+        padding: 0 10px; /* Further reduced padding */
+    }
+    .hero h1 {
+        font-size: 36px; /* Further reduced for small screens */
+        letter-spacing: 2px; /* Further reduced */
+        line-height: 1.2; /* Ensure readability if wrapping occurs */
+    }
+    .hero .subtitle {
+        font-size: 16px;
+    }
+    .hero .launch {
+        font-size: 10px;
+    }
     .section {
-        padding: 0 10px; /* Further reduced */
+        padding: 0 10px;
     }
     .section h2 {
-        font-size: 36px; /* Further reduced */
+        font-size: 36px;
     }
     .section p {
         font-size: 14px;
@@ -530,7 +572,7 @@ button:hover {
         gap: 10px;
     }
     .feature-card {
-        max-width: 100%; /* Ensure no overflow */
+        max-width: 100%;
     }
     .faq-content {
         padding: 10px;
