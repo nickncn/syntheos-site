@@ -149,15 +149,15 @@ button:hover {
 }
 
 .section {
-    height: 100vh;
+    min-height: 100vh; /* Changed from height to min-height */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0 20px;
+    padding: 0 15px; /* Reduced padding for mobile */
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden; /* Added to prevent horizontal overflow */
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.8s ease, transform 0.8s ease;
@@ -174,8 +174,10 @@ button:hover {
 }
 
 .yield .content {
-    max-width: 1000px;
+    max-width: 100%; /* Changed to 100% to fit viewport */
+    width: 100%;
     text-align: center;
+    padding: 0 10px; /* Added padding for content */
 }
 
 .yield .content p {
@@ -191,17 +193,19 @@ button:hover {
 
 .steps {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Reduced min width */
+    gap: 15px; /* Reduced gap */
     margin: 20px 0;
+    width: 100%;
 }
 
 .step-card {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 10px;
-    padding: 20px;
+    padding: 15px; /* Reduced padding */
     text-align: center;
+    width: 100%; /* Ensure cards fit container */
 }
 
 .step-card .step-number {
@@ -227,6 +231,7 @@ button:hover {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: opacity, transform; /* Optimize animation performance */
 }
 
 .fade-in.visible {
@@ -236,8 +241,8 @@ button:hover {
 
 .powered-by {
     position: absolute;
-    bottom: 30px;
-    right: 30px;
+    bottom: 20px; /* Adjusted for mobile */
+    right: 10px; /* Adjusted for mobile */
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -252,12 +257,12 @@ button:hover {
 
 .powered-by .logo-container {
     display: flex;
-    gap: 15px;
+    gap: 10px; /* Reduced gap */
 }
 
 .powered-by .logo {
-    width: 90px;
-    height: 90px;
+    width: 70px; /* Reduced size for mobile */
+    height: 70px;
     animation: breathe 2s ease-in-out infinite;
 }
 
@@ -275,17 +280,20 @@ button:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 15px; /* Reduced gap */
     margin-top: 30px;
-    max-width: 1140px;
+    max-width: 100%; /* Changed to 100% to fit viewport */
+    width: 100%;
+    padding: 0 10px; /* Added padding */
 }
 
 .feature-card {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 10px;
-    padding: 20px;
-    width: 360px;
+    padding: 15px; /* Reduced padding */
+    width: 100%; /* Changed to 100% */
+    max-width: 340px; /* Added max-width for larger screens */
     text-align: center;
 }
 
@@ -348,31 +356,31 @@ button:hover {
 }
 
 .section.faq {
-    height: 100vh;
+    min-height: 100vh; /* Changed from height to min-height */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0 20px;
+    padding: 0 15px; /* Reduced padding */
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden; /* Added to prevent overflow */
     background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05) 0%, transparent 70%),
                 linear-gradient(135deg, #1a2636, #0a0a0a);
 }
 
 .faq-content {
-    max-width: 800px;
+    max-width: 100%; /* Changed to 100% */
     width: 100%;
-    padding: 40px;
+    padding: 20px; /* Reduced padding */
     background: rgba(255, 255, 255, 0.05);
     border-radius: 16px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 .faq-item {
-    margin-bottom: 24px;
-    padding: 20px;
+    margin-bottom: 20px;
+    padding: 15px; /* Reduced padding */
     background: rgba(255, 255, 255, 0.05);
     border-radius: 12px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -445,31 +453,32 @@ button:hover {
     .hero h1 { font-size: 60px; }
     .hero .subtitle { font-size: 18px; }
     .hero .launch { font-size: 12px; }
-    .section h2 { font-size: 56px; }
-    .section p { font-size: 18px; }
-    .highlight-text { font-size: 20px; }
+    .section h2 { font-size: 48px; } /* Reduced further */
+    .section p { font-size: 16px; } /* Reduced */
+    .highlight-text { font-size: 18px; } /* Reduced */
     .form-column h3 { font-size: 28px; }
     .steps { grid-template-columns: 1fr; }
     .step-card p { font-size: 14px; }
     .step-card .step-number { font-size: 20px; }
     .powered-by {
-        bottom: 20px;
-        right: 20px;
+        bottom: 15px;
+        right: 10px;
         gap: 8px;
     }
     .powered-by span {
         font-size: 8px;
     }
     .powered-by .logo-container {
-        gap: 12px;
+        gap: 8px;
     }
     .powered-by .logo {
-        width: 68px;
-        height: 68px;
+        width: 50px; /* Further reduced */
+        height: 50px;
     }
     .features { max-width: 100%; }
     .feature-card {
-        width: 340px;
+        width: 100%; /* Ensure full width */
+        max-width: 300px; /* Reduced max-width */
     }
     .feature-card .feature-icon {
         width: 32px;
@@ -483,15 +492,61 @@ button:hover {
         font-size: 14px;
     }
     .faq-content {
-        padding: 20px;
+        padding: 15px;
     }
     .faq-content h2 {
-        font-size: 36px;
+        font-size: 32px; /* Reduced */
     }
     .faq-item h3 {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     .faq-item p {
         font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 0 10px; /* Further reduced */
+    }
+    .section h2 {
+        font-size: 36px; /* Further reduced */
+    }
+    .section p {
+        font-size: 14px;
+    }
+    .yield .content {
+        padding: 0 5px;
+    }
+    .steps {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .step-card {
+        padding: 10px;
+    }
+    .features {
+        padding: 0 5px;
+        gap: 10px;
+    }
+    .feature-card {
+        max-width: 100%; /* Ensure no overflow */
+    }
+    .faq-content {
+        padding: 10px;
+    }
+    .faq-content h2 {
+        font-size: 28px;
+    }
+    .faq-item {
+        padding: 10px;
+    }
+    .powered-by {
+        bottom: 10px;
+        right: 5px;
+    }
+    .powered-by .logo {
+        width: 40px;
+        height: 40px;
     }
 }
