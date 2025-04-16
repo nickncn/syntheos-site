@@ -10,6 +10,7 @@ body {
     color: #fff;
     overflow-x: hidden;
     line-height: 1.6;
+    margin: 0;
 }
 
 .hero {
@@ -349,6 +350,7 @@ button:hover {
     justify-content: space-between;
     min-height: 100vh;
     position: relative;
+    padding: 0;
 }
 
 .faq-content {
@@ -356,26 +358,25 @@ button:hover {
     max-width: 800px;
     width: 100%;
     margin: 0 auto;
-    padding: 80px 20px 40px 20px;
+    padding: 60px 20px 40px 20px;
     text-align: left;
-    position: relative;
 }
 
 .faq-content h2 {
     font-family: 'Orbitron', sans-serif;
-    font-size: 40px;
+    font-size: 36px;
     letter-spacing: 3px;
-    margin-bottom: 30px;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    padding-left: 15px;
+    width: 100vw;
+    padding-left: 10px;
     white-space: nowrap;
     color: #ffffff;
     opacity: 1;
-    z-index: 1;
-    transform: translateX(0);
+    z-index: 10;
+    margin: 0;
+    background: transparent;
 }
 
 .faq-item {
@@ -401,22 +402,22 @@ button:hover {
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     width: 100%;
     margin: 0;
-    padding: 5px 20px;
+    padding: 3px 15px;
     text-align: center;
     font-style: italic;
 }
 
 .founder-quote p {
-    font-size: 2.5px;
-    margin-bottom: 2px;
+    font-size: 1.25px;
+    margin-bottom: 1px;
     opacity: 0.9;
 }
 
 .founder-quote .author {
-    font-size: 2.25px;
+    font-size: 1.125px;
     font-weight: 700;
     color: #00d4ff;
-    margin-top: 2px;
+    margin-top: 1px;
 }
 
 .section h2 {
@@ -484,12 +485,11 @@ button:hover {
         font-size: 14px;
     }
     .faq-content {
-        padding: 60px 20px 20px 20px;
+        padding: 40px 20px 20px 20px;
     }
     .faq-content h2 {
-        font-size: 28px;
-        padding-left: 10px;
-        top: 0;
+        font-size: 24px;
+        padding-left: 5px;
     }
     .faq-item h3 {
         font-size: 20px;
@@ -498,14 +498,14 @@ button:hover {
         font-size: 16px;
     }
     .founder-quote {
-        padding: 4px 10px;
+        padding: 2px 10px;
     }
     .founder-quote p {
-        font-size: 2px;
-        margin-bottom: 1px;
+        font-size: 1px;
+        margin-bottom: 0.5px;
     }
     .founder-quote .author {
-        font-size: 1.75px;
-        margin-top: 1px;
+        font-size: 0.875px;
+        margin-top: 0.5px;
     }
 }
