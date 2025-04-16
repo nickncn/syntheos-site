@@ -311,7 +311,7 @@ button:hover {
 }
 
 .feature-card p {
-    font-size: 20px;
+    font-size: 40px;
     opacity: 0.9;
     transition: opacity 0.8s ease, text-shadow 0.8s ease;
 }
@@ -428,7 +428,7 @@ button:hover {
     .hero .subtitle { font-size: 18px; }
     .hero .launch { font-size: 12px; }
     .section h2 { font-size: 56px; }
-    .section p, .yield .content p { font-size: 22px; }
+    .section p, .yield .content p { font-size: 40px; }
     .form-column h3 { font-size: 28px; }
     .steps { grid-template-columns: 1fr; }
     .step-card p { font-size: 14px; }
