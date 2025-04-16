@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const observerOptions = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.2 // Trigger when 20% of section is visible
+        threshold: 0.1 // Trigger when 10% of section is visible
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -30,5 +30,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     sections.forEach(section => {
         observer.observe(section);
+    });
+
+    // Fallback scroll listener
+    window.addEventListener('scroll', () => {
+        const triggerPoint = window.innerHeight * 0.9;
+        sections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+            if (sectionTop < triggerPoint && !section.classList.contains('visible')) {
+                section.classList.add('visible');
+            }
+        });
     });
 });
