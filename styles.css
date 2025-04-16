@@ -62,7 +62,7 @@ body {
 
 .hero h1 {
     font-family: 'Orbitron', sans-serif;
-    font-size: 120px;
+    font-size: 140px;
     letter-spacing: 5px;
     text-transform: uppercase;
     animation: fadeIn 2s ease-in-out;
@@ -221,7 +221,7 @@ button:hover {
 }
 
 .step-card p {
-    font-size: 16px;
+    font-size: 20px;
     opacity: 0.9;
     transition: opacity 0.8s ease, text-shadow 0.8s ease;
 }
@@ -311,7 +311,7 @@ button:hover {
 }
 
 .feature-card p {
-    font-size: 16px;
+    font-size: 20px;
     opacity: 0.9;
     transition: opacity 0.8s ease, text-shadow 0.8s ease;
 }
