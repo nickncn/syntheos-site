@@ -62,7 +62,7 @@ body {
 
 .hero h1 {
     font-family: 'Orbitron', sans-serif;
-    font-size: 140px;
+    font-size: 120px;
     letter-spacing: 5px;
     text-transform: uppercase;
     animation: fadeIn 2s ease-in-out;
@@ -221,7 +221,7 @@ button:hover {
 }
 
 .step-card p {
-    font-size: 20px;
+    font-size: 16px;
     opacity: 0.9;
     transition: opacity 0.8s ease, text-shadow 0.8s ease;
 }
@@ -295,6 +295,11 @@ button:hover {
     width: 40px;
     height: 40px;
     margin-bottom: 10px;
+    filter: brightness(0) invert(1); /* Makes black SVGs white */
+}
+
+.transfer.visible .feature-card .feature-icon {
+    filter: brightness(0) invert(1); /* Ensures visibility transition doesn’t override */
 }
 
 .feature-card h3 {
@@ -311,7 +316,7 @@ button:hover {
 }
 
 .feature-card p {
-    font-size: 20px;
+    font-size: 16px;
     opacity: 0.9;
     transition: opacity 0.8s ease, text-shadow 0.8s ease;
 }
@@ -329,7 +334,7 @@ button:hover {
 .get-in-touch {
     margin-top: 20px;
     padding: 12px 24px;
-    font-size: 20px;
+    font-size: 16px;
     background: #ffffff;
     border: none;
     color: #000;
@@ -405,12 +410,27 @@ button:hover {
 
 .section h2 {
     font-family: 'Orbitron', sans-serif;
-    font-size: 60px;
+    font-size: 80px;
     font-weight: 700;
     letter-spacing: 3px;
     margin-bottom: 20px;
     z-index: 1;
     text-transform: uppercase;
+}
+
+.section p {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+.highlight-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    opacity: 0.9;
+    margin-bottom: 20px;
 }
 
 @keyframes fadeIn {
@@ -428,7 +448,8 @@ button:hover {
     .hero .subtitle { font-size: 18px; }
     .hero .launch { font-size: 12px; }
     .section h2 { font-size: 56px; }
-    .section p, .yield .content p { font-size: 24px; }
+    .section p { font-size: 18px; }
+    .highlight-text { font-size: 20px; }
     .form-column h3 { font-size: 28px; }
     .steps { grid-template-columns: 1fr; }
     .step-card p { font-size: 14px; }
@@ -455,6 +476,7 @@ button:hover {
     .feature-card .feature-icon {
         width: 32px;
         height: 32px;
+        filter: brightness(0) invert(1); /* Maintain white on mobile */
     }
     .feature-card h3 {
         font-size: 18px;
