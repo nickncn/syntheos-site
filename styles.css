@@ -99,26 +99,6 @@ body {
     margin-bottom: 20px;
 }
 
-.yield-card {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.yield-card p {
-    font-size: 16px;
-    opacity: 0.9;
-}
-
-.yield-card span {
-    font-size: 24px;
-    font-weight: 700;
-    color: #00d4ff;
-}
-
 form {
     display: flex;
     flex-direction: column;
@@ -205,7 +185,7 @@ button:hover {
 
 .yield.visible .content p {
     opacity: 1;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
 }
 
 .steps {
@@ -245,21 +225,12 @@ button:hover {
 
 .yield.visible .step-card p {
     opacity: 1;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
 }
 
 @keyframes fadeInStep {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
-}
-
-.yield-diagram {
-    max-width: 600px;
-    width: 100%;
-    margin-top: 20px;
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
 .powered-by {
@@ -327,11 +298,24 @@ button:hover {
     font-family: 'Inter', sans-serif;
     font-size: 20px;
     margin-bottom: 10px;
+    opacity: 0.9;
+    transition: opacity 0.8s ease, text-shadow 0.8s ease;
+}
+
+.transfer.visible .feature-card h3 {
+    opacity: 1;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
 }
 
 .feature-card p {
     font-size: 16px;
     opacity: 0.9;
+    transition: opacity 0.8s ease, text-shadow 0.8s ease;
+}
+
+.transfer.visible .feature-card p {
+    opacity: 1;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
 }
 
 .future {
@@ -371,14 +355,15 @@ button:hover {
     max-width: 800px;
     width: 100%;
     padding: 40px 20px;
+    text-align: left;
 }
 
 .faq-content h2 {
     font-family: 'Orbitron', sans-serif;
-    font-size: 60px;
+    font-size: 56px;
     letter-spacing: 3px;
     margin-bottom: 30px;
-    text-align: center;
+    text-align: left;
     white-space: nowrap;
     color: #ffffff;
     opacity: 1;
@@ -402,25 +387,25 @@ button:hover {
 }
 
 .founder-quote {
-    flex: 0.8;
+    flex: 0.4;
     background: rgba(255, 255, 255, 0.05);
     border-top: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 15px;
+    padding: 10px;
     text-align: center;
     font-style: italic;
 }
 
 .founder-quote p {
-    font-size: 8px;
-    margin-bottom: 8px;
+    font-size: 10px;
+    margin-bottom: 6px;
     opacity: 0.9;
 }
 
 .founder-quote .author {
-    font-size: 6px;
+    font-size: 9px;
     font-weight: 700;
     color: #00d4ff;
-    margin-top: 8px;
+    margin-top: 6px;
 }
 
 .section h2 {
@@ -455,7 +440,6 @@ button:hover {
     .section h2 { font-size: 48px; }
     .section p, .yield .content p { font-size: 18px; }
     .form-column h3 { font-size: 28px; }
-    .yield-diagram { max-width: 100%; }
     .steps { grid-template-columns: 1fr; }
     .step-card p { font-size: 14px; }
     .step-card .step-number { font-size: 20px; }
@@ -492,7 +476,7 @@ button:hover {
         padding: 20px;
     }
     .faq-content h2 {
-        font-size: 40px;
+        font-size: 36px;
     }
     .faq-item h3 {
         font-size: 20px;
@@ -507,6 +491,6 @@ button:hover {
         font-size: 8px;
     }
     .founder-quote .author {
-        font-size: 6px;
+        font-size: 7px;
     }
 }
