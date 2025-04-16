@@ -14,32 +14,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Add scroll animation for sections
     const sections = document.querySelectorAll('.section');
-    const observerOptions = {
+    const sectionObserverOptions = {
         root: null,
         rootMargin: '0px',
         threshold: 0.1 // Trigger when 10% of section is visible
     };
 
-    const observer = new IntersectionObserver((entries) => {
+    const sectionObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
             }
         });
-    }, observerOptions);
+    }, sectionObserverOptions);
 
     sections.forEach(section => {
-        observer.observe(section);
+        sectionObserver.observe(section);
     });
 
-    // Fallback scroll listener
-    window.addEventListener('scroll', () => {
-        const triggerPoint = window.innerHeight * 0.9;
-        sections.forEach(section => {
-            const sectionTop = section.getBoundingClientRect().top;
-            if (sectionTop < triggerPoint && !section.classList.contains('visible')) {
-                section.classList.add('visible');
+    // Add scroll-triggered fade-in for elements in the yield section
+    const yieldSection = document.querySelector('.yield');
+    const fadeInElements = yieldSection.querySelectorAll('.fade-in');
+    const fadeInObserverOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1 // Trigger when 10% of element is visible
+    };
+
+    const fadeInObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                // Add visible class with staggered delay
+                setTimeout(() => {
+                    entry.target.classList.add('visible');
+                }, index * 200); // 200ms delay per element (0s, 0.2s, 0.4s, etc.)
+                observer.unobserve(entry.target); // Stop observing after animation
             }
         });
+    }, fadeInObserverOptions);
+
+    fadeInElements.forEach(element => {
+        fadeInObserver.observe(element);
     });
 });
