@@ -450,7 +450,7 @@ button:hover {
 }
 
 @media (max-width: 768px) {
-    .hero h1 { font-size: 60px; }
+    .hero h1 { font-size: 48px; }
     .hero .subtitle { font-size: 18px; }
     .hero .launch { font-size: 12px; }
     .section h2 { font-size: 48px; } /* Reduced further */
