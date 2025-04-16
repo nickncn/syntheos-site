@@ -343,7 +343,7 @@ button:hover {
 }
 
 .faq {
-    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05) 0%, transparent 70%),
+    background: radial-gradient(circle at center, rgba(255, 255, 899, 0.05) 0%, transparent 70%),
                 linear-gradient(135deg, #1a2636, #0a0a0a);
     display: flex;
     flex-direction: column;
@@ -358,7 +358,7 @@ button:hover {
     max-width: 800px;
     width: 100%;
     margin: 0 auto;
-    padding: 60px 20px 40px 20px;
+    padding: 80px 20px 40px 20px;
     text-align: left;
 }
 
@@ -485,7 +485,7 @@ button:hover {
         font-size: 14px;
     }
     .faq-content {
-        padding: 40px 20px 20px 20px;
+        padding: 60px 20px 20px 20px;
     }
     .faq-content h2 {
         font-size: 24px;
