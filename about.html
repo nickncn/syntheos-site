@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syntheos - About</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#careers">Careers</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+        </ul>
+    </nav>
+
+    <!-- Get in Touch Button -->
+    <button class="get-in-touch-btn">
+        <span class="plus-icon"></span>
+        Get in touch
+    </button>
+
+    <!-- Modal for Get in Touch Form -->
+    <div class="modal" id="getInTouchModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal">×</button>
+            <h3>Join Early Access</h3>
+            <form action="https://formspree.io/f/xkgjqole" method="POST">
+                <input type="text" name="discord" placeholder="Discord Username" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <button type="submit">JOIN EARLY ACCESS</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Slide 1: How Our AI Works -->
+    <section class="about-section ai-works">
+        <div class="stars-background"></div>
+        <div class="grid-overlay"></div>
+        <h2>How Our AI Works</h2>
+        <div class="diagram">
+            <div class="diagram-step">
+                <span class="step-label">Input</span>
+                <div class="step-box">Stablecoin Deposits</div>
+            </div>
+            <div class="arrow">→</div>
+            <div class="diagram-step">
+                <span class="step-label">Strategy Engine</span>
+                <div class="step-box">AI Market Analysis</div>
+            </div>
+            <div class="arrow">→</div>
+            <div class="diagram-step">
+                <span class="step-label">Yield Router</span>
+                <div class="step-box">Optimized Allocation</div>
+            </div>
+        </div>
+        <p>Our AI processes your stablecoin deposits, analyzes the market in real-time, and routes your capital to the safest, highest-yielding opportunities.</p>
+    </section>
+
+    <!-- Slide 2: Visual Depth / Bank Feel -->
+    <section class="about-section bank-feel">
+        <div class="stars-background"></div>
+        <div class="grid-overlay"></div>
+        <div class="orbital-lines">
+            <div class="orbital-line orbital-1"></div>
+            <div class="orbital-line orbital-2"></div>
+            <div class="orbital-line orbital-3"></div>
+        </div>
+        <h2>A Bank for the Future</h2>
+        <p>Experience the power of AI-driven DeFi with a command-center interface.</p>
+        <div class="yield-chart">
+            <canvas id="yieldChart"></canvas>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Dynamically create stars for all stars-background elements
+            const starsContainers = document.querySelectorAll('.stars-background');
+            starsContainers.forEach(container => {
+                for (let i = 0; i < 50; i++) {
+                    const star = document.createElement('div');
+                    star.classList.add('star');
+                    star.style.top = `${Math.random() * 100}%`;
+                    star.style.left = `${Math.random() * 100}%`;
+                    star.style.animationDelay = `${Math.random() * 2}s`;
+                    container.appendChild(star);
+                }
+            });
+
+            // Get in Touch Modal Functionality
+            const getInTouchBtn = document.querySelector('.get-in-touch-btn');
+            const modal = document.querySelector('#getInTouchModal');
+            const closeModalBtn = document.querySelector('#closeModal');
+
+            getInTouchBtn.addEventListener('click', () => {
+                modal.style.display = 'flex';
+            });
+
+            closeModalBtn.addEventListener('click', () => {
+                modal.style.display = 'none';
+            });
+
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+
+            // Yield Chart Animation
+            const ctx = document.getElementById('yieldChart').getContext('2d');
+            const yieldChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6', 'Day 7'],
+                    datasets: [{
+                        label: 'Yield (%)',
+                        data: [3, 3.5, 4, 4.2, 4.8, 5, 5.3],
+                        borderColor: '#00d4ff',
+                        backgroundColor: 'rgba(0, 212, 255, 0.2)',
+                        fill: true,
+                        tension: 0.4,
+                        pointBackgroundColor: '#fff',
+                        pointBorderColor: '#00d4ff',
+                        pointRadius: 5,
+                        pointHoverRadius: 7
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            },
+                            ticks: {
+                                color: '#fff'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            },
+                            ticks: {
+                                color: '#fff'
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            labels: {
+                                color: '#fff'
+                            }
+                        }
+                    },
+                    animation: {
+                        duration: 2000,
+                        easing: 'easeOutQuart'
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
