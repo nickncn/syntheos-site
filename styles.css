@@ -32,6 +32,7 @@ body {
     gap: 30px;
     margin: 0;
     padding: 0;
+    justify-content: center; /* Center the navigation links */
 }
 
 .nav-bar li {
@@ -832,8 +833,6 @@ button:hover {
     .nav-bar {
         padding: 8px 15px;
         top: 10px;
-        width: 90%;
-        max-width: 500px;
     }
 
     .nav-bar ul {
@@ -845,7 +844,7 @@ button:hover {
     }
 
     .get-in-touch-btn {
-        top: 60px;
+        top: 50px;
         right: 50%;
         transform: translateX(50%);
         font-size: 14px;
@@ -861,7 +860,7 @@ button:hover {
 
     .hero {
         padding: 0 15px;
-        padding-top: 100px;
+        padding-top: 90px;
     }
 
     .hero h1 {
@@ -972,7 +971,7 @@ button:hover {
     }
 
     .about-section {
-        padding-top: 100px;
+        padding-top: 90px;
     }
 
     .about-section h2 {
@@ -1015,8 +1014,6 @@ button:hover {
 @media (max-width: 480px) {
     .nav-bar {
         padding: 6px 10px;
-        width: 90%;
-        max-width: 400px;
     }
 
     .nav-bar ul {
@@ -1028,7 +1025,7 @@ button:hover {
     }
 
     .get-in-touch-btn {
-        top: 50px;
+        top: 45px;
         font-size: 12px;
         padding: 5px 10px;
         max-width: 180px;
@@ -1041,7 +1038,7 @@ button:hover {
 
     .hero {
         padding: 0 10px;
-        padding-top: 90px;
+        padding-top: 80px;
     }
 
     .hero h1 {
@@ -1115,7 +1112,7 @@ button:hover {
     }
 
     .about-section {
-        padding-top: 90px;
+        padding-top: 80px;
     }
 
     .about-section h2 {
