@@ -541,7 +541,7 @@ button:hover {
 
 /* Future Section - Original Gradient Background */
 .future {
-    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05) 0%, transparent 70%),
+    background: radial-gradient(circle at center, rgba(255, 255, 955, 0.05) 0%, transparent 70%),
                 linear-gradient(135deg, #363846, #0a0a0a);
 }
 
@@ -831,6 +831,9 @@ button:hover {
 @media (max-width: 768px) {
     .nav-bar {
         padding: 8px 15px;
+        top: 10px;
+        width: 90%;
+        max-width: 500px;
     }
 
     .nav-bar ul {
@@ -842,9 +845,13 @@ button:hover {
     }
 
     .get-in-touch-btn {
+        top: 60px;
+        right: 50%;
+        transform: translateX(50%);
         font-size: 14px;
-        right: 15px;
         padding: 6px 12px;
+        width: auto;
+        max-width: 200px;
     }
 
     .get-in-touch-btn .plus-icon {
@@ -854,6 +861,7 @@ button:hover {
 
     .hero {
         padding: 0 15px;
+        padding-top: 100px;
     }
 
     .hero h1 {
@@ -963,6 +971,10 @@ button:hover {
         font-size: 24px;
     }
 
+    .about-section {
+        padding-top: 100px;
+    }
+
     .about-section h2 {
         font-size: 48px;
     }
@@ -1003,6 +1015,8 @@ button:hover {
 @media (max-width: 480px) {
     .nav-bar {
         padding: 6px 10px;
+        width: 90%;
+        max-width: 400px;
     }
 
     .nav-bar ul {
@@ -1014,9 +1028,10 @@ button:hover {
     }
 
     .get-in-touch-btn {
+        top: 50px;
         font-size: 12px;
-        right: 10px;
         padding: 5px 10px;
+        max-width: 180px;
     }
 
     .get-in-touch-btn .plus-icon {
@@ -1026,6 +1041,7 @@ button:hover {
 
     .hero {
         padding: 0 10px;
+        padding-top: 90px;
     }
 
     .hero h1 {
@@ -1096,6 +1112,10 @@ button:hover {
     .powered-by .logo {
         width: 40px;
         height: 40px;
+    }
+
+    .about-section {
+        padding-top: 90px;
     }
 
     .about-section h2 {
