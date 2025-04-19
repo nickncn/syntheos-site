@@ -680,21 +680,22 @@ button:hover {
     max-width: 800px;
 }
 
-/* Slide 1: How Our AI Works - Satellite UI Background */
+/* Slide 1: How Our AI Works - New Satellite UI Background */
 .ai-works {
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a2636 100%);
+    background: linear-gradient(135deg, #000 0%, #1a2636 100%);
 }
 
 .ai-works::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0, 212, 255, 0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 212, 255, 0.05) 1px, transparent 1px);
-    background-size: 100px 100px;
+    bottom: -20%;
+    left: 50%;
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.2) 20%, transparent 40%), /* Sunrise glow */
+                radial-gradient(circle at 50% 50%, rgba(200, 200, 200, 0.5) 0%, rgba(150, 150, 150, 0.3) 50%, transparent 70%); /* Planet */
+    border-radius: 50%;
+    transform: translateX(-50%);
     z-index: 0;
     pointer-events: none;
 }
@@ -702,14 +703,13 @@ button:hover {
 .ai-works::after {
     content: '';
     position: absolute;
-    top: 50%;
+    bottom: -20%;
     left: 50%;
-    width: 500px;
-    height: 500px;
-    border: 1px dashed rgba(0, 212, 255, 0.2);
+    width: 120%;
+    height: 120%;
+    background: linear-gradient(to top, rgba(255, 165, 0, 0.3) 0%, transparent 30%); /* Orange sunrise tint */
     border-radius: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
-    animation: orbit 40s linear infinite;
+    transform: translateX(-50%);
     z-index: 0;
     pointer-events: none;
 }
@@ -992,9 +992,11 @@ button:hover {
         height: 200px;
     }
 
+    .ai-works::before,
     .ai-works::after {
-        width: 300px;
-        height: 300px;
+        width: 200%;
+        height: 200%;
+        bottom: -50%;
     }
 }
 
