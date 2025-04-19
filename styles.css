@@ -462,22 +462,7 @@ button:hover {
     opacity: 0.8;
 }
 
-.powered-by .logo-container {
-    display: flex;
-    gap: 10px;
-}
-
-.powered-by .logo {
-    width: 70px;
-    height: 70px;
-    animation: breathe 2s ease-in-out infinite;
-}
-
-@keyframes breathe {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-}
-
+.powered-by .logo 
 /* Transfer Section (Third Slide) - Original Gradient Background */
 .transfer {
     background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05) 0%, transparent 70%),
@@ -870,6 +855,7 @@ button:hover {
 
     .hero .subtitle {
         font-size: 18px;
+        margin-bottom: 40px; /* Increased margin to separate from powered-by */
     }
 
     .hero .launch {
@@ -894,10 +880,19 @@ button:hover {
 
     .steps {
         grid-template-columns: 1fr;
+        gap: 20px; /* Increased gap for breathing room */
+    }
+
+    .step-card {
+        max-width: 300px; /* Reduced width for breathing room */
+        margin: 0 auto; /* Center the card */
+        padding: 10px; /* Reduced padding */
+        background: rgba(255, 255, 255, 0.08); /* Slightly more transparent background */
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
     }
 
     .step-card p {
-        font-size: 14px;
+        font-size: 14px; /* Reduced font size */
     }
 
     .step-card .step-number {
@@ -911,7 +906,7 @@ button:hover {
     }
 
     .powered-by span {
-        font-size: 8px;
+        font-size: 8px; /* Reduced font size */
     }
 
     .powered-by .logo-container {
@@ -925,11 +920,15 @@ button:hover {
 
     .features {
         max-width: 100%;
+        gap: 20px; /* Increased gap for breathing room */
     }
 
     .feature-card {
-        width: 100%;
-        max-width: 300px;
+        max-width: 300px; /* Reduced width for breathing room */
+        margin: 0 auto; /* Center the card */
+        padding: 10px; /* Reduced padding */
+        background: rgba(255, 255, 255, 0.08); /* Slightly more transparent background */
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
     }
 
     .feature-card .feature-icon {
@@ -939,11 +938,11 @@ button:hover {
     }
 
     .feature-card h3 {
-        font-size: 18px;
+        font-size: 18px; /* Reduced font size */
     }
 
     .feature-card p {
-        font-size: 14px;
+        font-size: 14px; /* Reduced font size */
     }
 
     .faq-content {
@@ -1049,6 +1048,7 @@ button:hover {
 
     .hero .subtitle {
         font-size: 16px;
+        margin-bottom: 30px; /* Adjusted margin */
     }
 
     .hero .launch {
@@ -1073,20 +1073,22 @@ button:hover {
 
     .steps {
         grid-template-columns: 1fr;
-        gap: 10px;
+        gap: 15px; /* Adjusted gap */
     }
 
     .step-card {
-        padding: 10px;
+        max-width: 280px; /* Further reduced width */
+        padding: 8px; /* Further reduced padding */
     }
 
     .features {
         padding: 0 5px;
-        gap: 10px;
+        gap: 15px; /* Adjusted gap */
     }
 
     .feature-card {
-        max-width: 100%;
+        max-width: 280px; /* Further reduced width */
+        padding: 8px; /* Further reduced padding */
     }
 
     .faq-content {
