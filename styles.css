@@ -407,7 +407,7 @@ button:hover {
 }
 
 .step-card {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 10px;
     padding: 15px;
@@ -454,7 +454,7 @@ button:hover {
     flex-direction: column;
     align-items: flex-end;
     gap: 10px;
-    z-index: 1;
+    z-index: 2; /* Ensure it stays above other elements */
 }
 
 .powered-by span {
@@ -462,7 +462,22 @@ button:hover {
     opacity: 0.8;
 }
 
-.powered-by .logo 
+.powered-by .logo-container {
+    display: flex;
+    gap: 10px;
+}
+
+.powered-by .logo {
+    width: 70px;
+    height: 70px;
+    animation: breathe 2s ease-in-out infinite;
+}
+
+@keyframes breathe {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
 /* Transfer Section (Third Slide) - Original Gradient Background */
 .transfer {
     background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05) 0%, transparent 70%),
@@ -481,7 +496,7 @@ button:hover {
 }
 
 .feature-card {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 10px;
     padding: 15px;
@@ -846,6 +861,7 @@ button:hover {
     .hero {
         padding: 0 15px;
         padding-top: 90px;
+        padding-bottom: 80px; /* Added padding to create space at the bottom */
     }
 
     .hero h1 {
@@ -855,11 +871,17 @@ button:hover {
 
     .hero .subtitle {
         font-size: 18px;
-        margin-bottom: 40px; /* Increased margin to separate from powered-by */
+        margin-top: 15px; /* Reduced margin */
+        margin-bottom: 30px; /* Reduced margin */
     }
 
     .hero .launch {
         font-size: 12px;
+        margin-top: 15px; /* Reduced margin */
+    }
+
+    .hero .form-column {
+        margin-top: 20px; /* Reduced margin */
     }
 
     .section h2 {
@@ -880,19 +902,19 @@ button:hover {
 
     .steps {
         grid-template-columns: 1fr;
-        gap: 20px; /* Increased gap for breathing room */
+        gap: 20px;
     }
 
     .step-card {
-        max-width: 300px; /* Reduced width for breathing room */
-        margin: 0 auto; /* Center the card */
-        padding: 10px; /* Reduced padding */
-        background: rgba(255, 255, 255, 0.08); /* Slightly more transparent background */
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+        max-width: 300px;
+        margin: 0 auto;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.08);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     }
 
     .step-card p {
-        font-size: 14px; /* Reduced font size */
+        font-size: 14px;
     }
 
     .step-card .step-number {
@@ -900,13 +922,13 @@ button:hover {
     }
 
     .powered-by {
-        bottom: 15px;
+        bottom: 20px; /* Adjusted to ensure it stays clear */
         right: 10px;
-        gap: 8px;
+        gap: 6px; /* Reduced gap */
     }
 
     .powered-by span {
-        font-size: 8px; /* Reduced font size */
+        font-size: 8px;
     }
 
     .powered-by .logo-container {
@@ -920,15 +942,15 @@ button:hover {
 
     .features {
         max-width: 100%;
-        gap: 20px; /* Increased gap for breathing room */
+        gap: 20px;
     }
 
     .feature-card {
-        max-width: 300px; /* Reduced width for breathing room */
-        margin: 0 auto; /* Center the card */
-        padding: 10px; /* Reduced padding */
-        background: rgba(255, 255, 255, 0.08); /* Slightly more transparent background */
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+        max-width: 300px;
+        margin: 0 auto;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.08);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     }
 
     .feature-card .feature-icon {
@@ -938,11 +960,11 @@ button:hover {
     }
 
     .feature-card h3 {
-        font-size: 18px; /* Reduced font size */
+        font-size: 18px;
     }
 
     .feature-card p {
-        font-size: 14px; /* Reduced font size */
+        font-size: 14px;
     }
 
     .faq-content {
@@ -1038,6 +1060,7 @@ button:hover {
     .hero {
         padding: 0 10px;
         padding-top: 80px;
+        padding-bottom: 60px; /* Adjusted padding */
     }
 
     .hero h1 {
@@ -1048,11 +1071,17 @@ button:hover {
 
     .hero .subtitle {
         font-size: 16px;
-        margin-bottom: 30px; /* Adjusted margin */
+        margin-top: 10px; /* Further reduced margin */
+        margin-bottom: 20px; /* Further reduced margin */
     }
 
     .hero .launch {
         font-size: 10px;
+        margin-top: 10px; /* Further reduced margin */
+    }
+
+    .hero .form-column {
+        margin-top: 15px; /* Further reduced margin */
     }
 
     .section {
@@ -1073,22 +1102,22 @@ button:hover {
 
     .steps {
         grid-template-columns: 1fr;
-        gap: 15px; /* Adjusted gap */
+        gap: 15px;
     }
 
     .step-card {
-        max-width: 280px; /* Further reduced width */
-        padding: 8px; /* Further reduced padding */
+        max-width: 280px;
+        padding: 8px;
     }
 
     .features {
         padding: 0 5px;
-        gap: 15px; /* Adjusted gap */
+        gap: 15px;
     }
 
     .feature-card {
-        max-width: 280px; /* Further reduced width */
-        padding: 8px; /* Further reduced padding */
+        max-width: 280px;
+        padding: 8px;
     }
 
     .faq-content {
@@ -1104,8 +1133,9 @@ button:hover {
     }
 
     .powered-by {
-        bottom: 10px;
+        bottom: 15px; /* Adjusted to ensure it stays clear */
         right: 5px;
+        gap: 4px; /* Further reduced gap */
     }
 
     .powered-by .logo {
