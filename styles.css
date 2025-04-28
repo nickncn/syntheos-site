@@ -1246,7 +1246,7 @@ iframe[data-tally-src] {
         font-size: 14px;
         padding: 10px;
     }
-}
+
 /* Animation styles for sections and child elements */
 .section, .about-section {
     opacity: 0;
