@@ -116,16 +116,8 @@
         </div>
     </section>
 
-    <!-- Future Section -->
-    <section class="section future">
-        <div class="stars-background"></div>
-        <h2>Ready to Build Your Sovereign Wealth?</h2>
-        <p>Earn XP today. Race up the Leaderboard. Unlock exclusive Vault Access in Mid-June. Sovereignty isn’t given. It’s earned.</p>
-        <button class="get-in-touch" onclick="document.getElementById('getInTouchModal').style.display='flex'">Join Early Access</button>
-    </section>
-
-    <!-- FAQ Section (Timeline) -->
-    <section class="section faq" id="faq">
+    <!-- Future Section (Timeline) -->
+    <section class="section future" id="future">
         <div class="stars-background"></div>
         <div class="faq-content">
             <h2>Roadmap</h2>
@@ -145,6 +137,30 @@
                     <h3>SYNTH Token Launch</h3>
                     <p>2026: Launch of the SYNTH token for ecosystem rewards.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq" id="faq">
+        <div class="stars-background"></div>
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-content">
+            <div class="faq-item">
+                <h3 class="faq-question">What is Syntheos?</h3>
+                <p class="faq-answer">Syntheos is a DeFi platform that uses AI to optimize yield strategies, allowing users to deposit stablecoins or ETH and earn XP to climb the Sovereign Leaderboard.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">How do I join the testnet?</h3>
+                <p class="faq-answer">Sign up for early access using the form on our homepage. Only 200 users will be granted priority access to the testnet.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">What are Sovereign Vaults?</h3>
+                <p class="faq-answer">Sovereign Vaults are AI-powered investment pools that maximize returns without intermediaries, giving you full control over your assets.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">When will the SYNTH token launch?</h3>
+                <p class="faq-answer">The SYNTH token is scheduled to launch in 2026, as part of our ecosystem rewards program.</p>
             </div>
         </div>
     </section>
@@ -234,7 +250,18 @@
                 document.querySelectorAll('iframe[data-tally-src]:not([src])').forEach((iframe) => {
                     iframe.src = iframe.dataset.tallySrc;
                 });
-            }
+            });
+
+            // FAQ Toggle Functionality
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    const isVisible = answer.style.display === 'block';
+                    answer.style.display = isVisible ? 'none' : 'block';
+                    question.classList.toggle('active', !isVisible);
+                });
+            });
         });
     </script>
 </body>
