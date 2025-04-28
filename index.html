@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Add Font Awesome for fallback icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <script async src="https://tally.so/widgets/embed.js"></script>
     <script src="script.js" defer></script>
 </head>
@@ -56,33 +58,61 @@
         <div class="scroll-indicator">Scroll to Explore</div>
     </section>
 
-    <!-- Yield Section -->
+    <!-- Yield Section (Updated with Web Map) -->
     <section class="section yield">
         <div class="stars-background"></div>
         <h2>What Can Syntheos Do for You?</h2>
-        <div class="content">
-            <ul class="features-list">
-                <li>
-                    <img src="/images/deposit-icon.svg" alt="Deposit Icon" class="feature-icon">
-                    <p>Deposit Stablecoins or ETH</p>
-                </li>
-                <li>
-                    <img src="/images/xp-icon.svg" alt="XP Icon" class="feature-icon">
-                    <p>Earn XP automatically by growing vault capital</p>
-                </li>
-                <li>
-                    <img src="/images/leaderboard-icon.svg" alt="Leaderboard Icon" class="feature-icon">
-                    <p>Climb the Sovereign XP Leaderboard</p>
-                </li>
-                <li>
-                    <img src="/images/vault-icon.svg" alt="Vault Icon" class="feature-icon">
-                    <p>Unlock Early Access to AI VaultOS strategies</p>
-                </li>
-                <li>
-                    <img src="/images/wealth-icon.svg" alt="Wealth Icon" class="feature-icon">
-                    <p>Compound Sovereign Wealth Effortlessly</p>
-                </li>
-            </ul>
+        <div class="web-map">
+            <!-- Background Images -->
+            <div class="web-map-image image-1">
+                <img src="/images/cityscape.jpg" alt="Cityscape">
+            </div>
+            <div class="web-map-image image-2">
+                <img src="/images/tech-interface.jpg" alt="Tech Interface">
+            </div>
+            <div class="web-map-image image-3">
+                <img src="/images/deposit-hand.jpg" alt="Deposit Hand">
+            </div>
+
+            <!-- SVG for Connecting Lines -->
+            <svg class="web-map-lines">
+                <path class="line" d="M50% 30%, 40% 40%, 30% 50%" />
+                <path class="line" d="M50% 30%, 60% 40%, 70% 50%" />
+                <path class="line" d="M30% 50%, 40% 60%, 50% 70%" />
+                <path class="line" d="M70% 50%, 60% 60%, 50% 70%" />
+            </svg>
+
+            <!-- Nodes -->
+            <div class="web-map-node node-1">
+                <div class="node-icon">
+                    <i class="fas fa-coins"></i> <!-- Fallback: Replace with <img src="/images/deposit-icon.svg" alt="Deposit Icon"> if available -->
+                </div>
+                <span>Deposit</span>
+            </div>
+            <div class="web-map-node node-2">
+                <div class="node-icon">
+                    <i class="fas fa-star"></i> <!-- Fallback: Replace with <img src="/images/xp-icon.svg" alt="XP Icon"> if available -->
+                </div>
+                <span>Earn XP</span>
+            </div>
+            <div class="web-map-node node-3">
+                <div class="node-icon">
+                    <i class="fas fa-trophy"></i> <!-- Fallback: Replace with <img src="/images/leaderboard-icon.svg" alt="Leaderboard Icon"> if available -->
+                </div>
+                <span>Leaderboard</span>
+            </div>
+            <div class="web-map-node node-4">
+                <div class="node-icon">
+                    <i class="fas fa-lock"></i> <!-- Fallback: Replace with <img src="/images/vault-icon.svg" alt="Vault Icon"> if available -->
+                </div>
+                <span>AI VaultOS</span>
+            </div>
+            <div class="web-map-node node-5">
+                <div class="node-icon">
+                    <i class="fas fa-chart-line"></i> <!-- Fallback: Replace with <img src="/images/wealth-icon.svg" alt="Wealth Icon"> if available -->
+                </div>
+                <span>Wealth</span>
+            </div>
         </div>
         <div class="powered-by">
             <span>Currently Integrated With</span>
