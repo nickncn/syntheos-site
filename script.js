@@ -52,4 +52,25 @@ document.addEventListener('DOMContentLoaded', () => {
             question.classList.toggle('active', !isVisible);
         });
     });
+
+    // Intersection Observer for scroll-triggered animations
+    const sections = document.querySelectorAll('.section, .about-section');
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1 // Trigger when 10% of section is visible
+    };
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+                sectionObserver.unobserve(entry.target); // Stop observing after animation
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach(section => {
+        sectionObserver.observe(section);
+    });
 });
