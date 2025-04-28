@@ -10,13 +10,40 @@
     <script async src="https://tally.so/widgets/embed.js"></script>
 </head>
 <body>
+    <!-- Header with Logo and Navigation -->
+    <header class="header">
+        <div class="logo-container">
+            <img src="/images/logo.png" alt="Syntheos Logo" class="logo">
+            <h1>Syntheos</h1>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#careers">Careers</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Get in Touch Button -->
+    <button class="get-in-touch-btn">
+        <span class="plus-icon"></span>
+        Get in touch
+    </button>
+
+    <!-- Modal for Get in Touch Form -->
+    <div class="modal" id="getInTouchModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal">×</button>
+            <h3>Join Early Access</h3>
+            <iframe data-tally-src="https://tally.so/embed/mR2goj?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="282" frameborder="0" marginheight="0" marginwidth="0" title="Private Early Access Sign Up"></iframe>
+        </div>
+    </div>
+
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="stars-background"></div>
-        <div class="logo-header">
-            <img src="/images/syntheos-logo.png" alt="Syntheos Logo" class="syntheos-logo">
-            <h1>Syntheos</h1>
-        </div>
         <div class="form-column">
             <h3>Automated yield. Smarter returns.</h3>
             <p>Priority Access. Only 200 early test users allowed.</p>
@@ -31,12 +58,27 @@
         <div class="stars-background"></div>
         <h2 class="fade-in">What Can Syntheos Do for You?</h2>
         <div class="content">
-            <ul class="yield-list fade-in">
-                <li>Deposit Stablecoins or ETH</li>
-                <li>Earn XP automatically by growing vault capital</li>
-                <li>Climb the Sovereign XP Leaderboard</li>
-                <li>Unlock Early Access to AI VaultOS strategies</li>
-                <li>Compound Sovereign Wealth Effortlessly</li>
+            <ul class="features-list">
+                <li class="fade-in">
+                    <img src="/images/deposit-icon.svg" alt="Deposit Icon" class="feature-icon">
+                    <p>Deposit Stablecoins or ETH</p>
+                </li>
+                <li class="fade-in">
+                    <img src="/images/xp-icon.svg" alt="XP Icon" class="feature-icon">
+                    <p>Earn XP automatically by growing vault capital</p>
+                </li>
+                <li class="fade-in">
+                    <img src="/images/leaderboard-icon.svg" alt="Leaderboard Icon" class="feature-icon">
+                    <p>Climb the Sovereign XP Leaderboard</p>
+                </li>
+                <li class="fade-in">
+                    <img src="/images/vault-icon.svg" alt="Vault Icon" class="feature-icon">
+                    <p>Unlock Early Access to AI VaultOS strategies</p>
+                </li>
+                <li class="fade-in">
+                    <img src="/images/wealth-icon.svg" alt="Wealth Icon" class="feature-icon">
+                    <p>Compound Sovereign Wealth Effortlessly</p>
+                </li>
             </ul>
         </div>
         <div class="powered-by">
@@ -55,50 +97,52 @@
         <p>Syntheos transforms your deposits into dynamic sovereign vaults powered by AI strategies. No middlemen. No lock-ins. No rulers but you.</p>
         <div class="features">
             <div class="feature-card">
-                <img src="/images/xp-icon.svg" alt="XP Icon" class="feature-icon">
+                <img src="/images/deposit-icon.svg" alt="Deposit Icon" class="feature-icon">
                 <h3>Earn XP by depositing</h3>
-                <p>Deposit to start earning XP and grow your vault.</p>
+                <p>Deposit stablecoins or ETH to start earning XP instantly.</p>
             </div>
             <div class="feature-card">
                 <img src="/images/vault-icon.svg" alt="Vault Icon" class="feature-icon">
                 <h3>Unlock Sovereign Vaults access</h3>
-                <p>Gain access to exclusive AI-driven vaults.</p>
+                <p>Gain access to exclusive AI-powered vaults.</p>
             </div>
             <div class="feature-card">
-                <img src="/images/optimization-icon.svg" alt="Optimization Icon" class="feature-icon">
+                <img src="/images/optimize-icon.svg" alt="Optimize Icon" class="feature-icon">
                 <h3>Boost returns with AI optimization</h3>
                 <p>AI strategies maximize your returns effortlessly.</p>
             </div>
         </div>
     </section>
 
-    <!-- Act Now Section -->
-    <section class="section act-now">
+    <!-- Future Section -->
+    <section class="section future">
         <div class="stars-background"></div>
         <h2>Ready to Build Your Sovereign Wealth?</h2>
         <p>Earn XP today. Race up the Leaderboard. Unlock exclusive Vault Access in Mid-June. Sovereignty isn’t given. It’s earned.</p>
-        <button class="get-in-touch">Join Early Access</button>
+        <button class="get-in-touch" onclick="document.getElementById('getInTouchModal').style.display='flex'">Join Early Access</button>
     </section>
 
-    <!-- Timeline Section -->
-    <section class="section timeline">
+    <!-- FAQ Section (Timeline) -->
+    <section class="section faq" id="faq">
         <div class="stars-background"></div>
-        <h2>Roadmap to Sovereignty</h2>
-        <div class="timeline-container">
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <h3>Testnet Launch</h3>
-                <p>Live now: Start earning XP and exploring vaults.</p>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <h3>VaultOS Mid-June Upgrade</h3>
-                <p>Enhanced AI strategies and vault access in June 2025.</p>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <h3>SYNTH Token Launch</h3>
-                <p>Official token launch in 2026.</p>
+        <div class="faq-content">
+            <h2>Roadmap</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <h3>Testnet Launch</h3>
+                    <p>Live now: Join the testnet and start earning XP.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <h3>VaultOS Mid-June Upgrade</h3>
+                    <p>Mid-June 2025: Unlock advanced AI VaultOS strategies.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <h3>SYNTH Token Launch</h3>
+                    <p>2026: Launch of the SYNTH token for ecosystem rewards.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -162,6 +206,25 @@
                 fadeInObserver.observe(element);
             });
 
+            // Get in Touch Modal Functionality
+            const getInTouchBtn = document.querySelector('.get-in-touch-btn');
+            const modal = document.querySelector('#getInTouchModal');
+            const closeModalBtn = document.querySelector('#closeModal');
+
+            getInTouchBtn.addEventListener('click', () => {
+                modal.style.display = 'flex';
+            });
+
+            closeModalBtn.addEventListener('click', () => {
+                modal.style.display = 'none';
+            });
+
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+
             // Load Tally embeds
             if (typeof Tally !== 'undefined') {
                 Tally.loadEmbeds();
@@ -170,12 +233,6 @@
                     iframe.src = iframe.dataset.tallySrc;
                 });
             }
-
-            // Join Early Access Button
-            const joinButton = document.querySelector('.get-in-touch');
-            joinButton.addEventListener('click', () => {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
         });
     </script>
 </body>
