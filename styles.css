@@ -1,9 +1,11 @@
+/* Reset default styles for all elements */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body styles for the entire page */
 body {
     font-family: 'Inter', sans-serif;
     background-color: #fff;
@@ -13,7 +15,7 @@ body {
     margin: 0;
 }
 
-/* Header Styles */
+/* Header styles for the top logo and title */
 .header {
     position: fixed;
     top: 10px;
@@ -23,18 +25,21 @@ body {
     z-index: 1000;
 }
 
+/* Container for the logo and title */
 .logo-container {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
+/* Logo image styling */
 .logo-container .logo {
     width: 40px;
     height: 40px;
     object-fit: contain;
 }
 
+/* Logo title styling */
 .logo-container h1 {
     font-family: 'Orbitron', sans-serif;
     font-size: 24px;
@@ -42,7 +47,7 @@ body {
     text-transform: uppercase;
 }
 
-/* Navigation Bar Styles */
+/* Navigation bar styling */
 .nav-bar {
     position: fixed;
     top: 10px;
@@ -55,6 +60,7 @@ body {
     z-index: 1000;
 }
 
+/* Navigation list styling */
 .nav-bar ul {
     list-style: none;
     display: flex;
@@ -64,10 +70,12 @@ body {
     justify-content: center;
 }
 
+/* Navigation list items */
 .nav-bar li {
     display: inline-block;
 }
 
+/* Navigation links */
 .nav-bar a {
     color: #000;
     font-family: 'Inter', sans-serif;
@@ -77,11 +85,12 @@ body {
     transition: opacity 0.3s ease;
 }
 
+/* Navigation link hover effect */
 .nav-bar a:hover {
     opacity: 1;
 }
 
-/* Get in Touch Button Styles */
+/* Get in Touch button styling */
 .get-in-touch-btn {
     position: fixed;
     top: 10px;
@@ -104,10 +113,12 @@ body {
     z-index: 1000;
 }
 
+/* Get in Touch button hover effect */
 .get-in-touch-btn:hover {
     opacity: 1;
 }
 
+/* Plus icon for Get in Touch button */
 .get-in-touch-btn .plus-icon {
     display: inline-block;
     width: 16px;
@@ -116,6 +127,7 @@ body {
     transition: transform 0.3s ease;
 }
 
+/* Plus icon pseudo-elements */
 .get-in-touch-btn .plus-icon::before,
 .get-in-touch-btn .plus-icon::after {
     content: '';
@@ -126,21 +138,24 @@ body {
     transform: translate(-50%, -50%);
 }
 
+/* Horizontal line of plus icon */
 .get-in-touch-btn .plus-icon::before {
     width: 100%;
     height: 2px;
 }
 
+/* Vertical line of plus icon */
 .get-in-touch-btn .plus-icon::after {
     width: 2px;
     height: 100%;
 }
 
+/* Plus icon rotation on hover */
 .get-in-touch-btn:hover .plus-icon {
     transform: rotate(90deg);
 }
 
-/* Modal Styles */
+/* Modal styling for Get in Touch form */
 .modal {
     display: none;
     position: fixed;
@@ -154,6 +169,7 @@ body {
     align-items: center;
 }
 
+/* Modal content container */
 .modal-content {
     background: rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(0, 0, 0, 0.3);
@@ -165,6 +181,7 @@ body {
     text-align: center;
 }
 
+/* Modal heading */
 .modal-content h3 {
     font-family: 'Orbitron', sans-serif;
     font-size: 28px;
@@ -172,22 +189,36 @@ body {
     color: #000;
 }
 
+/* Modal iframe for Tally form */
 .modal-content iframe {
     border: none;
     width: 100%;
 }
 
-/* Stars Background */
+/* Close button for modal */
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #000;
+}
+
+/* Stars background for visual effect */
 .stars-background {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0;
+    z-index: -1;
     pointer-events: none;
 }
 
+/* Individual star styling */
 .star {
     position: absolute;
     background: #fff;
@@ -198,27 +229,41 @@ body {
     height: 2px;
 }
 
+/* Odd stars animation duration */
 .star:nth-child(odd) {
     animation-duration: 2s;
 }
 
+/* Even stars animation duration */
 .star:nth-child(even) {
     animation-duration: 4s;
 }
 
+/* Twinkle animation for stars */
 @keyframes twinkle {
-    0%, 100% { opacity: 0.2; transform: scale(0.5); }
-    50% { opacity: 1; transform: scale(1); }
+    0% {
+        opacity: 0.2;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0.2;
+        transform: scale(0.5);
+    }
 }
 
-/* Background Effects for Main Page */
-.hero, .section:not(.future, .faq) {
+/* Background effects for main page sections */
+.hero, .section:not(.faq) {
     background: #fff;
     position: relative;
     overflow: hidden;
 }
 
-.hero::before, .section:not(.future, .faq)::before {
+/* Radial gradient background effect */
+.hero::before, .section:not(.faq)::before {
     content: '';
     position: absolute;
     top: 0;
@@ -226,11 +271,12 @@ body {
     width: 100%;
     height: 100%;
     background: radial-gradient(circle at center, rgba(0, 212, 255, 0.05) 0%, transparent 70%);
-    z-index: 0;
+    z-index: -1;
     pointer-events: none;
 }
 
-.hero::after, .section:not(.future, .faq)::after {
+/* Shimmer effect for sections */
+.hero::after, .section:not(.faq)::after {
     content: '';
     position: absolute;
     top: 0;
@@ -239,17 +285,24 @@ body {
     height: 100%;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, transparent 100%);
     animation: shimmer 5s infinite ease-in-out;
-    z-index: 0;
+    z-index: -1;
     pointer-events: none;
 }
 
+/* Shimmer animation */
 @keyframes shimmer {
-    0% { transform: translateX(-100%); }
-    50% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
+    0% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
-/* Hero Section */
+/* Hero section styling */
 .hero {
     height: 100vh;
     display: flex;
@@ -259,14 +312,17 @@ body {
     text-align: center;
     padding: 80px 20px;
     position: relative;
+    opacity: 1;
 }
 
+/* Form column in hero section */
 .hero .form-column {
     margin-top: 30px;
     z-index: 1;
     max-width: 400px;
 }
 
+/* Hero form heading */
 .form-column h3 {
     font-family: 'Inter', sans-serif;
     font-size: 36px;
@@ -274,17 +330,20 @@ body {
     color: #000;
 }
 
+/* Hero form paragraph */
 .form-column p {
     font-size: 18px;
     margin-bottom: 20px;
     color: #000;
 }
 
+/* Hero form iframe */
 .form-column iframe {
     border: none;
     width: 100%;
 }
 
+/* Launch text in hero */
 .hero .launch {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
@@ -294,6 +353,7 @@ body {
     color: #000;
 }
 
+/* Scroll indicator in hero */
 .hero .scroll-indicator {
     font-family: 'Inter', sans-serif;
     font-size: 14px;
@@ -303,16 +363,18 @@ body {
     opacity: 0.7;
 }
 
-/* Tally.so Form Overrides */
+/* Tally.so form overrides */
 iframe[data-tally-src] {
     background: transparent !important;
 }
 
+/* Tally form container */
 .tally-form-container * {
     font-family: 'Inter', sans-serif !important;
     color: #000 !important;
 }
 
+/* Tally form inputs */
 .tally-form-container input,
 .tally-form-container textarea {
     background: rgba(0, 0, 0, 0.1) !important;
@@ -325,11 +387,13 @@ iframe[data-tally-src] {
     max-width: 300px !important;
 }
 
+/* Tally form placeholders */
 .tally-form-container input::placeholder,
 .tally-form-container textarea::placeholder {
     color: rgba(0, 0, 0, 0.7) !important;
 }
 
+/* Tally form buttons */
 .tally-form-container button,
 .tally-form-container input[type="submit"] {
     background: #000 !important;
@@ -343,21 +407,25 @@ iframe[data-tally-src] {
     transition: background 0.3s ease !important;
 }
 
+/* Tally form button hover */
 .tally-form-container button:hover,
 .tally-form-container input[type="submit"]:hover {
     background: #333 !important;
 }
 
+/* Tally form labels */
 .tally-form-container label {
     font-size: 16px !important;
     margin-bottom: 8px !important;
     color: #000 !important;
 }
 
+/* Tally form block spacing */
 .tally-form-container .tally-block {
     margin-bottom: 15px !important;
 }
 
+/* Tally form branding */
 .tally-form-container a[href*="tally.so"],
 .tally-form-container .tally-branding {
     display: inline-block !important;
@@ -369,7 +437,7 @@ iframe[data-tally-src] {
     margin-top: 5px !important;
 }
 
-/* General Section Styles */
+/* General section styles */
 .section {
     min-height: 80vh;
     display: flex;
@@ -379,21 +447,30 @@ iframe[data-tally-src] {
     text-align: center;
     padding: 40px 20px;
     position: relative;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.8s ease;
+    transition: transform 0.8s ease;
 }
 
+/* Hidden sections before visibility */
+.section:not(.visible) {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+/* Visible sections */
 .section.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Yield Section */
+/* Yield section background */
 .yield {
     background: #fff;
 }
 
+/* Yield section heading */
 .yield h2 {
     font-family: 'Inter', sans-serif;
     font-size: 40px;
@@ -402,17 +479,20 @@ iframe[data-tally-src] {
     color: #000;
 }
 
+/* Yield content container */
 .yield .content {
     max-width: 600px;
     width: 100%;
     text-align: left;
 }
 
+/* Features list in yield section */
 .features-list {
     list-style: none;
     padding: 0;
 }
 
+/* Features list items */
 .features-list li {
     display: flex;
     align-items: center;
@@ -422,11 +502,13 @@ iframe[data-tally-src] {
     color: #000;
 }
 
+/* Feature icons */
 .features-list .feature-icon {
     width: 24px;
     height: 24px;
 }
 
+/* Powered by section */
 .powered-by {
     position: absolute;
     bottom: 20px;
@@ -438,33 +520,45 @@ iframe[data-tally-src] {
     z-index: 2;
 }
 
+/* Powered by text */
 .powered-by span {
     font-size: 10px;
     opacity: 0.8;
     color: #000;
 }
 
+/* Powered by logo container */
 .powered-by .logo-container {
     display: flex;
     gap: 10px;
 }
 
+/* Powered by logos */
 .powered-by .logo {
     width: 60px;
     height: 60px;
     object-fit: contain;
 }
 
+/* Breathe animation for logos */
 @keyframes breathe {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.1); }
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
-/* Transfer Section */
+/* Transfer section background */
 .transfer {
     background: #fff;
 }
 
+/* Transfer section heading */
 .transfer h2 {
     font-family: 'Inter', sans-serif;
     font-size: 40px;
@@ -472,6 +566,7 @@ iframe[data-tally-src] {
     color: #000;
 }
 
+/* Transfer section paragraph */
 .transfer p {
     font-size: 20px;
     max-width: 600px;
@@ -479,6 +574,7 @@ iframe[data-tally-src] {
     color: #000;
 }
 
+/* Features container in transfer section */
 .features {
     display: flex;
     flex-wrap: wrap;
@@ -488,6 +584,7 @@ iframe[data-tally-src] {
     width: 100%;
 }
 
+/* Feature card styling */
 .feature-card {
     background: rgba(0, 0, 0, 0.08);
     border: 1px solid rgba(0, 0, 0, 0.3);
@@ -498,6 +595,7 @@ iframe[data-tally-src] {
     text-align: center;
 }
 
+/* Feature card icon */
 .feature-card .feature-icon {
     width: 40px;
     height: 40px;
@@ -505,6 +603,7 @@ iframe[data-tally-src] {
     filter: brightness(0);
 }
 
+/* Feature card heading */
 .feature-card h3 {
     font-family: 'Inter', sans-serif;
     font-size: 20px;
@@ -512,16 +611,18 @@ iframe[data-tally-src] {
     color: #000;
 }
 
+/* Feature card paragraph */
 .feature-card p {
     font-size: 16px;
     color: #000;
 }
 
-/* Future Section (Timeline) */
+/* Future section (timeline) background */
 .future {
     background: #fff;
 }
 
+/* Future section heading */
 .future h2 {
     font-family: 'Inter', sans-serif;
     font-size: 40px;
@@ -529,17 +630,20 @@ iframe[data-tally-src] {
     color: #000;
 }
 
+/* FAQ content container (used in future and FAQ) */
 .faq-content {
     max-width: 800px;
     width: 100%;
     padding: 20px;
 }
 
+/* Timeline container */
 .timeline {
     position: relative;
     padding: 20px 0;
 }
 
+/* Timeline vertical line */
 .timeline::before {
     content: '';
     position: absolute;
@@ -551,6 +655,7 @@ iframe[data-tally-src] {
     background: rgba(0, 0, 0, 0.3);
 }
 
+/* Timeline item styling */
 .timeline-item {
     position: relative;
     width: 50%;
@@ -558,11 +663,13 @@ iframe[data-tally-src] {
     text-align: right;
 }
 
+/* Even timeline items */
 .timeline-item:nth-child(even) {
     margin-left: 50%;
     text-align: left;
 }
 
+/* Timeline dot */
 .timeline-dot {
     position: absolute;
     top: 50%;
@@ -573,14 +680,17 @@ iframe[data-tally-src] {
     transform: translateY(-50%);
 }
 
+/* Odd timeline item dot */
 .timeline-item:nth-child(odd) .timeline-dot {
     right: -8px;
 }
 
+/* Even timeline item dot */
 .timeline-item:nth-child(even) .timeline-dot {
     left: -8px;
 }
 
+/* Timeline item heading */
 .timeline-item h3 {
     font-family: 'Inter', sans-serif;
     font-size: 20px;
@@ -588,16 +698,18 @@ iframe[data-tally-src] {
     color: #000;
 }
 
+/* Timeline item paragraph */
 .timeline-item p {
     font-size: 16px;
     color: #000;
 }
 
-/* FAQ Section */
+/* FAQ section background */
 .faq {
     background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
 }
 
+/* FAQ section heading */
 .faq h2 {
     font-family: 'Orbitron', sans-serif;
     font-size: 60px;
@@ -607,15 +719,18 @@ iframe[data-tally-src] {
     color: #fff;
 }
 
+/* FAQ content container */
 .faq-content {
     max-width: 800px;
     width: 100%;
 }
 
+/* FAQ item styling */
 .faq-item {
     margin-bottom: 20px;
 }
 
+/* FAQ question styling */
 .faq-question {
     font-family: 'Inter', sans-serif;
     font-size: 24px;
@@ -628,14 +743,17 @@ iframe[data-tally-src] {
     transition: background 0.3s ease;
 }
 
+/* FAQ question hover effect */
 .faq-question:hover {
     background: rgba(255, 255, 255, 0.2);
 }
 
+/* FAQ question active state */
 .faq-question.active {
     background: rgba(0, 212, 255, 0.2);
 }
 
+/* FAQ answer styling */
 .faq-answer {
     font-family: 'Inter', sans-serif;
     font-size: 18px;
@@ -646,7 +764,7 @@ iframe[data-tally-src] {
     border-radius: 8px;
 }
 
-/* About Section */
+/* About section styling */
 .about-section {
     min-height: 100vh;
     display: flex;
@@ -656,8 +774,25 @@ iframe[data-tally-src] {
     text-align: center;
     padding: 80px 20px;
     position: relative;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.8s ease;
+    transition: transform 0.8s ease;
 }
 
+/* Hidden about sections */
+.about-section:not(.visible) {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+/* Visible about sections */
+.about-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* About section heading */
 .about-section h2 {
     font-family: 'Orbitron', sans-serif;
     font-size: 60px;
@@ -667,6 +802,7 @@ iframe[data-tally-src] {
     color: #fff;
 }
 
+/* About section paragraph */
 .about-section p {
     font-family: 'Inter', sans-serif;
     font-size: 20px;
@@ -675,11 +811,12 @@ iframe[data-tally-src] {
     color: #fff;
 }
 
-/* AI Works Section */
+/* AI Works section background */
 .ai-works {
     background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
 }
 
+/* AI Works radial gradient effect */
 .ai-works::before {
     content: '';
     position: absolute;
@@ -691,10 +828,11 @@ iframe[data-tally-src] {
                 radial-gradient(circle at 50% 50%, rgba(100, 100, 100, 0.3) 0%, rgba(50, 50, 50, 0.2) 50%, transparent 70%);
     border-radius: 50%;
     transform: translateX(-50%);
-    z-index: 0;
+    z-index: -1;
     pointer-events: none;
 }
 
+/* AI Works linear gradient effect */
 .ai-works::after {
     content: '';
     position: absolute;
@@ -705,10 +843,11 @@ iframe[data-tally-src] {
     background: linear-gradient(to top, rgba(255, 165, 0, 0.2) 0%, transparent 30%);
     border-radius: 50%;
     transform: translateX(-50%);
-    z-index: 0;
+    z-index: -1;
     pointer-events: none;
 }
 
+/* Grid overlay for AI Works */
 .grid-overlay {
     position: absolute;
     top: 0;
@@ -718,10 +857,11 @@ iframe[data-tally-src] {
     background: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
     background-size: 50px 50px;
-    z-index: 1;
+    z-index: 0;
     pointer-events: none;
 }
 
+/* Diagram container in AI Works */
 .ai-works .diagram {
     display: flex;
     align-items: center;
@@ -730,12 +870,14 @@ iframe[data-tally-src] {
     z-index: 2;
 }
 
+/* Diagram step styling */
 .ai-works .diagram-step {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* Diagram step label */
 .ai-works .step-label {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
@@ -744,6 +886,7 @@ iframe[data-tally-src] {
     color: #fff;
 }
 
+/* Diagram step box */
 .ai-works .step-box {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -755,25 +898,28 @@ iframe[data-tally-src] {
     color: #fff;
 }
 
+/* Diagram arrow */
 .ai-works .arrow {
     font-size: 24px;
     color: #00d4ff;
 }
 
-/* Bank Feel Section */
+/* Bank Feel section background */
 .bank-feel {
     background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
 }
 
+/* Orbital lines container */
 .bank-feel .orbital-lines {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: 0;
 }
 
+/* Orbital line styling */
 .bank-feel .orbital-line {
     position: absolute;
     border: 1px solid rgba(0, 212, 255, 0.2);
@@ -781,6 +927,7 @@ iframe[data-tally-src] {
     animation: orbit 20s linear infinite;
 }
 
+/* First orbital line */
 .bank-feel .orbital-1 {
     width: 300px;
     height: 300px;
@@ -789,6 +936,7 @@ iframe[data-tally-src] {
     animation-delay: 0s;
 }
 
+/* Second orbital line */
 .bank-feel .orbital-2 {
     width: 400px;
     height: 400px;
@@ -797,6 +945,7 @@ iframe[data-tally-src] {
     animation-delay: -5s;
 }
 
+/* Third orbital line */
 .bank-feel .orbital-3 {
     width: 200px;
     height: 200px;
@@ -805,107 +954,133 @@ iframe[data-tally-src] {
     animation-delay: -10s;
 }
 
+/* Orbit animation */
 @keyframes orbit {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
-/* Responsive Styles */
+/* Responsive styles for 768px and below */
 @media (max-width: 768px) {
+    /* Header adjustments */
     .header {
         left: 15px;
-        top: 50px;
+        top: 15px;
     }
 
+    /* Logo size */
     .logo-container .logo {
         width: 32px;
         height: 32px;
     }
 
+    /* Logo title size */
     .logo-container h1 {
         font-size: 20px;
     }
 
+    /* Navigation bar position */
     .nav-bar {
-        top: 15px;
+        top: 50px;
         padding: 8px 15px;
     }
 
+    /* Navigation list spacing */
     .nav-bar ul {
         gap: 20px;
     }
 
+    /* Navigation link size */
     .nav-bar a {
         font-size: 14px;
     }
 
+    /* Get in Touch button adjustments */
     .get-in-touch-btn {
-        top: 80px;
-        right: 50%;
-        transform: translateX(50%);
+        top: 15px;
+        right: 15px;
         font-size: 14px;
         padding: 6px 12px;
     }
 
+    /* Hero section padding */
     .hero {
         padding: 100px 15px;
     }
 
+    /* Hero form column width */
     .hero .form-column {
         max-width: 350px;
     }
 
+    /* Hero form heading size */
     .form-column h3 {
         font-size: 28px;
     }
 
+    /* Hero launch text size */
     .hero .launch {
         font-size: 14px;
     }
 
+    /* Section minimum height */
     .section {
         min-height: 70vh;
         padding: 30px 15px;
     }
 
+    /* Section headings size */
     .yield h2, .transfer h2, .future h2, .faq h2 {
         font-size: 32px;
     }
 
+    /* Features list item size */
     .features-list li {
         font-size: 16px;
     }
 
+    /* Features container spacing */
     .features {
         gap: 15px;
     }
 
+    /* Feature card width */
     .feature-card {
         max-width: 280px;
     }
 
+    /* About section padding */
     .about-section {
         padding: 100px 15px;
     }
 
+    /* About section heading size */
     .about-section h2 {
         font-size: 48px;
     }
 
+    /* About section paragraph size */
     .about-section p {
         font-size: 18px;
     }
 
+    /* AI Works diagram layout */
     .ai-works .diagram {
         flex-direction: column;
         gap: 15px;
         margin: 30px 0;
     }
 
+    /* AI Works arrow rotation */
     .ai-works .arrow {
         transform: rotate(90deg);
     }
 
+    /* Orbital lines size */
     .bank-feel .orbital-1,
     .bank-feel .orbital-2,
     .bank-feel .orbital-3 {
@@ -913,6 +1088,7 @@ iframe[data-tally-src] {
         height: 180px;
     }
 
+    /* AI Works background effects */
     .ai-works::before,
     .ai-works::after {
         width: 200%;
@@ -920,123 +1096,152 @@ iframe[data-tally-src] {
         bottom: -50%;
     }
 
+    /* Timeline vertical line position */
     .timeline::before {
         left: 20px;
     }
 
+    /* Timeline item layout */
     .timeline-item {
         width: 100%;
         margin-left: 40px;
         text-align: left;
     }
 
+    /* Even timeline items */
     .timeline-item:nth-child(even) {
         margin-left: 40px;
     }
 
+    /* Timeline dot position */
     .timeline-item .timeline-dot {
         left: 12px;
     }
 
+    /* FAQ question size */
     .faq-question {
         font-size: 20px;
         padding: 12px;
     }
 
+    /* FAQ answer size */
     .faq-answer {
         font-size: 16px;
         padding: 12px;
     }
 }
 
+/* Responsive styles for 480px and below */
 @media (max-width: 480px) {
+    /* Header adjustments */
     .header {
         left: 10px;
-        top: 40px;
+        top: 10px;
     }
 
+    /* Logo size */
     .logo-container .logo {
         width: 28px;
         height: 28px;
     }
 
+    /* Logo title size */
     .logo-container h1 {
         font-size: 18px;
     }
 
+    /* Navigation bar position */
     .nav-bar {
-        top: 10px;
+        top: 45px;
         padding: 6px 10px;
     }
 
+    /* Navigation list spacing */
     .nav-bar ul {
         gap: 15px;
     }
 
+    /* Navigation link size */
     .nav-bar a {
         font-size: 12px;
     }
 
+    /* Get in Touch button adjustments */
     .get-in-touch-btn {
-        top: 70px;
+        top: 10px;
+        right: 10px;
         font-size: 12px;
         padding: 5px 10px;
     }
 
+    /* Hero section padding */
     .hero {
         padding: 80px 10px;
     }
 
+    /* Hero form column width */
     .hero .form-column {
         max-width: 300px;
     }
 
+    /* Hero form heading size */
     .form-column h3 {
         font-size: 24px;
     }
 
+    /* Section padding */
     .section {
         padding: 20px 10px;
     }
 
+    /* Section headings size */
     .yield h2, .transfer h2, .future h2, .faq h2 {
         font-size: 28px;
     }
 
+    /* Features list item size */
     .features-list li {
         font-size: 14px;
     }
 
+    /* Feature card padding */
     .feature-card {
         padding: 15px;
     }
 
+    /* About section padding */
     .about-section {
         padding: 80px 10px;
     }
 
+    /* About section heading size */
     .about-section h2 {
         font-size: 36px;
     }
 
+    /* About section paragraph size */
     .about-section p {
         font-size: 16px;
     }
 
+    /* AI Works step box size */
     .ai-works .step-box {
         font-size: 15px;
         padding: 12px 18px;
     }
 
+    /* AI Works arrow size */
     .ai-works .arrow {
         font-size: 22px;
     }
 
+    /* FAQ question size */
     .faq-question {
         font-size: 18px;
         padding: 10px;
     }
 
+    /* FAQ answer size */
     .faq-answer {
         font-size: 14px;
         padding: 10px;
