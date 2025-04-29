@@ -457,26 +457,26 @@ iframe[data-tally-src] {
 
 /* Web Map Container for Yield Section */
 .yield .web-map {
-    position: relative;
-    width: 100%;
-    max-width: 1000px;
-    height: 600px;
-    margin: 0 auto;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  height: 600px; /* This is critical */
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 /* Background Images in Web Map */
 .yield .web-map-image {
-    position: relative;
 }
 
 .yield .web-map-image.image-1 {
-  position: relative;
+  position: absolute;
   top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
   width: 90%;
-  max-width: 1200px;
-  height: auto;
+  max-width: 900px;
+  z-index: 0; /* Make sure it's behind nodes but above backgrounds */
 }
 
 
