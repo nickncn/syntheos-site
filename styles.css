@@ -166,10 +166,6 @@ body {
     align-items: center;
 }
 
-.powered-by .compound-logo {
-    transform: scale(1.2);
-}
-
 
 /* Modal content container */
 .modal-content {
@@ -667,6 +663,10 @@ iframe[data-tally-src] {
     width: 100px;
     height: 100px;
     object-fit: contain;
+}
+
+.powered-by .compound-logo {
+    transform: scale(1.2);
 }
 
 /* Breathe animation for logos */
