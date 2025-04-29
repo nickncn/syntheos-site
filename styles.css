@@ -205,38 +205,6 @@ body {
     color: #000;
 }
 
-/* Stars background for visual effect */
-.stars-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    pointer-events: none;
-}
-
-/* Individual star styling */
-.star {
-    position: absolute;
-    background: #fff;
-    border-radius: 50%;
-    animation: twinkle 3s infinite ease-in-out;
-    opacity: 0.8;
-    width: 2px;
-    height: 2px;
-}
-
-/* Odd stars animation duration */
-.star:nth-child(odd) {
-    animation-duration: 2s;
-}
-
-/* Even stars animation duration */
-.star:nth-child(even) {
-    animation-duration: 4s;
-}
-
 /* Twinkle animation for stars */
 @keyframes twinkle {
     0% {
@@ -312,44 +280,16 @@ body {
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
-/* Trust bar */
-.trust-bar {
-  position: relative; z-index: 2;
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  background: rgba(0,0,0,0.3);
-  padding: 0.75rem 1.5rem;
-  border-radius: 12px;
-  margin-top: 2rem;
-}
-.trust-bar span {
-  font-size: 0.875rem;
-  color: #fff;
-}
-.trust-bar img {
-  height: 24px;
-  width: auto;
-}
-
-/* size all logos in the trust-bar */
-.trust-bar .trust-logo {
-  height: 24px;
-  width: auto;
-  object-fit: contain;
-  opacity: 0.9;
-}
-
 
 /* get rid of the weird “make Compound huge” rule */
 .compound-logo {
-  transform: 20px;      /* <— remove your scale(1.8) */
+  transform: 2px;      /* <— remove your scale(1.8) */
   animation: breathe 6s ease-in-out infinite; /* if you still want breathing */
 }
 
 /* if you want the Aave one to breathe too, but not grow */
 .aave-logo {
-  transform: 20px;      /* make sure there’s no lingering scale */
+  transform: 2px;      /* make sure there’s no lingering scale */
   animation: breathe 4s ease-in-out infinite;
 }
 
