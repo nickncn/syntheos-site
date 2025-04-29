@@ -343,13 +343,13 @@ body {
 
 /* get rid of the weird “make Compound huge” rule */
 .compound-logo {
-  transform: none;      /* <— remove your scale(1.8) */
+  transform: 20px;      /* <— remove your scale(1.8) */
   animation: breathe 6s ease-in-out infinite; /* if you still want breathing */
 }
 
 /* if you want the Aave one to breathe too, but not grow */
 .aave-logo {
-  transform: none;      /* make sure there’s no lingering scale */
+  transform: 20px;      /* make sure there’s no lingering scale */
   animation: breathe 4s ease-in-out infinite;
 }
 
@@ -1521,13 +1521,5 @@ iframe[data-tally-src] {
         font-size: 14px;
         padding: 10px;
     }
-
-    /* === FORCE LOGO RESET === */
-.trust-bar .compound-logo,
-.trust-bar .aave-logo {
-  transform: none !important;
-  height: 24px !important;    /* same size as your other trust logos */
-  width: auto !important;
-}
 
 }
