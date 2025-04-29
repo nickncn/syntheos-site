@@ -12,6 +12,42 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    document.addEventListener("DOMContentLoaded", () => {
+  const nodes = document.querySelectorAll('.web-map-node');
+  const container = document.querySelector('.web-map');
+
+  nodes.forEach(node => {
+    let x = Math.random() * (container.offsetWidth - 100);
+    let y = Math.random() * (container.offsetHeight - 100);
+    let dx = (Math.random() < 0.5 ? -1 : 1) * (1 + Math.random() * 2);
+    let dy = (Math.random() < 0.5 ? -1 : 1) * (1 + Math.random() * 2);
+
+    node.style.position = 'absolute';
+    node.style.left = `${x}px`;
+    node.style.top = `${y}px`;
+
+    function move() {
+      x += dx;
+      y += dy;
+
+      if (x <= 0 || x >= container.offsetWidth - node.offsetWidth) {
+        dx *= -1;
+      }
+      if (y <= 0 || y >= container.offsetHeight - node.offsetHeight) {
+        dy *= -1;
+      }
+
+      node.style.left = `${x}px`;
+      node.style.top = `${y}px`;
+
+      requestAnimationFrame(move);
+    }
+
+    move();
+  });
+});
+
+    
     // Get in Touch Modal Functionality
     const getInTouchBtn = document.querySelector('.get-in-touch-btn');
     const modal = document.querySelector('#getInTouchModal');
