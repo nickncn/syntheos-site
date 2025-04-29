@@ -1522,4 +1522,12 @@ iframe[data-tally-src] {
         padding: 10px;
     }
 
+    /* === FORCE LOGO RESET === */
+.trust-bar .compound-logo,
+.trust-bar .aave-logo {
+  transform: none !important;
+  height: 24px !important;    /* same size as your other trust logos */
+  width: auto !important;
+}
+
 }
