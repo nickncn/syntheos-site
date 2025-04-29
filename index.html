@@ -14,14 +14,14 @@
 </head>
 <body>
     <!-- Navigation Bar -->
-    <nav class="nav-bar">
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="#careers">Careers</a></li>
-            <li><a href="#faq">FAQ</a></li>
-        </ul>
-    </nav>
+   <nav class="nav-bar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="#careers">Careers</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+  </nav>
 
     <!-- Header with Logo -->
     <header class="header">
@@ -86,38 +86,34 @@
             </svg>
 
             <!-- Nodes -->
-            <div class="web-map-node node-1">
-                <div class="node-icon">
-                    <i class="fas fa-coins"></i> <!-- Fallback: Replace with <img src="/images/deposit-icon.svg" alt="Deposit Icon"> if available -->
-                </div>
-                <span>Deposit</span>
-            </div>
-            <div class="web-map-node node-2">
-                <div class="node-icon">
-                    <i class="fas fa-star"></i> <!-- Fallback: Replace with <img src="/images/xp-icon.svg" alt="XP Icon"> if available -->
-                </div>
-                <span>Earn XP</span>
-            </div>
-            <div class="web-map-node node-3">
-                <div class="node-icon">
-                    <i class="fas fa-trophy"></i> <!-- Fallback: Replace with <img src="/images/leaderboard-icon.svg" alt="Leaderboard Icon"> if available -->
-                </div>
-                <span>Leaderboard</span>
-            </div>
-            <div class="web-map-node node-4">
-                <div class="node-icon">
-                    <i class="fas fa-lock"></i> <!-- Fallback: Replace with <img src="/images/vault-icon.svg" alt="Vault Icon"> if available -->
-                </div>
-                <span>AI VaultOS</span>
-            </div>
-            <div class="web-map-node node-5">
-                <div class="node-icon">
-                    <i class="fas fa-chart-line"></i> <!-- Fallback: Replace with <img src="/images/wealth-icon.svg" alt="Wealth Icon"> if available -->
-                </div>
-                <span>Wealth</span>
-            </div>
+            <div class="web-map-node node-1" data-description="Deposit stablecoins to start earning XP.">
+        <div class="node-icon"><i class="fas fa-coins"></i></div>
+        <span>Deposit</span>
+      </div>
+      <div class="web-map-node node-2" data-description="Earn XP for loyalty and activity.">
+        <div class="node-icon"><i class="fas fa-star"></i></div>
+        <span>Earn XP</span>
+      </div>
+      <div class="web-map-node node-3" data-description="Climb the leaderboard and earn prizes.">
+        <div class="node-icon"><i class="fas fa-trophy"></i></div>
+        <span>Leaderboard</span>
+      </div>
+      <div class="web-map-node node-4" data-description="AI VaultOS optimizes your vault strategies.">
+        <div class="node-icon"><i class="fas fa-lock"></i></div>
+        <span>AI VaultOS</span>
+      </div>
+      <div class="web-map-node node-5" data-description="Grow real wealth through AI-driven allocations.">
+        <div class="node-icon"><i class="fas fa-chart-line"></i></div>
+        <span>Wealth</span>
+      </div>
         </div>
-       
+        
+         <!-- Node Info Modal -->
+      <div class="node-modal" id="nodeModal">
+        <div class="node-modal-content" id="nodeModalContent"></div>
+      </div>
+    </div>
+        
     </section>
 
     <!-- Transfer Section -->
