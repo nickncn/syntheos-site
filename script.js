@@ -23,10 +23,12 @@ const nodeModalContent = document.getElementById('nodeModalContent');
   });
 
   // Close on outside click
-  document.addEventListener('click', () => {
-    modal.classList.remove('show');
-  });
-  modal.addEventListener('transitionend', () => {
+ // if you mean the Get-in-Touch modal:
+const touchModal = document.querySelector('#getInTouchModal');
+document.addEventListener('click', () => {
+  touchModal.classList.remove('show');
+});
+touchModal.addEventListener('transitionend', …
     if (!modal.classList.contains('show')) {
       modal.style.display = 'none';
     }
