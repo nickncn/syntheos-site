@@ -668,13 +668,6 @@ iframe[data-tally-src] {
     transform: scale(2.5);
 }
 
-/* Breathe animation for logos */
-/* Breathing animation keyframes */
-@keyframes breathe {
-    0%   { transform: scale(1); }
-    50%  { transform: scale(1.1); }
-    100% { transform: scale(1); }
-}
 
 /* Aave logo breathes every 4s */
 .aave-logo {
