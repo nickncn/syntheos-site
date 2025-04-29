@@ -459,14 +459,12 @@ iframe[data-tally-src] {
 .yield .web-map {
   position: relative;
   width: 100%;
-  max-width: 1000px;
-  height: 900px; /* was 600px */
+  max-width: 1100px;
+  height: 600px; /* tighter height */
   margin: 0 auto;
-  overflow: visible; /* was hidden */
-     display: flex;
-  justify-content: center;
-  align-items: center;
+  overflow: visible;
 }
+
 
 
 /* Background Images in Web Map */
@@ -478,19 +476,18 @@ iframe[data-tally-src] {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: auto;
-max-height: 100%; /* So it never exceeds container */
-  max-width: 100%;
-
-  z-index: 0; /* Make sure it's behind nodes but above backgrounds */
+  width: 50%; /* SMALLER */
+  max-width: 450px;
+  opacity: 0.3; /* ADD THIS */
+  z-index: 0;
 }
+
 
 
 .yield .web-map-image img {
     width: 100%;
     height: auto;
     border-radius: 24px;
-    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.15);
     display: block;
 }
 
@@ -572,7 +569,7 @@ max-height: 100%; /* So it never exceeds container */
 
 /* Positioning Nodes */
 .yield .web-map-node.node-1 {
-    top: 30%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
     animation-delay: 2s;
@@ -580,28 +577,28 @@ max-height: 100%; /* So it never exceeds container */
 }
 
 .yield .web-map-node.node-2 {
-    top: 50%;
+    top: 55%;
     left: 30%;
     animation-delay: 3s;
 
 }
 
 .yield .web-map-node.node-3 {
-    top: 50%;
+    top: 55%;
     right: 30%;
     animation-delay: 4s;
 
 }
 
 .yield .web-map-node.node-4 {
-    bottom: 30%;
+    bottom: 20%;
     left: 40%;
     animation-delay: 0s;
 
 }
 
 .yield .web-map-node.node-5 {
-    bottom: 30%;
+    bottom: 20%;
     right: 40%;
     animation-delay: 1s;
 
