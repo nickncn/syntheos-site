@@ -476,11 +476,10 @@ iframe[data-tally-src] {
     width: 90%;
     max-width: 900px;
     height: auto;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
+    position: relative; /* << CHANGE THIS */
+    margin: 0 auto;
 }
+
 
 .yield .web-map-image img {
     width: 100%;
@@ -529,7 +528,6 @@ iframe[data-tally-src] {
     align-items: center;
     z-index: 2;
     transition: transform 0.3s ease, opacity 0.3s ease;
-    animation: float 6s ease-in-out infinite;
 }
 
 .yield .web-map-node:hover {
@@ -1449,10 +1447,5 @@ iframe[data-tally-src] {
         font-size: 14px;
         padding: 10px;
     }
-    @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
-}
-
+  
 }
