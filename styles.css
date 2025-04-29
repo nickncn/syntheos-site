@@ -553,15 +553,15 @@ iframe[data-tally-src] {
 /* Positioning Nodes */
 .yield .web-map-node.node-1 {
     top: 20%;
-    left: 30%;
+    left: 800%;
     transform: translate(-50%, -50%);
     animation-delay: 2s;
 
 }
 
 .yield .web-map-node.node-2 {
-    top: 60%;
-    left: 20%;
+    top: 80%;
+    left: 80%;
     animation-delay: 3s;
 
 }
@@ -575,14 +575,14 @@ iframe[data-tally-src] {
 
 .yield .web-map-node.node-4 {
     bottom: 10%;
-    left: 40%;
+    left: 10%;
     animation-delay: 0s;
 
 }
 
 .yield .web-map-node.node-5 {
     bottom: 20%;
-    right: 40%;
+    right: 80%;
     animation-delay: 1s;
 
 }
