@@ -561,28 +561,28 @@ iframe[data-tally-src] {
 
 .yield .web-map-node.node-2 {
     top: 15%;
-    left: 100%;
+    left: 90%;
     animation-delay: 3s;
 
 }
 
 .yield .web-map-node.node-3 {
     top: 15%;
-    right: 100%;
+    right: 90%;
     animation-delay: 4s;
 
 }
 
 .yield .web-map-node.node-4 {
-    bottom: 90%;
-    left: 10%;
+    bottom: 80%;
+    left: 20%;
     animation-delay: 0s;
 
 }
 
 .yield .web-map-node.node-5 {
-    bottom: 90%;
-    right: 80%;
+    bottom: 85%;
+    right: 20%;
     animation-delay: 1s;
 
 }
