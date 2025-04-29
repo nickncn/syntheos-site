@@ -1241,14 +1241,14 @@ iframe[data-tally-src] {
 }
 /* breathing animations (optional) */
 .aave-logo {
-  height: 24px !important;
+  height: 60px !important;
   width: auto !important;
   max-width: 100px;
   animation: breathe 4s ease-in-out infinite;
 }
 
 .compound-logo {
-    height: 24px !important;
+    height: 60px !important;
   width: auto !important;
   max-width: 100px;
   animation: breathe 6s ease-in-out infinite;
