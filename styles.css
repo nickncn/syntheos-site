@@ -553,35 +553,35 @@ iframe[data-tally-src] {
 /* Positioning Nodes */
 .yield .web-map-node.node-1 {
     top: 20%;
-    left: 800%;
+    left: 80%;
     transform: translate(-50%, -50%);
     animation-delay: 2s;
 
 }
 
 .yield .web-map-node.node-2 {
-    top: 80%;
-    left: 80%;
+    top: 15%;
+    left: 100%;
     animation-delay: 3s;
 
 }
 
 .yield .web-map-node.node-3 {
-    top: 70%;
-    right: 20%;
+    top: 15%;
+    right: 100%;
     animation-delay: 4s;
 
 }
 
 .yield .web-map-node.node-4 {
-    bottom: 10%;
+    bottom: 90%;
     left: 10%;
     animation-delay: 0s;
 
 }
 
 .yield .web-map-node.node-5 {
-    bottom: 20%;
+    bottom: 90%;
     right: 80%;
     animation-delay: 1s;
 
