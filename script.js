@@ -33,26 +33,26 @@ const nodeModalContent = document.getElementById('nodeModalContent');
   });
     
     // Get in Touch Modal Functionality
-    const getInTouchBtn = document.querySelector('.get-in-touch-btn');
-    const touchModal = document.querySelector('#getInTouchModal');
-const closeTouchModalBtn = document.querySelector('#closeModal');
-    const closeModalBtn = document.querySelector('#closeModal');
+  // …
+const getInTouchBtn   = document.querySelector('.get-in-touch-btn');
+const touchModal      = document.querySelector('#getInTouchModal');
+const closeTouchModal = document.querySelector('#closeModal');
 
-    if (getInTouchBtn && modal && closeModalBtn) {
-        getInTouchBtn.addEventListener('click', () => {
-            modal.style.display = 'flex';
-        });
-
-        closeModalBtn.addEventListener('click', () => {
-            modal.style.display = 'none';
-        });
-
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.style.display = 'none';
-            }
-        });
+if (getInTouchBtn && touchModal && closeTouchModal) {
+  getInTouchBtn.addEventListener('click', () => {
+    touchModal.style.display = 'flex';
+  });
+  closeTouchModal.addEventListener('click', () => {
+    touchModal.style.display = 'none';
+  });
+  touchModal.addEventListener('click', (e) => {
+    if (e.target === touchModal) {
+      touchModal.style.display = 'none';
     }
+  });
+}
+// …
+
 
     // Load Tally embeds with error handling
     if (typeof Tally !== 'undefined') {
