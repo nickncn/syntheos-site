@@ -1,40 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Dynamically create stars for all stars-background elements
             
+ // 2) Node-click modal logic
   const nodes = document.querySelectorAll('.web-map-node');
+  const modal = document.getElementById('nodeModal');
+  const modalContent = document.getElementById('nodeModalContent');
   const container = document.querySelector('.web-map');
-
   nodes.forEach(node => {
-    let x = Math.random() * (container.offsetWidth - 100);
-    let y = Math.random() * (container.offsetHeight - 100);
-    let dx = (Math.random() < 0.5 ? -1 : 1) * (1 + Math.random() * 2);
-    let dy = (Math.random() < 0.5 ? -1 : 1) * (1 + Math.random() * 2);
-
-    node.style.position = 'absolute';
-    node.style.left = `${x}px`;
-    node.style.top = `${y}px`;
-
-    function move() {
-      x += dx;
-      y += dy;
-
-      if (x <= 0 || x >= container.offsetWidth - node.offsetWidth) {
-        dx *= -1;
-      }
-      if (y <= 0 || y >= container.offsetHeight - node.offsetHeight) {
-        dy *= -1;
-      }
-
-      node.style.left = `${x}px`;
-      node.style.top = `${y}px`;
-
-      requestAnimationFrame(move);
-    }
-
-    move();
+    node.addEventListener('click', e => {
+      e.stopPropagation();
+      const nB = node.getBoundingClientRect();
+      const cB = container.getBoundingClientRect();
+      modal.style.left = `${nB.left - cB.left + nB.width/2 - 110}px`;
+      modal.style.top  = `${nB.top - cB.top  + nB.height + 8}px`;
+      modalContent.textContent = node.dataset.description;
+      modal.classList.add('show');
+    });
   });
-});
 
+  // Close on outside click
+  document.addEventListener('click', () => {
+    modal.classList.remove('show');
+  });
+  modal.addEventListener('transitionend', () => {
+    if (!modal.classList.contains('show')) {
+      modal.style.display = 'none';
+    }
+  });
     
     // Get in Touch Modal Functionality
     const getInTouchBtn = document.querySelector('.get-in-touch-btn');
