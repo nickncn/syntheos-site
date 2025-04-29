@@ -457,33 +457,148 @@ iframe[data-tally-src] {
     color: #000;
 }
 
-/* Yield content container */
-.yield .content {
-    max-width: 600px;
+/* Web Map Container for Yield Section */
+.yield .web-map {
+    position: relative;
     width: 100%;
-    text-align: left;
+    max-width: 1000px;
+    height: 600px;
+    margin: 0 auto;
 }
 
-/* Features list in yield section */
-.features-list {
-    list-style: none;
-    padding: 0;
+/* Background Images in Web Map */
+.yield .web-map-image {
+    position: absolute;
+    overflow: hidden;
+    border-radius: 20px;
 }
 
-/* Features list items */
-.features-list li {
+.yield .web-map-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.yield .web-map-image.image-1 {
+    width: 300px;
+    height: 200px;
+    top: 10%;
+    left: 10%;
+}
+
+.yield .web-map-image.image-2 {
+    width: 200px;
+    height: 300px;
+    bottom: 10%;
+    left: 20%;
+}
+
+.yield .web-map-image.image-3 {
+    width: 250px;
+    height: 350px;
+    top: 20%;
+    right: 10%;
+}
+
+/* SVG Lines for Web Map */
+.yield .web-map-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.yield .web-map-lines .line {
+    fill: none;
+    stroke: rgba(0, 212, 255, 0.3);
+    stroke-width: 2;
+    stroke-dasharray: 5, 5;
+    animation: drawLine 3s infinite linear;
+}
+
+/* Animation for Drawing Lines */
+@keyframes drawLine {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dashoffset: 10;
+    }
+}
+
+/* Web Map Nodes */
+.yield .web-map-node {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.yield .web-map-node:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+/* Node Icon Container */
+.yield .web-map-node .node-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
     display: flex;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
-    font-size: 18px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+/* Node Icon (Font Awesome or SVG) */
+.yield .web-map-node .node-icon i,
+.yield .web-map-node .node-icon img {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
     color: #000;
 }
 
-/* Feature icons */
-.features-list .feature-icon {
-    width: 24px;
-    height: 24px;
+/* Node Label */
+.yield .web-map-node span {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    text-align: center;
+}
+
+/* Positioning Nodes */
+.yield .web-map-node.node-1 {
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.yield .web-map-node.node-2 {
+    top: 50%;
+    left: 30%;
+}
+
+.yield .web-map-node.node-3 {
+    top: 50%;
+    right: 30%;
+}
+
+.yield .web-map-node.node-4 {
+    bottom: 30%;
+    left: 40%;
+}
+
+.yield .web-map-node.node-5 {
+    bottom: 30%;
+    right: 40%;
 }
 
 /* Powered by section */
@@ -518,7 +633,6 @@ iframe[data-tally-src] {
     object-fit: contain;
 }
 
-/ Oldest: 6 months ago
 /* Breathe animation for logos */
 @keyframes breathe {
     0% {
@@ -925,18 +1039,28 @@ iframe[data-tally-src] {
     animation: fadeInUp 0.8s ease-out 0.2s forwards;
 }
 
-/* Yield section list items */
-.yield .features-list li {
+/* Web Map Nodes Animation */
+.yield .web-map-node {
     opacity: 0;
     transform: translateY(20px);
 }
 
-/* Staggered animation for yield list items */
-.yield .features-list li:nth-child(1) { animation: fadeInUp 0.8s ease-out 0.4s forwards; }
-.yield .features-list li:nth-child(2) { animation: fadeInUp 0.8s ease-out 0.6s forwards; }
-.yield .features-list li:nth-child(3) { animation: fadeInUp 0.8s ease-out 0.8s forwards; }
-.yield .features-list li:nth-child(4) { animation: fadeInUp 0.8s ease-out 1.0s forwards; }
-.yield .features-list li:nth-child(5) { animation: fadeInUp 0.8s ease-out 1.2s forwards; }
+/* Staggered animation for web map nodes */
+.yield .web-map-node.node-1 { animation: fadeInUp 0.8s ease-out 0.4s forwards; }
+.yield .web-map-node.node-2 { animation: fadeInUp 0.8s ease-out 0.6s forwards; }
+.yield .web-map-node.node-3 { animation: fadeInUp 0.8s ease-out 0.8s forwards; }
+.yield .web-map-node.node-4 { animation: fadeInUp 0.8s ease-out 1.0s forwards; }
+.yield .web-map-node.node-5 { animation: fadeInUp 0.8s ease-out 1.2s forwards; }
+
+/* Web Map Images Animation */
+.yield .web-map-image {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.yield .web-map-image.image-1 { animation: fadeInUp 0.8s ease-out 0.2s forwards; }
+.yield .web-map-image.image-2 { animation: fadeInUp 0.8s ease-out 0.4s forwards; }
+.yield .web-map-image.image-3 { animation: fadeInUp 0.8s ease-out 0.6s forwards; }
 
 /* Transfer section feature cards */
 .transfer .feature-card {
@@ -1074,9 +1198,36 @@ iframe[data-tally-src] {
         font-size: 32px;
     }
 
-    /* Features list item size */
-    .features-list li {
-        font-size: 16px;
+    /* Web Map Adjustments */
+    .yield .web-map {
+        height: 800px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .yield .web-map-lines {
+        display: none; /* Hide lines on mobile, as they won't align properly */
+    }
+
+    .yield .web-map-node {
+        position: relative;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        transform: none !important;
+    }
+
+    .yield .web-map-image {
+        position: relative;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        width: 200px;
+        height: 150px;
     }
 
     /* Features container spacing */
@@ -1235,8 +1386,22 @@ iframe[data-tally-src] {
         font-size: 28px;
     }
 
-    /* Features list item size */
-    .features-list li {
+    /* Web Map Adjustments */
+    .yield .web-map {
+        height: 700px;
+    }
+
+    .yield .web-map-image {
+        width: 150px;
+        height: 100px;
+    }
+
+    .yield .web-map-node .node-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .yield .web-map-node span {
         font-size: 14px;
     }
 
