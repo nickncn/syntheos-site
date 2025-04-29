@@ -464,6 +464,7 @@ iframe[data-tally-src] {
     max-width: 1000px;
     height: 600px;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 /* Background Images in Web Map */
@@ -475,22 +476,22 @@ iframe[data-tally-src] {
 
 .yield .web-map-image img {
     width: 100%;
-    max-width: 900px;
-    border-radius: 24px; /* Like Ondo's rounded edges */
+    border-radius: 24px;
     object-fit: cover;
-    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.15); /* Subtle shadow like premium UI */
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.15);
     display: block;
-    margin: 0 auto;
 }
 
 
 .yield .web-map-image.image-1 {
-    width: 900px; /* make it large and nice */
+    width: 90%; /* flexible for smaller screens */
+    max-width: 900px;
     height: auto;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
 }
+
 
 /* SVG Lines for Web Map */
 .yield .web-map-lines {
@@ -528,6 +529,7 @@ iframe[data-tally-src] {
     align-items: center;
     z-index: 2;
     transition: transform 0.3s ease, opacity 0.3s ease;
+    animation: float 6s ease-in-out infinite;
 }
 
 .yield .web-map-node:hover {
@@ -571,26 +573,36 @@ iframe[data-tally-src] {
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
+    animation-delay: 2s;
+
 }
 
 .yield .web-map-node.node-2 {
     top: 50%;
     left: 30%;
+    animation-delay: 3s;
+
 }
 
 .yield .web-map-node.node-3 {
     top: 50%;
     right: 30%;
+    animation-delay: 4s;
+
 }
 
 .yield .web-map-node.node-4 {
     bottom: 30%;
     left: 40%;
+    animation-delay: 0s;
+
 }
 
 .yield .web-map-node.node-5 {
     bottom: 30%;
     right: 40%;
+    animation-delay: 1s;
+
 }
 
 /* Powered by section */
@@ -1051,8 +1063,6 @@ iframe[data-tally-src] {
 }
 
 .yield .web-map-image.image-1 { animation: fadeInUp 0.8s ease-out 0.2s forwards; }
-.yield .web-map-image.image-2 { animation: fadeInUp 0.8s ease-out 0.4s forwards; }
-.yield .web-map-image.image-3 { animation: fadeInUp 0.8s ease-out 0.6s forwards; }
 
 /* Transfer section feature cards */
 .transfer .feature-card {
@@ -1439,4 +1449,10 @@ iframe[data-tally-src] {
         font-size: 14px;
         padding: 10px;
     }
+    @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
 }
