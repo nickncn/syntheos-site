@@ -1511,6 +1511,13 @@ iframe[data-tally-src] {
   padding: 60px 20px;
 }
 
+.site-footer {
+  background: #fff;
+  color: #000;
+  padding: 60px 20px;
+  font-family: 'Inter', sans-serif;
+}
+
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -1529,27 +1536,26 @@ iframe[data-tally-src] {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-family: 'Orbitron', sans-serif;
   font-size: 24px;
-  margin-bottom: 20px;
-  color: #000;
+  font-weight: 700;
 }
 
 .footer-logo img {
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   object-fit: contain;
 }
 
 .footer-social {
   display: flex;
   gap: 10px;
+  margin-top: 16px;
 }
 
 .footer-social a {
   display: inline-block;
   padding: 10px;
-  background: #f1f1f1;
+  background: #f2f2f2;
   border-radius: 6px;
   color: #000;
   font-size: 18px;
@@ -1568,9 +1574,9 @@ iframe[data-tally-src] {
 }
 
 .footer-column h4 {
-  font-size: 16px;
+  font-size: 14px;
   margin-bottom: 12px;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -1589,7 +1595,6 @@ iframe[data-tally-src] {
   text-decoration: none;
   font-size: 14px;
   opacity: 0.8;
-  transition: opacity 0.2s ease;
 }
 
 .footer-column a:hover {
@@ -1609,7 +1614,6 @@ iframe[data-tally-src] {
   text-decoration: none;
   font-weight: 500;
   margin-bottom: 20px;
-  transition: all 0.2s ease;
 }
 
 .launch-app-btn:hover {
@@ -1621,16 +1625,8 @@ iframe[data-tally-src] {
   display: flex;
   flex-direction: column;
   gap: 4px;
-}
-
-.legal-links a {
   font-size: 13px;
-  color: #333;
-  text-decoration: none;
-}
-
-.legal-links a:hover {
-  color: #000;
+  opacity: 0.7;
 }
 
 }
