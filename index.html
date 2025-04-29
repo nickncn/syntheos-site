@@ -48,24 +48,35 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="stars-background"></div>
-        <div class="form-column">
-            <h3>Automated yield. Smarter returns.</h3>
-            <p>Priority Access. Only 200 early test users allowed.</p>
-            <iframe data-tally-src="https://tally.so/embed/mR2goj?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="282" frameborder="0" marginheight="0" marginwidth="0" title="Private Early Access Sign Up"></iframe>
-        </div>
-        <p class="launch">Testnet live now</p>
-        <div class="scroll-indicator">Scroll to Explore</div>
-         <div class="powered-by">
-            <span>Currently Integrated With</span>
-          <div class="logo-container">
-  <img src="/images/aave-logo.png" alt="Aave Logo" class="logo">
-  <img src="/images/compound-logo.png" alt="Compound Logo" class="logo compound-logo">
-</div>
+<!-- Hero Section -->
+<section class="hero" id="home">
+  <!-- 1) Video background -->
+  <video autoplay muted loop class="hero-bg">
+    <source src="/videos/hero-loop.mp4" type="video/mp4">
+  </video>
 
-        </div>
-    </section>
+  <!-- 2) Gradient overlay -->
+  <div class="hero-overlay"></div>
+
+  <!-- 3) Headline & subheading -->
+  <h1>Automated yield.<br>Smarter returns.</h1>
+  <p>Priority Access. Only 200 early test users allowed.</p>
+
+  <!-- 4) Primary CTA button -->
+  <a href="#early" class="cta">Join Early Access</a>
+
+  <!-- 5) Trust bar -->
+  <div class="trust-bar">
+    <span>Trusted by:</span>
+    <img src="/images/aave-logo.png" alt="Aave Logo">
+    <img src="/images/compound-logo.png" alt="Compound Logo">
+    <!-- add more logos here -->
+  </div>
+
+  <!-- 6) Scroll cue -->
+  <div class="scroll-cue">↓ Scroll to Explore</div>
+</section>
+
 
     <!-- Yield Section (Updated with Web Map) -->
     <section class="section yield">
