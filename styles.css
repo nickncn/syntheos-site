@@ -396,18 +396,6 @@ body {
     }
 }
 
-/* Hero section styling */
-.hero {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 80px 20px;
-    position: relative;
-}
-
 /* Form column in hero section */
 .hero .form-column {
     margin-top: 30px;
@@ -1297,26 +1285,6 @@ iframe[data-tally-src] {
         padding: 6px 12px;
     }
 
-    /* Hero section padding */
-    .hero {
-        padding: 100px 15px;
-    }
-
-    /* Hero form column width */
-    .hero .form-column {
-        max-width: 350px;
-    }
-
-    /* Hero form heading size */
-    .form-column h3 {
-        font-size: 28px;
-    }
-
-    /* Hero launch text size */
-    .hero .launch {
-        font-size: 14px;
-    }
-
     /* Section minimum height */
     .section {
         min-height: 70vh;
@@ -1491,49 +1459,8 @@ iframe[data-tally-src] {
         padding: 5px 10px;
     }
 
-    /* Hero section padding */
-    .hero {
-        padding: 80px 10px;
-    }
 
-    /* Hero form column width */
-    .hero .form-column {
-        max-width: 300px;
-    }
 
-    /* Hero form heading size */
-    .form-column h3 {
-        font-size: 24px;
-    }
-
-    /* Section padding */
-    .section {
-        padding: 20px 10px;
-    }
-
-    /* Section headings size */
-    .yield h2, .transfer h2, .future h2, .faq h2 {
-        font-size: 28px;
-    }
-
-    /* Web Map Adjustments */
-    .yield .web-map {
-        height: 700px;
-    }
-
-    .yield .web-map-image {
-        width: 150px;
-        height: 100px;
-    }
-
-    .yield .web-map-node .node-icon {
-        width: 50px;
-        height: 50px;
-    }
-
-    .yield .web-map-node span {
-        font-size: 14px;
-    }
 
     /* Feature card padding */
     .feature-card {
