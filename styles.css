@@ -463,6 +463,9 @@ iframe[data-tally-src] {
   height: 900px; /* was 600px */
   margin: 0 auto;
   overflow: visible; /* was hidden */
+     display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -475,8 +478,10 @@ iframe[data-tally-src] {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 90%;
-  max-width: 900px;
+  width: auto;
+max-height: 100%; /* So it never exceeds container */
+  max-width: 100%;
+
   z-index: 0; /* Make sure it's behind nodes but above backgrounds */
 }
 
