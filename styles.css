@@ -1138,6 +1138,39 @@ iframe[data-tally-src] {
     animation-play-state: running;
 }
 
+/* ——— GLOBAL TRUST BAR ——— */
+.trust-bar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: rgba(0,0,0,0.3);
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+}
+.trust-bar span {
+  font-size: 0.875rem;
+  color: #fff;
+}
+/* force both logos to 24px tall everywhere */
+.trust-bar img,
+.trust-bar .trust-logo {
+  height: 24px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.9;
+  transform: none;   /* clear any stray scale() */
+}
+/* breathing animations (optional) */
+.aave-logo {
+  animation: breathe 4s ease-in-out infinite;
+}
+.compound-logo {
+  animation: breathe 6s ease-in-out infinite;
+}
+
 /* Responsive styles for 768px and below */
 @media (max-width: 768px) {
     /* Header adjustments */
