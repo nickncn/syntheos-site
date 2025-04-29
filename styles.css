@@ -455,81 +455,59 @@ iframe[data-tally-src] {
     color: #000;
 }
 
-/* Web Map Container for Yield Section */
 .yield .web-map {
   position: relative;
   width: 100%;
-  max-width: 1100px;
-  height: 600px; /* tighter height */
+  max-width: 1200px;
+  height: 700px;
   margin: 0 auto;
-  overflow: visible;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
-
-/* Background Images in Web Map */
-.yield .web-map-image {
+.yield .web-map-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
 }
 
+/* Background Image fills card */
 .yield .web-map-image.image-1 {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50%; /* SMALLER */
-  max-width: 450px;
-  opacity: 0.3; /* ADD THIS */
-  z-index: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
-
-
 
 .yield .web-map-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 24px;
-    display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-
-
-/* SVG Lines for Web Map */
-.yield .web-map-lines {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-
-.yield .web-map-lines .line {
-    fill: none;
-    stroke: rgba(0, 212, 255, 0.3);
-    stroke-width: 2;
-    stroke-dasharray: 5, 5;
-    animation: drawLine 3s infinite linear;
-}
-
-/* Animation for Drawing Lines */
-@keyframes drawLine {
-    0% {
-        stroke-dashoffset: 0;
-    }
-    100% {
-        stroke-dashoffset: 10;
-    }
-}
-
-/* Web Map Nodes */
+/* Nodes inside the card */
 .yield .web-map-node {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 2;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+  position: absolute;
+  z-index: 2; /* above the image */
+  /* You can position them individually as before */
 }
+
+/* Example node positioning */
+.yield .web-map-node.node-1 { top: 20%; left: 20%; }
+.yield .web-map-node.node-2 { top: 40%; left: 30%; }
+.yield .web-map-node.node-3 { top: 60%; right: 30%; }
+.yield .web-map-node.node-4 { bottom: 20%; left: 40%; }
+.yield .web-map-node.node-5 { bottom: 20%; right: 40%; }
+
+
 
 .yield .web-map-node:hover {
     transform: scale(1.1);
