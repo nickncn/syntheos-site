@@ -111,4 +111,3 @@ if (getInTouchBtn && touchModal && closeTouchModal) {
     sections.forEach(section => {
         sectionObserver.observe(section);
     });
-});
