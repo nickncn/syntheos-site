@@ -1,12 +1,6 @@
-/* Reset default styles for all elements */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 /* Reset & Base */
 * { margin:0; padding:0; box-sizing:border-box; }
-body { font-family:'Inter',sans-serif; background:#fff; color:#000; overflow-x:hidden; line-height:1.6; }
 
 /* Body styles for the entire page */
 body {
@@ -476,11 +470,13 @@ iframe[data-tally-src] {
 }
 
 .yield .web-map-image.image-1 {
-    width: 90%;
-    max-width: 900px;
-    height: auto;
-    position: relative; /* << CHANGE THIS */
-    margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 900px;
+  height: auto;
 }
 
 
