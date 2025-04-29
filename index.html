@@ -200,54 +200,59 @@
 
 <footer class="site-footer">
   <div class="footer-container">
-    <!-- Logo + Socials -->
+    <!-- Left: Logo + Social Icons -->
     <div class="footer-left">
       <div class="footer-logo">
-        <img src="images/syntheos-logo.png" alt="Syntheos Logo">
         <span>Syntheos</span>
       </div>
       <div class="footer-social">
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-discord"></i></a>
-        <a href="#"><i class="fab fa-medium"></i></a>
-        <a href="#"><i class="fab fa-github"></i></a>
-        <a href="#"><i class="fab fa-telegram"></i></a>
+        <a href="https://twitter.com/SyntheosHQ" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://linkedin.com/syntheoshq" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="#" onclick="alertComingSoon(event)"><i class="fab fa-discord"></i></a>
+        <a href="#" onclick="alertComingSoon(event)"><i class="fab fa-telegram"></i></a>
+        <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
       </div>
     </div>
 
-    <!-- Links -->
+    <!-- Center: Link Columns -->
     <div class="footer-links">
       <div class="footer-column">
         <h4>Community</h4>
         <ul>
-          <li><a href="#">Discord</a></li>
-          <li><a href="#">Twitter</a></li>
-          <li><a href="#">Telegram</a></li>
+          <li><a href="#" onclick="alertComingSoon(event)">Discord</a></li>
+          <li><a href="https://twitter.com/SyntheosHQ" target="_blank">Twitter</a></li>
+          <li><a href="#" onclick="alertComingSoon(event)">Telegram</a></li>
         </ul>
       </div>
       <div class="footer-column">
         <h4>Protocol</h4>
         <ul>
-          <li><a href="#">Docs</a></li>
-          <li><a href="#">Education</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">GitHub</a></li>
-          <li><a href="#">Brand Guide</a></li>
-          <li><a href="#">Build with Us</a></li>
+          <li><a href="#" onclick="alertComingSoon(event)">Docs</a></li>
+          <li><a href="#" onclick="alertComingSoon(event)">Education</a></li>
+          <li><a href="#" onclick="alertComingSoon(event)">Blog</a></li>
+          <li><a href="#" onclick="alertComingSoon(event)">Brand Guide</a></li>
+          <li><a href="#" onclick="alertComingSoon(event)">Build with Us</a></li>
         </ul>
       </div>
     </div>
 
-    <!-- CTA & Legal -->
+    <!-- Right: CTA + Legal -->
     <div class="footer-cta">
       <div class="legal-links">
-            <p>© 2025 Syntheos. All rights reserved.</p>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Use</a>
+              <p>© 2025 Syntheos. All rights reserved.</p>
+        <span>Privacy Policy</span>
+        <span>Terms of Use</span>
       </div>
     </div>
   </div>
 </footer>
+
+<script>
+  function alertComingSoon(e) {
+    e.preventDefault();
+    alert("Coming soon!");
+  }
+</script>
 
 </body>
 </html>
