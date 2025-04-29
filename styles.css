@@ -460,10 +460,11 @@ iframe[data-tally-src] {
   position: relative;
   width: 100%;
   max-width: 1000px;
-  height: 600px; /* This is critical */
+  height: 900px; /* was 600px */
   margin: 0 auto;
-  overflow: hidden;
+  overflow: visible; /* was hidden */
 }
+
 
 /* Background Images in Web Map */
 .yield .web-map-image {
