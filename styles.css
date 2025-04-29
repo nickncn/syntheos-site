@@ -658,7 +658,7 @@ iframe[data-tally-src] {
 
 /* Powered by logo container */
 .powered-by .logo-container {
-    display: flex;
+    display: 40px;
     gap: 10px;
 }
 
