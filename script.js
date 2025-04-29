@@ -1,39 +1,54 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Dynamically create stars for all stars-background elements
-            
- // 2) Node-click modal logic
-  const nodes = document.querySelectorAll('.web-map-node');
-const nodeModal = document.getElementById('nodeModal');
-const nodeModalContent = document.getElementById('nodeModalContent');
-  const modalContent = document.getElementById('nodeModalContent');
-  const container = document.querySelector('.web-map');
-  nodes.forEach(node => {
-    node.addEventListener('click', e => {
-      e.stopPropagation();
-      const nB = node.getBoundingClientRect();
-      const cB = container.getBoundingClientRect();
-        
-         nodeModal.style.left = `${nB.left - cB.left + nB.width/2 - 110}px`;
-      nodeModal.style.top  = `${nB.top - cB.top  + nB.height + 8}px`;
-      nodeModalContent.textContent = node.dataset.description;
+    const getInTouchBtn = document.querySelector('.get-in-touch-btn');
+    const getInTouchModal = document.getElementById('getInTouchModal');
+    const closeModalBtn = document.getElementById('closeModal');
 
-      nodeModal.style.display = 'block';      // ← show container
-      nodeModal.classList.add('show');        // ← trigger fade-in
-    });
-  });
+    if (getInTouchBtn && getInTouchModal && closeModalBtn) {
+        getInTouchBtn.addEventListener('click', () => {
+            getInTouchModal.style.display = 'flex';
+        });
 
-  // Close on outside click
- // if you mean the Get-in-Touch modal:
-const touchModal = document.querySelector('#getInTouchModal');
-document.addEventListener('click', () => {
-  touchModal.classList.remove('show');
-});
-touchModal.addEventListener('transitionend', …
-    if (!modal.classList.contains('show')) {
-      modal.style.display = 'none';
+        closeModalBtn.addEventListener('click', () => {
+            getInTouchModal.style.display = 'none';
+        });
+
+        getInTouchModal.addEventListener('click', (e) => {
+            if (e.target === getInTouchModal) {
+                getInTouchModal.style.display = 'none';
+            }
+        });
     }
-  });
-    
+
+    // Node modal (nodeModal and nodeModalContent)
+    const nodes = document.querySelectorAll('.web-map-node');
+    const nodeModal = document.getElementById('nodeModal');
+    const nodeModalContent = document.getElementById('nodeModalContent');
+    const container = document.querySelector('.web-map');
+
+    nodes.forEach(node => {
+        node.addEventListener('click', e => {
+            e.stopPropagation();
+            const nB = node.getBoundingClientRect();
+            const cB = container.getBoundingClientRect();
+            nodeModal.style.left = `${nB.left - cB.left + nB.width/2 - 110}px`;
+            nodeModal.style.top  = `${nB.top - cB.top + nB.height + 8}px`;
+            nodeModalContent.textContent = node.dataset.description;
+            nodeModal.style.display = 'block';
+            nodeModal.classList.add('show');
+        });
+    });
+
+    document.addEventListener('click', () => {
+        nodeModal.classList.remove('show');
+    });
+
+    nodeModal.addEventListener('transitionend', () => {
+        if (!nodeModal.classList.contains('show')) {
+            nodeModal.style.display = 'none';
+        }
+    });
+});
+
     // Get in Touch Modal Functionality
   // …
 const getInTouchBtn   = document.querySelector('.get-in-touch-btn');
