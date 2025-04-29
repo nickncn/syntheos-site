@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
             
  // 2) Node-click modal logic
   const nodes = document.querySelectorAll('.web-map-node');
-  const modal = document.getElementById('nodeModal');
+const nodeModal = document.getElementById('nodeModal');
+const nodeModalContent = document.getElementById('nodeModalContent');
   const modalContent = document.getElementById('nodeModalContent');
   const container = document.querySelector('.web-map');
   nodes.forEach(node => {
@@ -11,10 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
       e.stopPropagation();
       const nB = node.getBoundingClientRect();
       const cB = container.getBoundingClientRect();
-      modal.style.left = `${nB.left - cB.left + nB.width/2 - 110}px`;
-      modal.style.top  = `${nB.top - cB.top  + nB.height + 8}px`;
-      modalContent.textContent = node.dataset.description;
-      modal.classList.add('show');
+        
+         nodeModal.style.left = `${nB.left - cB.left + nB.width/2 - 110}px`;
+      nodeModal.style.top  = `${nB.top - cB.top  + nB.height + 8}px`;
+      nodeModalContent.textContent = node.dataset.description;
+
+      nodeModal.style.display = 'block';      // ← show container
+      nodeModal.classList.add('show');        // ← trigger fade-in
     });
   });
 
@@ -30,7 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Get in Touch Modal Functionality
     const getInTouchBtn = document.querySelector('.get-in-touch-btn');
-    const modal = document.querySelector('#getInTouchModal');
+    const touchModal = document.querySelector('#getInTouchModal');
+const closeTouchModalBtn = document.querySelector('#closeModal');
     const closeModalBtn = document.querySelector('#closeModal');
 
     if (getInTouchBtn && modal && closeModalBtn) {
