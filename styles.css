@@ -745,29 +745,6 @@ iframe[data-tally-src] {
     gap: 10px;
 }
 
-/* Powered by logos */
-.powered-by .logo {
-    width: 30px;
-    height: 30px;
-    object-fit: contain;
-}
-
-.powered-by .compound-logo {
-    transform: scale(1.8);
-}
-
-
-/* Aave logo breathes every 4s */
-.aave-logo {
-    animation: breathe 4s ease-in-out infinite;
-}
-
-/* Compound logo breathes every 6s */
-.compound-logo {
-    animation: breathe 6s ease-in-out infinite;
-}
-
-
 /* Transfer section heading */
 .transfer h2 {
     font-family: 'Inter', sans-serif;
