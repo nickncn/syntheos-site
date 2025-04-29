@@ -332,6 +332,15 @@ body {
   width: auto;
 }
 
+/* size all logos in the trust-bar */
+.trust-bar .trust-logo {
+  height: 24px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.9;
+}
+
+
 /* get rid of the weird “make Compound huge” rule */
 .compound-logo {
   transform: none;      /* <— remove your scale(1.8) */
@@ -343,6 +352,7 @@ body {
   transform: none;      /* make sure there’s no lingering scale */
   animation: breathe 4s ease-in-out infinite;
 }
+
 
 /* Scroll cue */
 .scroll-cue {
