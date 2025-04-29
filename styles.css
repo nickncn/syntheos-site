@@ -319,13 +319,13 @@ body {
 
 /* get rid of the weird “make Compound huge” rule */
 .compound-logo {
-  transform: none;      /* <— remove your scale(1.8) */
+  transform: 60px;      /* <— remove your scale(1.8) */
   animation: breathe 6s ease-in-out infinite; /* if you still want breathing */
 }
 
 /* if you want the Aave one to breathe too, but not grow */
 .aave-logo {
-  transform: none;      /* make sure there’s no lingering scale */
+  transform: 40pxpx;      /* make sure there’s no lingering scale */
   animation: breathe 4s ease-in-out infinite;
 }
 
