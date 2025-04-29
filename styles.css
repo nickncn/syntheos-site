@@ -470,27 +470,27 @@ iframe[data-tally-src] {
 /* Background Images in Web Map */
 .yield .web-map-image {
     position: absolute;
-    overflow: hidden;
-    border-radius: 20px;
+}
+
+.yield .web-map-image.image-1 {
+    width: 90%;
+    max-width: 900px;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
 }
 
 .yield .web-map-image img {
     width: 100%;
+    height: auto;
     border-radius: 24px;
     object-fit: cover;
     box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.15);
     display: block;
 }
 
-
-.yield .web-map-image.image-1 {
-    width: 90%; /* flexible for smaller screens */
-    max-width: 900px;
-    height: auto;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
 
 
 /* SVG Lines for Web Map */
