@@ -258,6 +258,28 @@ body {
   color: #ccc;
 }
 
+.vaultos-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+.vaultos-subtext {
+  font-size: 1.1rem;
+  color: #000;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+
 .early-access-btn {
   background: #4f46e5;
   color: white;
