@@ -361,29 +361,26 @@ body {
   color: #000;
   padding: 60px 40px;
 }
-.footer-container {
+
+.site-footer .footer-container {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between !important;
   flex-wrap: wrap;
   gap: 40px;
   align-items: flex-start;
 }
 
-.site-footer .footer-container {
-  justify-content: space-between !important;
-}
-
 .footer-column {
   flex: 1 1 200px;
-  min-width: 150px;
+  min-width: 200px;
 }
 
 .footer-column.right {
+  text-align: right;
   margin-left: auto;
 }
-
 .footer-column.left .footer-logo {
   display: flex;
   align-items: center;
