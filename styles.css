@@ -212,7 +212,11 @@ body {
     color: #000;
     margin-bottom: 0.5rem;
     line-height: 1.2;
-   white-space: nowrap;
+    /* Removed white-space: nowrap to allow manual line break */
+}
+
+.no-wrap {
+    white-space: nowrap; /* Prevents wrapping of "for Sovereign Finance" */
 }
 
 .vaultos-subtext {
