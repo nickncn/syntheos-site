@@ -136,13 +136,17 @@ window.addEventListener("click", (e) => {
 });
 
 
-    // Dynamically Adjust Hero Height
+  // Dynamically Adjust Hero Height
     const adjustHeroHeight = () => {
+        console.log("Adjusting hero height...");
         const hero = document.querySelector('.hero');
         const header = document.querySelector('.header');
         if (hero && header) {
             const headerHeight = header.offsetHeight;
             hero.style.height = `calc(100vh - ${headerHeight}px)`;
+            console.log(`Hero height set to: calc(100vh - ${headerHeight}px)`);
+        } else {
+            console.log("Hero or header element not found.");
         }
     };
 
