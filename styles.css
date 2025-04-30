@@ -244,6 +244,203 @@ body {
   margin-bottom: 20px;
 }
 
+/* About section styling */
+.about-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+}
+
+/* About section heading */
+.about-section h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+/* About section paragraph */
+.about-section p {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    max-width: 800px;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+/* AI Works section background */
+.ai-works {
+    background: #fff;
+}
+
+/* AI Works radial gradient effect */
+.ai-works::before {
+    content: '';
+    position: absolute;
+    bottom: -20%;
+    left: 50%;
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle at 50% 0%, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.05) 20%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(100, 100, 100, 0.3) 0%, rgba(50, 50, 50, 0.2) 50%, transparent 70%);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* AI Works linear gradient effect */
+.ai-works::after {
+    content: '';
+    position: absolute;
+    bottom: -20%;
+    left: 50%;
+    width: 120%;
+    height: 120%;
+    background: linear-gradient(to top, rgba(255, 165, 0, 0.2) 0%, transparent 30%);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Grid overlay for AI Works */
+.grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Diagram container in AI Works */
+.ai-works .diagram {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin: 40px 0;
+    z-index: 2;
+}
+
+/* Diagram step styling */
+.ai-works .diagram-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Diagram step label */
+.ai-works .step-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    opacity: 0.8;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+/* Diagram step box */
+.ai-works .step-box {
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    padding: 15px 20px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+/* Diagram arrow */
+.ai-works .arrow {
+    font-size: 24px;
+    color: #00d4ff;
+}
+
+/* Bank Feel section background */
+.bank-feel {
+    background: #fff;
+}
+
+/* Orbital lines container */
+.bank-feel .orbital-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* Orbital line styling */
+.bank-feel .orbital-line {
+    position: absolute;
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    border-radius: 50%;
+    animation: orbit 20s linear infinite;
+}
+
+/* First orbital line */
+.bank-feel .orbital-1 {
+    width: 300px;
+    height: 300px;
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+/* Second orbital line */
+.bank-feel .orbital-2 {
+    width: 400px;
+    height: 400px;
+    top: 60%;
+    right: 10%;
+    animation-delay: -5s;
+}
+
+/* Third orbital line */
+.bank-feel .orbital-3 {
+    width: 200px;
+    height: 200px;
+    top: 40%;
+    left: 70%;
+    animation-delay: -10s;
+}
+
+/* Orbit animation */
+@keyframes orbit {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Animation styles for sections and child elements */
+.section, .about-section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Child elements within sections */
+.section h2, .section p, .about-section h2, .about-section p {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out 0.2s forwards;
+}
 /* ----------------------------------------
    YIELD MAP
 ---------------------------------------- */
