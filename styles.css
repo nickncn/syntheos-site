@@ -1,1635 +1,456 @@
-
-/* Reset & Base */
-* { margin:0; padding:0; box-sizing:border-box; }
-
-/* Body styles for the entire page */
+/* ----------------------------------------
+   RESET & BASE
+---------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: #fff;
-    color: #000;
-    overflow-x: hidden;
-    line-height: 1.6;
-    margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #fff;
+  color: #000;
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
-/* Header styles for the top logo and title */
+/* ----------------------------------------
+   HEADER & NAVBAR
+---------------------------------------- */
 .header {
-    position: fixed;
-    top: 10px;
-    left: 20px;
-    display: flex;
-    align-items: center;
-    z-index: 1000;
+  position: fixed;
+  top: 10px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
 }
-
-/* Container for the logo and title */
 .logo-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-
-/* Logo image styling */
 .logo-container .logo {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
+  width: 40px;
+  height: 40px;
 }
-
-/* Logo title styling */
-.logo-container h1 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 24px;
-    color: #000;
-    text-transform: uppercase;
-}
-
-/* Navigation bar styling */
 .nav-bar {
-    position: fixed;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    padding: 10px 20px;
-    z-index: 1000;
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 10px 20px;
+  z-index: 1000;
 }
-
-/* Navigation list styling */
 .nav-bar ul {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    margin: 0;
-    padding: 0;
-    justify-content: center;
+  list-style: none;
+  display: flex;
+  gap: 30px;
 }
-
-/* Navigation list items */
-.nav-bar li {
-    display: inline-block;
-}
-
-/* Navigation links */
 .nav-bar a {
-    color: #000;
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    text-decoration: none;
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
+  color: #000;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.3s;
 }
-
-/* Navigation link hover effect */
 .nav-bar a:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
-/* Get in Touch button styling */
+/* ----------------------------------------
+   GET IN TOUCH BUTTON & MODAL
+---------------------------------------- */
 .get-in-touch-btn {
-    position: fixed;
-    top: 10px;
-    right: 20px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-    border: none;
-    border-radius: 20px;
-    padding: 8px 15px;
-    color: #000;
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    text-transform: uppercase;
-    cursor: pointer;
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
-    z-index: 1000;
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  background: rgba(0,0,0,0.1);
+  backdrop-filter: blur(10px);
+  border: none;
+  border-radius: 20px;
+  padding: 8px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+  z-index: 1000;
 }
-
-/* Get in Touch button hover effect */
-.get-in-touch-btn:hover {
-    opacity: 1;
-}
-
-/* Plus icon for Get in Touch button */
+.get-in-touch-btn:hover { opacity: 1; }
 .get-in-touch-btn .plus-icon {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    position: relative;
-    transition: transform 0.3s ease;
+  position: relative;
+  width: 16px;
+  height: 16px;
 }
-
-/* Plus icon pseudo-elements */
 .get-in-touch-btn .plus-icon::before,
 .get-in-touch-btn .plus-icon::after {
-    content: '';
-    position: absolute;
-    background: #000;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  content: '';
+  position: absolute;
+  background: #000;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
 }
-
-/* Horizontal line of plus icon */
 .get-in-touch-btn .plus-icon::before {
-    width: 100%;
-    height: 2px;
+  width: 100%; height: 2px;
 }
-
-/* Vertical line of plus icon */
 .get-in-touch-btn .plus-icon::after {
-    width: 2px;
-    height: 100%;
+  width: 2px; height: 100%;
 }
-
-/* Plus icon rotation on hover */
 .get-in-touch-btn:hover .plus-icon {
-    transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
-/* Modal styling for Get in Touch form */
 .modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 2000;
-    justify-content: center;
-    align-items: center;
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
 }
-
-
-/* Modal content container */
 .modal-content {
-    background: rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    padding: 30px;
-    max-width: 400px;
-    width: 90%;
-    position: relative;
-    text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 400px;
+  width: 90%;
+  position: relative;
+  text-align: center;
 }
-
-/* Modal heading */
 .modal-content h3 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #000;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 28px;
+  margin-bottom: 20px;
 }
-
-/* Modal iframe for Tally form */
 .modal-content iframe {
-    border: none;
-    width: 100%;
+  width: 100%;
+  border: none;
 }
-
-/* Close button for modal */
 .close-modal {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-    color: #000;
+  position: absolute;
+  top: 10px; right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
 }
 
-/* Twinkle animation for stars */
-@keyframes twinkle {
-    0% {
-        opacity: 0.2;
-        transform: scale(0.5);
-    }
-    50% {
-        opacity: 1;
-        transform: scale(1);
-    }
-    100% {
-        opacity: 0.2;
-        transform: scale(0.5);
-    }
-}
-  /* === Hero full-screen video & overlay === */
+/* ----------------------------------------
+   HERO
+---------------------------------------- */
 .hero {
   position: relative;
   width: 100%;
   height: 100vh;
-  background: url('/images/hero-bg.png') no-repeat center center;
-  background-size: cover;
+  background: url('/images/hero-bg.png') no-repeat center/cover;
   display: flex;
-  justify-content: flex-start; /* for left alignment */
-  align-items: flex-end;       /* push content toward bottom */
+  justify-content: flex-start;
+  align-items: flex-end;
   padding: 60px;
-  color: #fff;
 }
-
-.hero-bg {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
-  z-index: 0;
-}
-
-.hero-content {
-  text-align: center;
-  padding: 3rem 1rem;
-}
-
-.hero-content h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.hero-content .subtext {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-  color: #ccc;
-}
-
 .left-form-layout {
   position: absolute;
   bottom: 40px;
   left: 40px;
-  text-align: left;
   max-width: 400px;
-  z-index: 3;
+  z-index: 2;
 }
-
-.hero-message {
-  margin-bottom: 1rem;
-}
-
 .vaultos-heading {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 700;
   color: #000;
   margin-bottom: 0.5rem;
 }
-
 .vaultos-subtext {
   font-size: 1rem;
   color: #000;
   line-height: 1.4;
 }
-
 .form-wrapper iframe {
   width: 100%;
   border: none;
 }
 
-
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem;
+/* ----------------------------------------
+   GENERIC SECTION STYLES
+---------------------------------------- */
+.section {
+  padding: 60px 20px;
 }
-
-
-.early-access-btn {
-  background: #4f46e5;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-.early-access-btn:hover {
-  background: #3730a3;
-}
-
-.hero-headline {
-  white-space: nowrap;
-  overflow-x: auto;
+.yield, .transfer, .future, .faq {
+  position: relative;
   text-align: center;
 }
-
-.hero-overlay {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: linear-gradient(135deg, rgba(0,212,255,0.2), transparent 70%);
-  z-index: 1;
+.yield h2, .transfer h2, .future h2, .faq h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
-/* Headline & subtitle */
-.hero h1 {
-  position: relative; z-index: 2;
-  font-size: clamp(2.5rem, 8vw, 5rem);
-  font-weight: 900;
-  margin: 0;
-}
-.hero p {
-  position: relative; z-index: 2;
-  margin: 0.5em 0 1.5em;
-  font-size: 1.25rem;
-}
-
-/* CTA button */
-.hero .cta {
-  position: relative; z-index: 2;
-  background: #00d4ff;
-  color: #000;
-  padding: 1rem 2rem;
-  border-radius: 9999px;
-  font-weight: 700;
-  text-decoration: none;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-.hero .cta:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-
-
-/* get rid of the weird “make Compound huge” rule */
-.compound-logo {
-  transform: 60px;      /* <— remove your scale(1.8) */
-  animation: breathe 6s ease-in-out infinite; /* if you still want breathing */
-}
-
-/* if you want the Aave one to breathe too, but not grow */
-.aave-logo {
-  transform: 40pxpx;      /* make sure there’s no lingering scale */
-  animation: breathe 4s ease-in-out infinite;
-}
-
-
-/* Scroll cue */
-.scroll-cue {
-  position: relative; z-index: 2;
-  margin-top: 2rem;
-  font-size: 1rem;
-  animation: bounce 2s infinite;
-}
-@keyframes bounce {
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(10px); }
-}
-
-
-/* Shimmer animation */
-@keyframes shimmer {
-    0% {
-        transform: translateX(-100%);
-    }
-    50% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-/* Form column in hero section */
-.hero .form-column {
-    margin-top: 30px;
-    z-index: 1;
-    max-width: 400px;
-}
-
-/* Hero form heading */
-.form-column h3 {
-    font-family: 'Inter', sans-serif;
-    font-size: 36px;
-    margin-bottom: 10px;
-    color: #000;
-}
-
-/* Hero form paragraph */
-.form-column p {
-    font-size: 18px;
-    margin-bottom: 20px;
-    color: #000;
-}
-
-/* Hero form iframe */
-.form-column iframe {
-    border: none;
-    width: 100%;
-}
-
-/* Launch text in hero */
-.hero .launch {
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    margin-top: 30px;
-    opacity: 0.7;
-    z-index: 1;
-    color: #000;
-}
-
-/* Scroll indicator in hero */
-.hero .scroll-indicator {
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    position: absolute;
-    bottom: 20px;
-    color: #000;
-    opacity: 0.7;
-}
-
-/* Tally.so form overrides */
-iframe[data-tally-src] {
-    background: transparent !important;
-}
-
-/* Tally form container */
-.tally-form-container * {
-    font-family: 'Inter', sans-serif !important;
-    color: #000 !important;
-}
-
-/* Tally form inputs */
-.tally-form-container input,
-.tally-form-container textarea {
-    background: rgba(0, 0, 0, 0.1) !important;
-    border: 1px solid rgba(0, 0, 0, 0.3) !important;
-    border-radius: 5px !important;
-    padding: 10px !important;
-    font-size: 16px !important;
-    color: #000 !important;
-    outline: none !important;
-    max-width: 300px !important;
-}
-
-/* Tally form placeholders */
-.tally-form-container input::placeholder,
-.tally-form-container textarea::placeholder {
-    color: rgba(0, 0, 0, 0.7) !important;
-}
-
-/* Tally form buttons */
-.tally-form-container button,
-.tally-form-container input[type="submit"] {
-    background: #000 !important;
-    color: #fff !important;
-    padding: 12px !important;
-    border-radius: 5px !important;
-    border: none !important;
-    font-family: 'Inter', sans-serif !important;
-    text-transform: uppercase !important;
-    cursor: pointer !important;
-    transition: background 0.3s ease !important;
-}
-
-/* Tally form button hover */
-.tally-form-container button:hover,
-.tally-form-container input[type="submit"]:hover {
-    background: #333 !important;
-}
-
-/* Tally form labels */
-.tally-form-container label {
-    font-size: 16px !important;
-    margin-bottom: 8px !important;
-    color: #000 !important;
-}
-
-/* Tally form block spacing */
-.tally-form-container .tally-block {
-    margin-bottom: 15px !important;
-}
-
-/* Tally form branding */
-.tally-form-container a[href*="tally.so"],
-.tally-form-container .tally-branding {
-    display: inline-block !important;
-    transform: scale(0.6) !important;
-    opacity: 0.5 !important;
-    position: relative !important;
-    bottom: 0 !important;
-    right: 0 !important;
-    margin-top: 5px !important;
-}
-
-/* General section styles */
-.section {
-    min-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 40px 20px;
-    position: relative;
-}
-
-/* Yield section heading */
-.yield h2 {
-    font-family: 'Inter', sans-serif;
-    font-size: 40px;
-    font-weight: 700;
-    margin-bottom: 30px;
-    color: #000;
-}
-
-.yield .web-map {
+/* ----------------------------------------
+   YIELD MAP
+---------------------------------------- */
+.web-map {
   position: relative;
-  width: 100%;
   max-width: 1200px;
-  height: 700px;
   margin: 0 auto;
-  padding: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 600px;
 }
-
-.yield .web-map-card {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background: #fff;
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-}
-
-/* Background Image fills card */
-.yield .web-map-image.image-1 {
+.web-map-image {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+  inset: 0;
   z-index: 1;
 }
-
-.yield .web-map-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 24px; /* already good */
-    object-fit: cover;
-    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.15);
-    display: block;
-    overflow: hidden; /* add this line to prevent any leaks */
+.web-map-image img {
+  width: 100%; height: 100%; object-fit: cover;
+  border-radius: 24px;
 }
-
-
-/* Nodes inside the card */
-.yield .web-map-node {
+.web-map-node {
   position: absolute;
-  z-index: 2; /* above the image */
-  /* You can position them individually as before */
+  z-index: 2;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s;
 }
-
-/* Example node positioning */
-.yield .web-map-node.node-1 { top: 20%; left: 20%; }
-.yield .web-map-node.node-2 { top: 40%; left: 30%; }
-.yield .web-map-node.node-3 { top: 60%; right: 30%; }
-.yield .web-map-node.node-4 { bottom: 20%; left: 40%; }
-.yield .web-map-node.node-5 { bottom: 20%; right: 40%; }
-
-
-
-.yield .web-map-node:hover {
-    transform: scale(1.1);
-    opacity: 1;
+.web-map-node:hover {
+  transform: scale(1.1);
 }
-
-/* Node Icon Container */
-.yield .web-map-node .node-icon {
-    width: 60px;
-    height: 60px;
-    background: rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
+.node-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(0,0,0,0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 8px;
 }
-
-/* Node Icon (Font Awesome or SVG) */
-.yield .web-map-node .node-icon i,
-.yield .web-map-node .node-icon img {
-    font-size: 24px;
-    width: 24px;
-    height: 24px;
-    color: #000;
-}
-
-/* Node Label */
-.yield .web-map-node span {
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    color: #000;
-    text-align: center;
-}
-
-/* Positioning Nodes */
-.yield .web-map-node.node-1 {
-    top: 20%;
-    left: 80%;
-    transform: translate(-50%, -50%);
-    animation-delay: 2s;
-
-}
-
-.yield .web-map-node.node-2 {
-    top: 15%;
-    left: 90%;
-    animation-delay: 3s;
-
-}
-
-.yield .web-map-node.node-3 {
-    top: 15%;
-    right: 90%;
-    animation-delay: 4s;
-
-}
-
-.yield .web-map-node.node-4 {
-    bottom: 80%;
-    left: 20%;
-    animation-delay: 0s;
-
-}
-
-.yield .web-map-node.node-5 {
-    bottom: 85%;
-    right: 20%;
-    animation-delay: 1s;
-
-}
-
-/* Powered by section */
-.powered-by {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 10px;
-    z-index: 2;
-}
-/* -------- Node Info Modal -------- */
 .node-modal {
   display: none;
   position: absolute;
-  padding: 16px;
-  background: rgba(255,255,255,0.95);
+  padding: 12px;
+  background: #fff;
   border-radius: 8px;
-  border: 1px solid rgba(0,0,0,0.2);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-  max-width: 220px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  max-width: 200px;
   text-align: center;
+  transform: scale(0.9);
   opacity: 0;
-  transform: scale(0.95);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  z-index: 10;
+  transition: all 0.3s;
 }
 .node-modal.show {
   display: block;
-  opacity: 1;
   transform: scale(1);
-}
-.node-modal-content {
-  font-size: 14px;
-  color: #000;
+  opacity: 1;
 }
 
-/* Make nodes clickable */
-.web-map-node {
-  cursor: pointer;
-}
-
-/* Powered by text */
-.powered-by span {
-    font-size: 10px;
-    opacity: 0.8;
-    color: #000;
-}
-
-/* Powered by logo container */
-.powered-by .logo-container {
-    display: 40px;
-    gap: 10px;
-}
-
-/* Transfer section heading */
-.transfer h2 {
-    font-family: 'Inter', sans-serif;
-    font-size: 40px;
-    margin-bottom: 20px;
-    color: #000;
-}
-
-/* Transfer section paragraph */
-.transfer p {
-    font-size: 20px;
-    max-width: 600px;
-    margin: 0 auto 30px;
-    color: #000;
-}
-
-/* Features container in transfer section */
+/* ----------------------------------------
+   TRANSFER FEATURES
+---------------------------------------- */
 .features {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    max-width: 1000px;
-    width: 100%;
-}
-
-/* Feature card styling */
-.feature-card {
-    background: rgba(0, 0, 0, 0.08);
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    padding: 20px;
-    width: 100%;
-    max-width: 300px;
-    text-align: center;
-}
-
-/* Feature card icon */
-.feature-card .feature-icon {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 15px;
-    filter: brightness(0);
-}
-
-/* Feature card heading */
-.feature-card h3 {
-    font-family: 'Inter', sans-serif;
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #000;
-}
-
-/* Feature card paragraph */
-.feature-card p {
-    font-size: 16px;
-    color: #000;
-}
-
-/* Future section (timeline) heading */
-.future h2 {
-    font-family: 'Inter', sans-serif;
-    font-size: 40px;
-    margin-bottom: 40px;
-    color: #000;
-}
-
-/* FAQ content container (used in future and FAQ) */
-.faq-content {
-    max-width: 800px;
-    width: 100%;
-    padding: 20px;
-}
-
-/* Timeline container */
-.timeline {
-    position: relative;
-    padding: 20px 0;
-}
-
-/* Timeline vertical line */
-.timeline::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 4px;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3);
-}
-
-/* Timeline item styling */
-.timeline-item {
-    position: relative;
-    width: 50%;
-    padding: 20px;
-    text-align: right;
-}
-
-/* Even timeline items */
-.timeline-item:nth-child(even) {
-    margin-left: 50%;
-    text-align: left;
-}
-
-/* Timeline dot */
-.timeline-dot {
-    position: absolute;
-    top: 50%;
-    width: 16px;
-    height: 16px;
-    background: #00d4ff;
-    border-radius: 50%;
-    transform: translateY(-50%);
-}
-
-/* Odd timeline item dot */
-.timeline-item:nth-child(odd) .timeline-dot {
-    right: -8px;
-}
-
-/* Even timeline item dot */
-.timeline-item:nth-child(even) .timeline-dot {
-    left: -8px;
-}
-
-/* Timeline item heading */
-.timeline-item h3 {
-    font-family: 'Inter', sans-serif;
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #000;
-}
-
-/* Timeline item paragraph */
-.timeline-item p {
-    font-size: 16px;
-    color: #000;
-}
-
-/* FAQ section background */
-.faq {
-    background: #fff;
-}
-
-/* FAQ section heading */
-.faq h2 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 60px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    margin-bottom: 30px;
-    color: #000;
-}
-
-/* FAQ item styling */
-.faq-item {
-    margin-bottom: 20px;
-}
-
-/* FAQ question styling */
-.faq-question {
-    font-family: 'Inter', sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-    color: #000;
-    cursor: pointer;
-    padding: 15px;
-    background: rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    transition: background 0.3s ease;
-}
-
-/* FAQ question hover effect */
-.faq-question:hover {
-    background: rgba(0, 0, 0, 0.2);
-}
-
-/* FAQ question active state */
-.faq-question.active {
-    background: rgba(0, 212, 255, 0.2);
-}
-
-/* FAQ answer styling */
-.faq-answer {
-    font-family: 'Inter', sans-serif;
-    font-size: 18px;
-    color: #000;
-    padding: 15px;
-    display: none;
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 8px;
-}
-
-/* About section styling */
-.about-section {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 80px 20px;
-    position: relative;
-}
-
-/* About section heading */
-.about-section h2 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 60px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    margin-bottom: 30px;
-    color: #000;
-}
-
-/* About section paragraph */
-.about-section p {
-    font-family: 'Inter', sans-serif;
-    font-size: 20px;
-    max-width: 800px;
-    margin-bottom: 30px;
-    color: #000;
-}
-
-/* AI Works section background */
-.ai-works {
-    background: #fff;
-}
-
-/* AI Works radial gradient effect */
-.ai-works::before {
-    content: '';
-    position: absolute;
-    bottom: -20%;
-    left: 50%;
-    width: 120%;
-    height: 120%;
-    background: radial-gradient(circle at 50% 0%, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.05) 20%, transparent 40%),
-                radial-gradient(circle at 50% 50%, rgba(100, 100, 100, 0.3) 0%, rgba(50, 50, 50, 0.2) 50%, transparent 70%);
-    border-radius: 50%;
-    transform: translateX(-50%);
-    z-index: -1;
-    pointer-events: none;
-}
-
-/* AI Works linear gradient effect */
-.ai-works::after {
-    content: '';
-    position: absolute;
-    bottom: -20%;
-    left: 50%;
-    width: 120%;
-    height: 120%;
-    background: linear-gradient(to top, rgba(255, 165, 0, 0.2) 0%, transparent 30%);
-    border-radius: 50%;
-    transform: translateX(-50%);
-    z-index: -1;
-    pointer-events: none;
-}
-
-/* Grid overlay for AI Works */
-.grid-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-    background-size: 50px 50px;
-    z-index: 0;
-    pointer-events: none;
-}
-
-/* Diagram container in AI Works */
-.ai-works .diagram {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    margin: 40px 0;
-    z-index: 2;
-}
-
-/* Diagram step styling */
-.ai-works .diagram-step {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Diagram step label */
-.ai-works .step-label {
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    opacity: 0.8;
-    margin-bottom: 10px;
-    color: #000;
-}
-
-/* Diagram step box */
-.ai-works .step-box {
-    background: rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    border-radius: 8px;
-    padding: 15px 20px;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 18px;
-    text-transform: uppercase;
-    color: #000;
-}
-
-/* Diagram arrow */
-.ai-works .arrow {
-    font-size: 24px;
-    color: #00d4ff;
-}
-
-/* Bank Feel section background */
-.bank-feel {
-    background: #fff;
-}
-
-/* Orbital lines container */
-.bank-feel .orbital-lines {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-}
-
-/* Orbital line styling */
-.bank-feel .orbital-line {
-    position: absolute;
-    border: 1px solid rgba(0, 212, 255, 0.2);
-    border-radius: 50%;
-    animation: orbit 20s linear infinite;
-}
-
-/* First orbital line */
-.bank-feel .orbital-1 {
-    width: 300px;
-    height: 300px;
-    top: 20%;
-    left: 10%;
-    animation-delay: 0s;
-}
-
-/* Second orbital line */
-.bank-feel .orbital-2 {
-    width: 400px;
-    height: 400px;
-    top: 60%;
-    right: 10%;
-    animation-delay: -5s;
-}
-
-/* Third orbital line */
-.bank-feel .orbital-3 {
-    width: 200px;
-    height: 200px;
-    top: 40%;
-    left: 70%;
-    animation-delay: -10s;
-}
-
-/* Orbit animation */
-@keyframes orbit {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-/* Animation styles for sections and child elements */
-.section, .about-section {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s ease-out forwards;
-}
-
-/* Child elements within sections */
-.section h2, .section p, .about-section h2, .about-section p {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s ease-out 0.2s forwards;
-}
-
-/* Web Map Nodes Animation */
-.yield .web-map-node {
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-/* Staggered animation for web map nodes */
-.yield .web-map-node.node-1 { animation: fadeInUp 0.8s ease-out 0.4s forwards; }
-.yield .web-map-node.node-2 { animation: fadeInUp 0.8s ease-out 0.6s forwards; }
-.yield .web-map-node.node-3 { animation: fadeInUp 0.8s ease-out 0.8s forwards; }
-.yield .web-map-node.node-4 { animation: fadeInUp 0.8s ease-out 1.0s forwards; }
-.yield .web-map-node.node-5 { animation: fadeInUp 0.8s ease-out 1.2s forwards; }
-
-/* Web Map Images Animation */
-.yield .web-map-image {
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-.yield .web-map-image.image-1 { animation: fadeInUp 0.8s ease-out 0.2s forwards; }
-
-/* Transfer section feature cards */
-.transfer .feature-card {
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-/* Staggered animation for feature cards */
-.transfer .feature-card:nth-child(1) { animation: fadeInUp 0.8s ease-out 0.4s forwards; }
-.transfer .feature-card:nth-child(2) { animation: fadeInUp 0.8s ease-out 0.6s forwards; }
-.transfer .feature-card:nth-child(3) { animation: fadeInUp 0.8s ease-out 0.8s forwards; }
-
-/* Future section timeline items */
-.future .timeline-item {
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-/* Staggered animation for timeline items */
-.future .timeline-item:nth-child(1) { animation: fadeInUp 0.8s ease-out 0.4s forwards; }
-.future .timeline-item:nth-child(2) { animation: fadeInUp 0.8s ease-out 0.6s forwards; }
-.future .timeline-item:nth-child(3) { animation: fadeInUp 0.8s ease-out 0.8s forwards; }
-
-/* FAQ section items */
-.faq .faq-item {
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-/* Staggered animation for FAQ items */
-.faq .faq-item:nth-child(1) { animation: fadeInUp 0.8s ease-out 0.4s forwards; }
-.faq .faq-item:nth-child(2) { animation: fadeInUp 0.8s ease-out 0.6s forwards; }
-.faq .faq-item:nth-child(3) { animation: fadeInUp 0.8s ease-out 0.8s forwards; }
-.faq .faq-item:nth-child(4) { animation: fadeInUp 0.8s ease-out 1.0s forwards; }
-
-/* AI Works diagram steps */
-.ai-works .diagram-step {
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-/* Staggered animation for diagram steps */
-.ai-works .diagram-step:nth-child(1) { animation: fadeInUp 0.8s ease-out 0.4s forwards; }
-.ai-works .diagram-step:nth-child(3) { animation: fadeInUp 0.8s ease-out 0.6s forwards; }
-.ai-works .diagram-step:nth-child(5) { animation: fadeInUp 0.8s ease-out 0.8s forwards; }
-
-/* Fade-in animation keyframe */
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Ensure animations trigger on scroll */
-.section, .about-section {
-    animation-play-state: paused;
-}
-
-.section.in-view, .about-section.in-view {
-    animation-play-state: running;
-}
-
-/* ——— GLOBAL TRUST BAR ——— */
-.trust-bar {
-  position: relative;
-  z-index: 2;
   display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  background: rgba(0,0,0,0.3);
-  padding: 0.75rem 1.5rem;
-  border-radius: 12px;
-  margin-top: 2rem;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
-.trust-bar span {
-  font-size: 0.875rem;
-  color: #fff;
+.feature-card {
+  background: rgba(0,0,0,0.05);
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 280px;
+  text-align: center;
 }
-/* force both logos to 24px tall everywhere */
-.trust-bar img,
-.trust-bar .trust-logo {
-  height: 24px;
-  width: auto;
-  object-fit: contain;
-  opacity: 0.9;
-  transform: none;   /* clear any stray scale() */
-}
-/* breathing animations (optional) */
-.aave-logo {
-  height: 60px !important;
-  width: auto !important;
-  max-width: 100px;
-  animation: breathe 4s ease-in-out infinite;
+.feature-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 15px;
 }
 
-.compound-logo {
-    height: 60px !important;
-  width: auto !important;
-  max-width: 100px;
-  animation: breathe 6s ease-in-out infinite;
+/* ----------------------------------------
+   ROADMAP / FUTURE
+---------------------------------------- */
+.timeline {
+  position: relative;
+  padding: 40px 0;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0; left: 50%;
+  width: 4px;
+  background: rgba(0,0,0,0.2);
+}
+.timeline-item {
+  position: relative;
+  width: 45%;
+  padding: 20px;
+}
+.timeline-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+.timeline-item:nth-child(even) {
+  left: 55%;
+  text-align: left;
+}
+.timeline-dot {
+  position: absolute;
+  top: 20px;
+  width: 16px; height: 16px;
+  background: #00d4ff;
+  border-radius: 50%;
+}
+.timeline-item:nth-child(odd) .timeline-dot {
+  right: -8px;
+}
+.timeline-item:nth-child(even) .timeline-dot {
+  left: -8px;
 }
 
-/* Responsive styles for 768px and below */
-@media (max-width: 768px) {
-    /* Header adjustments */
-    .header {
-        left: 15px;
-        top: 15px;
-    }
-
-    /* Logo size */
-    .logo-container .logo {
-        width: 32px;
-        height: 32px;
-    }
-
-    /* Logo title size */
-    .logo-container h1 {
-        font-size: 20px;
-    }
-
-    /* Navigation bar position */
-    .nav-bar {
-        top: 50px;
-        padding: 8px 15px;
-    }
-
-    /* Navigation list spacing */
-    .nav-bar ul {
-        gap: 20px;
-    }
-
-    /* Navigation link size */
-    .nav-bar a {
-        font-size: 14px;
-    }
-
-    /* Get in Touch button adjustments */
-    .get-in-touch-btn {
-        top: 15px;
-        right: 15px;
-        font-size: 14px;
-        padding: 6px 12px;
-    }
-
-    /* Section minimum height */
-    .section {
-        min-height: 70vh;
-        padding: 30px 15px;
-    }
-
-    /* Section headings size */
-    .yield h2, .transfer h2, .future h2, .faq h2 {
-        font-size: 32px;
-    }
-
-    /* Web Map Adjustments */
-    .yield .web-map {
-        height: 800px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-    }
-
-    .yield .web-map-lines {
-        display: none; /* Hide lines on mobile, as they won't align properly */
-    }
-
-    .yield .web-map-node {
-        position: relative;
-        top: auto !important;
-        left: auto !important;
-        right: auto !important;
-        bottom: auto !important;
-        transform: none !important;
-    }
-
-    .yield .web-map-image {
-        position: relative;
-        top: auto !important;
-        left: auto !important;
-        right: auto !important;
-        bottom: auto !important;
-        width: 200px;
-        height: 150px;
-    }
-
-    /* Features container spacing */
-    .features {
-        gap: 15px;
-    }
-
-    /* Feature card width */
-    .feature-card {
-        max-width: 280px;
-    }
-
-    /* About section padding */
-    .about-section {
-        padding: 100px 15px;
-    }
-
-    /* About section heading size */
-    .about-section h2 {
-        font-size: 48px;
-    }
-
-    /* About section paragraph size */
-    .about-section p {
-        font-size: 18px;
-    }
-
-    /* AI Works diagram layout */
-    .ai-works .diagram {
-        flex-direction: column;
-        gap: 15px;
-        margin: 30px 0;
-    }
-
-    /* AI Works arrow rotation */
-    .ai-works .arrow {
-        transform: rotate(90deg);
-    }
-
-    /* Orbital lines size */
-    .bank-feel .orbital-1,
-    .bank-feel .orbital-2,
-    .bank-feel .orbital-3 {
-        width: 180px;
-        height: 180px;
-    }
-
-    /* AI Works background effects */
-    .ai-works::before,
-    .ai-works::after {
-        width: 200%;
-        height: 200%;
-        bottom: -50%;
-    }
-
-    /* Timeline vertical line position */
-    .timeline::before {
-        left: 20px;
-    }
-
-    /* Timeline item layout */
-    .timeline-item {
-        width: 100%;
-        margin-left: 40px;
-        text-align: left;
-    }
-
-    /* Even timeline items */
-    .timeline-item:nth-child(even) {
-        margin-left: 40px;
-    }
-
-    /* Timeline dot position */
-    .timeline-item .timeline-dot {
-        left: 12px;
-    }
-
-    /* FAQ question size */
-    .faq-question {
-        font-size: 20px;
-        padding: 12px;
-    }
-
-    /* FAQ answer size */
-    .faq-answer {
-        font-size: 16px;
-        padding: 12px;
-    }
+/* ----------------------------------------
+   FAQ
+---------------------------------------- */
+.faq-item {
+  margin-bottom: 20px;
+}
+.faq-question {
+  font-size: 1.1rem;
+  font-weight: 700;
+  background: rgba(0,0,0,0.05);
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.faq-question:hover {
+  background: rgba(0,0,0,0.1);
+}
+.faq-answer {
+  display: none;
+  padding: 12px;
+  background: rgba(0,0,0,0.1);
+  border-radius: 6px;
+  margin-top: 8px;
 }
 
-/* Responsive styles for 480px and below */
-@media (max-width: 480px) {
-    /* Header adjustments */
-    .header {
-        left: 10px;
-        top: 10px;
-    }
-
-    /* Logo size */
-    .logo-container .logo {
-        width: 28px;
-        height: 28px;
-    }
-
-    /* Logo title size */
-    .logo-container h1 {
-        font-size: 18px;
-    }
-
-    /* Navigation bar position */
-    .nav-bar {
-        top: 45px;
-        padding: 6px 10px;
-    }
-
-    /* Navigation list spacing */
-    .nav-bar ul {
-        gap: 15px;
-    }
-
-    /* Navigation link size */
-    .nav-bar a {
-        font-size: 12px;
-    }
-
-    /* Get in Touch button adjustments */
-    .get-in-touch-btn {
-        top: 10px;
-        right: 10px;
-        font-size: 12px;
-        padding: 5px 10px;
-    }
-
-
-
-
-    /* Feature card padding */
-    .feature-card {
-        padding: 15px;
-    }
-
-    /* About section padding */
-    .about-section {
-        padding: 80px 10px;
-    }
-
-    /* About section heading size */
-    .about-section h2 {
-        font-size: 36px;
-    }
-
-    /* About section paragraph size */
-    .about-section p {
-        font-size: 16px;
-    }
-
-    /* AI Works step box size */
-    .ai-works .step-box {
-        font-size: 15px;
-        padding: 12px 18px;
-    }
-
-    /* AI Works arrow size */
-    .ai-works .arrow {
-        font-size: 22px;
-    }
-
-    /* FAQ question size */
-    .faq-question {
-        font-size: 18px;
-        padding: 10px;
-    }
-
-    /* FAQ answer size */
-    .faq-answer {
-        font-size: 14px;
-        padding: 10px;
-    }
+/* ----------------------------------------
+   FOOTER (Pendle-style)
+---------------------------------------- */
 .site-footer {
   background: #fff;
   color: #000;
   padding: 60px 40px;
-  font-family: 'Inter', sans-serif;
 }
-
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
   flex-wrap: wrap;
   gap: 40px;
+  align-items: flex-start;
 }
-
 .footer-column {
-  flex: 1;
-  min-width: 200px;
+  flex: 1 1 200px;
+  min-width: 150px;
 }
-
-.footer-logo {
+/* Logo & social */
+.logo-col .footer-logo {
   display: flex;
   align-items: center;
   gap: 10px;
   font-weight: 700;
   font-size: 20px;
 }
-
-.footer-logo img {
+.logo-col .footer-logo img {
   width: 32px;
   height: 32px;
-  object-fit: contain;
 }
-
-.footer-social {
+.logo-col .footer-social {
   display: flex;
   gap: 12px;
   margin-top: 20px;
 }
-
-.footer-social a {
-  font-size: 18px;
-  color: #000;
-  padding: 8px;
+.logo-col .footer-social a {
   background: #f2f2f2;
+  padding: 8px;
   border-radius: 6px;
-  transition: all 0.3s ease;
+  transition: background 0.3s;
 }
-
-.footer-social a:hover {
+.logo-col .footer-social a:hover {
   background: #e0e0e0;
 }
 
+/* Community & Protocol lists */
 .center h4 {
   text-transform: uppercase;
   font-size: 14px;
   margin-bottom: 10px;
 }
-
 .center ul {
   list-style: none;
-  padding: 0;
-  margin: 0 0 20px 0;
 }
-
 .center li {
   margin-bottom: 6px;
 }
-
 .center a {
   color: #000;
-  font-size: 14px;
   text-decoration: none;
   opacity: 0.8;
+  transition: opacity 0.3s;
 }
-
 .center a:hover {
   opacity: 1;
 }
 
+/* Right column: launch + legal */
 .right {
   text-align: right;
 }
-
 .launch-app-btn {
   display: inline-block;
   padding: 10px 20px;
   border: 1px solid #000;
   border-radius: 6px;
-  font-size: 14px;
   text-decoration: none;
   color: #000;
   margin-bottom: 15px;
-  transition: 0.3s;
+  transition: background 0.3s, color 0.3s;
 }
-
 .launch-app-btn:hover {
   background: #000;
   color: #fff;
 }
-
 .legal-links {
   font-size: 12px;
   color: #888;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+  line-height: 1.5;
+}
+.legal-links span {
+  display: block;
 }
 
-/* Responsive */
+/* ----------------------------------------
+   RESPONSIVE
+---------------------------------------- */
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
     text-align: center;
     align-items: center;
   }
-
   .footer-column.right {
     text-align: center;
   }
-
-  .footer-social {
+  .logo-col .footer-social {
     justify-content: center;
   }
-}
-
+  .timeline-item,
+  .timeline::before {
+    left: 20px !important;
+    width: calc(100% - 40px);
+    text-align: left !important;
+  }
 }
