@@ -2,150 +2,175 @@
    RESET & BASE
 ---------------------------------------- */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 body {
-  font-family: 'Inter', sans-serif;
-  background: #fff;
-  color: #000;
-  line-height: 1.6;
-  overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+    background: #fff;
+    color: #000;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
 /* ----------------------------------------
    HEADER & NAVBAR
 ---------------------------------------- */
 .header {
-  position: fixed;
-  top: 10px;
-  left: 20px;
-  display: flex;
-  align-items: center;
-  z-index: 1000;
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
 }
+
 .logo-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
+
 .logo-container .logo {
-  width: 40px;
-  height: 40px;
+    width: 40px;
+    height: 40px;
 }
+
 .nav-bar {
-  position: fixed;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0,0,0,0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  padding: 10px 20px;
-  z-index: 1000;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 10px 20px;
+    z-index: 1000;
 }
+
 .nav-bar ul {
-  list-style: none;
-  display: flex;
-  gap: 30px;
+    list-style: none;
+    display: flex;
+    gap: 30px;
 }
+
 .nav-bar a {
-  color: #000;
-  text-decoration: none;
-  opacity: 0.8;
-  transition: opacity 0.3s;
+    color: #000;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.3s;
 }
+
 .nav-bar a:hover {
-  opacity: 1;
+    opacity: 1;
 }
 
 /* ----------------------------------------
    GET IN TOUCH BUTTON & MODAL
 ---------------------------------------- */
 .get-in-touch-btn {
-  position: fixed;
-  top: 10px;
-  right: 20px;
-  background: rgba(0,0,0,0.1);
-  backdrop-filter: blur(10px);
-  border: none;
-  border-radius: 20px;
-  padding: 8px 15px;
-  font-size: 16px;
-  cursor: pointer;
-  opacity: 0.8;
-  transition: opacity 0.3s;
-  z-index: 1000;
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    background: rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    border: none;
+    border-radius: 20px;
+    padding: 8px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+    z-index: 1000;
 }
-.get-in-touch-btn:hover { opacity: 1; }
+
+.get-in-touch-btn:hover {
+    opacity: 1;
+}
+
 .get-in-touch-btn .plus-icon {
-  position: relative;
-  width: 16px;
-  height: 16px;
+    position: relative;
+    width: 16px;
+    height: 16px;
 }
+
 .get-in-touch-btn .plus-icon::before,
 .get-in-touch-btn .plus-icon::after {
-  content: '';
-  position: absolute;
-  background: #000;
-  top: 50%; left: 50%;
-  transform: translate(-50%,-50%);
+    content: '';
+    position: absolute;
+    background: #000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
+
 .get-in-touch-btn .plus-icon::before {
-  width: 100%; height: 2px;
+    width: 100%;
+    height: 2px;
 }
+
 .get-in-touch-btn .plus-icon::after {
-  width: 2px; height: 100%;
+    width: 2px;
+    height: 100%;
 }
+
 .get-in-touch-btn:hover .plus-icon {
-  transform: rotate(90deg);
+    transform: rotate(90deg);
 }
 
 .modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.5);
-  z-index: 2000;
-  justify-content: center;
-  align-items: center;
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
 }
+
 .modal-content {
-  background: #fff;
-  border-radius: 10px;
-  padding: 30px;
-  max-width: 400px;
-  width: 90%;
-  position: relative;
-  text-align: center;
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+    text-align: center;
 }
+
 .modal-content h3 {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 28px;
-  margin-bottom: 20px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 28px;
+    margin-bottom: 20px;
 }
+
 .modal-content iframe {
-  width: 100%;
-  border: none;
+    width: 100%;
+    border: none;
+    background: transparent !important;
+    background-color: transparent !important;
 }
+
 .close-modal {
-  position: absolute;
-  top: 10px; right: 10px;
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
 }
 
 /* ----------------------------------------
-   HERO (Updated)
+   HERO (For index.html)
 ---------------------------------------- */
 .hero {
     position: relative;
     width: 100%;
     height: calc(100vh - 60px);
-    height: calc(100dvh - 60px); /* Fallback for JavaScript */
+    height: calc(100dvh - 60px);
     overflow: hidden;
 }
 
@@ -176,11 +201,11 @@ body {
 }
 
 .vaultos-heading {
-    font-size: 1.5rem; /* Reduced to ensure it fits on one line */
+    font-size: 1.5rem;
     font-weight: 700;
     color: #000;
     margin-bottom: 0.5rem;
-    white-space: nowrap; /* Prevent wrapping */
+    white-space: nowrap;
 }
 
 .vaultos-subtext {
@@ -202,18 +227,18 @@ body {
 
 .scroll-cue {
     position: absolute;
-    bottom: 20px; /* Position at the bottom */
+    bottom: 20px;
     left: 50%;
-    transform: translateX(-50%); /* Center horizontally */
+    transform: translateX(-50%);
     color: #000;
     font-size: 1rem;
     z-index: 2;
 }
 
-.powered-by {
-    position: absolute;
-    bottom: 20px; /* Position at the bottom */
-    right: 20px; /* Position at the right */
+.hero .powered-by {
+    position: absolute !important;
+    bottom: 20px !important;
+    right: 20px !important;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -221,30 +246,17 @@ body {
 }
 
 .powered-by span {
-    color: #fff; /* Changed to white */
+    color: #fff;
     font-size: 0.9rem;
 }
 
 .integrated-logo {
-    height: 30px; /* Enlarged logos */
+    height: 30px;
 }
 
 /* ----------------------------------------
-   GENERIC SECTION STYLES
+   ABOUT SECTION (For about.html)
 ---------------------------------------- */
-.section {
-  padding: 60px 20px;
-}
-.yield, .transfer, .future, .faq {
-  position: relative;
-  text-align: center;
-}
-.yield h2, .transfer h2, .future h2, .faq h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-/* About section styling */
 .about-section {
     min-height: 100vh;
     display: flex;
@@ -256,7 +268,6 @@ body {
     position: relative;
 }
 
-/* About section heading */
 .about-section h2 {
     font-family: 'Orbitron', sans-serif;
     font-size: 60px;
@@ -266,7 +277,6 @@ body {
     color: #000;
 }
 
-/* About section paragraph */
 .about-section p {
     font-family: 'Inter', sans-serif;
     font-size: 20px;
@@ -278,9 +288,9 @@ body {
 /* AI Works section background */
 .ai-works {
     background: #fff;
+    position: relative;
 }
 
-/* AI Works radial gradient effect */
 .ai-works::before {
     content: '';
     position: absolute;
@@ -296,7 +306,6 @@ body {
     pointer-events: none;
 }
 
-/* AI Works linear gradient effect */
 .ai-works::after {
     content: '';
     position: absolute;
@@ -311,7 +320,6 @@ body {
     pointer-events: none;
 }
 
-/* Grid overlay for AI Works */
 .grid-overlay {
     position: absolute;
     top: 0;
@@ -325,7 +333,6 @@ body {
     pointer-events: none;
 }
 
-/* Diagram container in AI Works */
 .ai-works .diagram {
     display: flex;
     align-items: center;
@@ -334,14 +341,12 @@ body {
     z-index: 2;
 }
 
-/* Diagram step styling */
 .ai-works .diagram-step {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* Diagram step label */
 .ai-works .step-label {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
@@ -350,7 +355,6 @@ body {
     color: #000;
 }
 
-/* Diagram step box */
 .ai-works .step-box {
     background: rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(0, 0, 0, 0.3);
@@ -362,7 +366,6 @@ body {
     color: #000;
 }
 
-/* Diagram arrow */
 .ai-works .arrow {
     font-size: 24px;
     color: #00d4ff;
@@ -371,9 +374,9 @@ body {
 /* Bank Feel section background */
 .bank-feel {
     background: #fff;
+    position: relative;
 }
 
-/* Orbital lines container */
 .bank-feel .orbital-lines {
     position: absolute;
     top: 0;
@@ -383,7 +386,6 @@ body {
     z-index: 0;
 }
 
-/* Orbital line styling */
 .bank-feel .orbital-line {
     position: absolute;
     border: 1px solid rgba(0, 212, 255, 0.2);
@@ -391,7 +393,6 @@ body {
     animation: orbit 20s linear infinite;
 }
 
-/* First orbital line */
 .bank-feel .orbital-1 {
     width: 300px;
     height: 300px;
@@ -400,7 +401,6 @@ body {
     animation-delay: 0s;
 }
 
-/* Second orbital line */
 .bank-feel .orbital-2 {
     width: 400px;
     height: 400px;
@@ -409,7 +409,6 @@ body {
     animation-delay: -5s;
 }
 
-/* Third orbital line */
 .bank-feel .orbital-3 {
     width: 200px;
     height: 200px;
@@ -418,7 +417,6 @@ body {
     animation-delay: -10s;
 }
 
-/* Orbit animation */
 @keyframes orbit {
     0% {
         transform: rotate(0deg);
@@ -435,159 +433,212 @@ body {
     animation: fadeInUp 0.8s ease-out forwards;
 }
 
-/* Child elements within sections */
 .section h2, .section p, .about-section h2, .about-section p {
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 0.8s ease-out 0.2s forwards;
 }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* ----------------------------------------
-   YIELD MAP
+   GENERIC SECTION STYLES (Shared)
+---------------------------------------- */
+.section {
+    padding: 60px 20px;
+}
+
+.yield, .transfer, .future, .faq {
+    position: relative;
+    text-align: center;
+}
+
+.yield h2, .transfer h2, .future h2, .faq h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* ----------------------------------------
+   YIELD MAP (For index.html)
 ---------------------------------------- */
 .web-map {
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
-  height: 600px;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 600px;
 }
+
 .web-map-image {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
+    position: absolute;
+    inset: 0;
+    z-index: 1;
 }
+
 .web-map-image img {
-  width: 100%; height: 100%; object-fit: cover;
-  border-radius: 24px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
 }
+
 .web-map-node {
-  position: absolute;
-  z-index: 2;
-  text-align: center;
-  cursor: pointer;
-  transition: transform 0.3s;
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s;
 }
+
 .web-map-node:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
+
 .node-icon {
-  width: 60px;
-  height: 60px;
-  background: rgba(0,0,0,0.1);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 8px;
+    width: 60px;
+    height: 60px;
+    background: rgba(0,0,0,0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 8px;
 }
+
 .node-modal {
-  display: none;
-  position: absolute;
-  padding: 12px;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-  max-width: 200px;
-  text-align: center;
-  transform: scale(0.9);
-  opacity: 0;
-  transition: all 0.3s;
+    display: none;
+    position: absolute;
+    padding: 12px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    max-width: 200px;
+    text-align: center;
+    transform: scale(0.9);
+    opacity: 0;
+    transition: all 0.3s;
 }
+
 .node-modal.show {
-  display: block;
-  transform: scale(1);
-  opacity: 1;
+    display: block;
+    transform: scale(1);
+    opacity: 1;
 }
 
 /* ----------------------------------------
-   TRANSFER FEATURES
+   TRANSFER FEATURES (For index.html)
 ---------------------------------------- */
 .features {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
+
 .feature-card {
-  background: rgba(0,0,0,0.05);
-  border-radius: 10px;
-  padding: 20px;
-  max-width: 280px;
-  text-align: center;
+    background: rgba(0,0,0,0.05);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 280px;
+    text-align: center;
 }
+
 .feature-icon {
-  width: 40px;
-  height: 40px;
-  margin-bottom: 15px;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 15px;
 }
 
 /* ----------------------------------------
-   ROADMAP / FUTURE
+   ROADMAP / FUTURE (For index.html)
 ---------------------------------------- */
 .timeline {
-  position: relative;
-  padding: 40px 0;
+    position: relative;
+    padding: 40px 0;
 }
+
 .timeline::before {
-  content: '';
-  position: absolute;
-  top: 0; bottom: 0; left: 50%;
-  width: 4px;
-  background: rgba(0,0,0,0.2);
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background: rgba(0,0,0,0.2);
 }
+
 .timeline-item {
-  position: relative;
-  width: 45%;
-  padding: 20px;
+    position: relative;
+    width: 45%;
+    padding: 20px;
 }
+
 .timeline-item:nth-child(odd) {
-  left: 0;
-  text-align: right;
+    left: 0;
+    text-align: right;
 }
+
 .timeline-item:nth-child(even) {
-  left: 55%;
-  text-align: left;
+    left: 55%;
+    text-align: left;
 }
+
 .timeline-dot {
-  position: absolute;
-  top: 20px;
-  width: 16px; height: 16px;
-  background: #00d4ff;
-  border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    width: 16px;
+    height: 16px;
+    background: #00d4ff;
+    border-radius: 50%;
 }
+
 .timeline-item:nth-child(odd) .timeline-dot {
-  right: -8px;
+    right: -8px;
 }
+
 .timeline-item:nth-child(even) .timeline-dot {
-  left: -8px;
+    left: -8px;
 }
 
 /* ----------------------------------------
-   FAQ
+   FAQ (For index.html)
 ---------------------------------------- */
 .faq-item {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
+
 .faq-question {
-  font-size: 1.1rem;
-  font-weight: 700;
-  background: rgba(0,0,0,0.05);
-  padding: 12px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.3s;
+    font-size: 1.1rem;
+    font-weight: 700;
+    background: rgba(0,0,0,0.05);
+    padding: 12px;
+    border-radius: 6px;
+                    cursor: pointer;
+    transition: background 0.3s;
 }
+
 .faq-question:hover {
-  background: rgba(0,0,0,0.1);
+    background: rgba(0,0,0,0.1);
 }
+
 .faq-answer {
-  display: none;
-  padding: 12px;
-  background: rgba(0,0,0,0.1);
-  border-radius: 6px;
-  margin-top: 8px;
+    display: none;
+    padding: 12px;
+    background: rgba(0,0,0,0.1);
+    border-radius: 6px;
+    margin-top: 8px;
 }
+
 /* ----------------------------------------
-   FOOTER (Rewritten)
+   FOOTER (Shared)
 ---------------------------------------- */
 .site-footer {
     background: #fff;
@@ -598,8 +649,8 @@ body {
 .footer-grid {
     max-width: 1200px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
     gap: 40px;
 }
 
@@ -678,22 +729,46 @@ body {
 /* ----------------------------------------
    RESPONSIVE
 ---------------------------------------- */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .hero-content {
         left: 20px;
         max-width: 300px;
     }
 
     .vaultos-heading {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .vaultos-subtext {
         font-size: 0.9rem;
     }
 
+    .about-section h2 {
+        font-size: 40px;
+    }
+
+    .about-section p {
+        font-size: 16px;
+    }
+
+    .ai-works .diagram {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .ai-works .arrow {
+        transform: rotate(90deg);
+    }
+
+    .bank-feel .orbital-1,
+    .bank-feel .orbital-2,
+    .bank-feel .orbital-3 {
+        width: 150px;
+        height: 150px;
+    }
+
     .footer-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
         text-align: center;
     }
 
