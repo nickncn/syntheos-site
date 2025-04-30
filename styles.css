@@ -139,12 +139,13 @@ body {
 }
 
 /* ----------------------------------------
-   HERO (Rewritten)
+   HERO (Updated)
 ---------------------------------------- */
 .hero {
     position: relative;
     width: 100%;
-    height: calc(100vh - 60px); /* Account for fixed header */
+    height: calc(100vh - 60px);
+    height: calc(100dvh - 60px); /* Fallback for JavaScript */
     overflow: hidden;
 }
 
@@ -175,10 +176,11 @@ body {
 }
 
 .vaultos-heading {
-    font-size: 1.75rem;
+    font-size: 1.5rem; /* Reduced to ensure it fits on one line */
     font-weight: 700;
     color: #000;
     margin-bottom: 0.5rem;
+    white-space: nowrap; /* Prevent wrapping */
 }
 
 .vaultos-subtext {
@@ -199,27 +201,33 @@ body {
 }
 
 .scroll-cue {
-    margin-top: 20px;
+    position: absolute;
+    bottom: 20px; /* Position at the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
     color: #000;
     font-size: 1rem;
+    z-index: 2;
 }
 
 .powered-by {
-    margin-top: 20px;
+    position: absolute;
+    bottom: 20px; /* Position at the bottom */
+    right: 20px; /* Position at the right */
     display: flex;
     align-items: center;
     gap: 10px;
+    z-index: 2;
 }
 
 .powered-by span {
-    color: #000;
+    color: #fff; /* Changed to white */
     font-size: 0.9rem;
 }
 
 .integrated-logo {
-    height: 20px;
+    height: 30px; /* Enlarged logos */
 }
-
 
 /* ----------------------------------------
    GENERIC SECTION STYLES
