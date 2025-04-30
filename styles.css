@@ -774,37 +774,171 @@ body {
 }
 
 /* ----------------------------------------
-   RESPONSIVE
+   RESPONSIVE (Updated Mobile Styles)
 ---------------------------------------- */
-@media (max-width: 600px) {
-    .hero-content {
+@media (max-width: 768px) {
+    /* General Adjustments */
+    body {
+        line-height: 1.8; /* More spacious line spacing */
+    }
+
+    /* Header & Navbar */
+    .header {
+        top: 20px;
         left: 20px;
-        max-width: 300px;
+        right: 20px;
+        justify-content: center;
+    }
+
+    .logo-container .logo {
+        width: 35px;
+        height: 35px;
+    }
+
+    .nav-bar {
+        top: 60px;
+        left: 0;
+        right: 0;
+        transform: none;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        border-radius: 0;
+    }
+
+    .nav-bar ul {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .nav-bar a {
+        font-size: 0.9rem;
+    }
+
+    .get-in-touch-btn {
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        right: auto;
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .get-in-touch-btn .plus-icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    /* Modal */
+    .modal-content {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .modal-content h3 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    /* Hero Section */
+    .hero {
+        height: calc(100vh - 80px);
+        height: calc(100dvh - 80px);
+    }
+
+    .hero-content {
+        left: 0;
+        right: 0;
+        max-width: 85%;
+        margin: 0 auto;
+        padding: 30px 20px;
+        text-align: center;
     }
 
     .vaultos-heading {
-        font-size: 1.3rem;
+        font-size: 1.8rem;
+        line-height: 1.3;
+        margin-bottom: 15px;
     }
 
     .vaultos-subtext {
         font-size: 0.9rem;
+        line-height: 1.6;
+        margin: 20px 0;
+    }
+
+    .form-wrapper {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .hero .scroll-cue {
+        bottom: 50px;
+        font-size: 0.9rem;
+    }
+
+    .hero .powered-by {
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .powered-by span {
+        font-size: 0.8rem;
+    }
+
+    .aave-logo, .compound-logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Generic Section Styles */
+    .section {
+        padding: 80px 20px; /* More vertical spacing */
+    }
+
+    .yield h2, .transfer h2, .future h2, .faq h2 {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
+
+    /* About Section */
+    .about-section {
+        min-height: auto;
+        padding: 80px 20px;
     }
 
     .about-section h2 {
-        font-size: 40px;
+        font-size: 2rem;
+        margin-bottom: 20px;
     }
 
     .about-section p {
-        font-size: 16px;
+        font-size: 1rem;
+        max-width: 90%;
+        margin-bottom: 20px;
     }
 
     .ai-works .diagram {
         flex-direction: column;
-        gap: 20px;
+        gap: 30px;
+        margin: 30px 0;
     }
 
     .ai-works .arrow {
         transform: rotate(90deg);
+    }
+
+    .ai-works .step-label {
+        font-size: 0.9rem;
+    }
+
+    .ai-works .step-box {
+        font-size: 0.9rem;
+        padding: 10px 15px;
     }
 
     .bank-feel .orbital-1,
@@ -814,18 +948,104 @@ body {
         height: 150px;
     }
 
+    /* Yield Map */
+    .web-map {
+        height: 400px;
+        max-width: 90%;
+    }
+
+    .web-map-node {
+        transform: scale(0.8);
+    }
+
+    .node-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .node-modal {
+        max-width: 150px;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    /* Transfer Features */
+    .features {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .feature-card {
+        max-width: 90%;
+        padding: 25px;
+    }
+
+    .feature-icon {
+        width: 35px;
+        height: 35px;
+        margin-bottom: 10px;
+    }
+
+    /* Roadmap */
+    .timeline {
+        padding: 60px 0;
+    }
+
+    .timeline::before {
+        left: 20px;
+        width: 3px;
+    }
+
+    .timeline-item {
+        left: 50px !important;
+        width: calc(100% - 70px);
+        text-align: left !important;
+        padding: 25px 15px;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-dot,
+    .timeline-item:nth-child(even) .timeline-dot {
+        left: -27px;
+    }
+
+    /* FAQ */
+    .faq-item {
+        margin-bottom: 25px;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .faq-question {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .faq-answer {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    /* Footer */
+    .site-footer {
+        padding: 60px 20px;
+    }
+
     .footer-grid {
         grid-template-columns: 1fr !important;
         text-align: center;
+        gap: 40px;
     }
 
     .footer-links {
         flex-direction: column;
-        gap: 20px;
+        gap: 30px;
     }
 
     .footer-logo-social .footer-social {
         justify-content: center;
+        margin-top: 15px;
     }
 
     .footer-legal {
@@ -834,12 +1054,5 @@ body {
 
     .footer-legal .legal-links span {
         margin: 0 5px;
-    }
-
-    .timeline-item,
-    .timeline::before {
-        left: 20px !important;
-        width: calc(100% - 40px);
-        text-align: left !important;
     }
 }
