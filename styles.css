@@ -207,6 +207,7 @@ body {
     color: #000;
     margin-bottom: 0.5rem;
     line-height: 1.2;
+   white-space: normal; 
 }
 
 .vaultos-subtext {
@@ -226,7 +227,7 @@ body {
     background-color: transparent !important;
 }
 
-.scroll-cue {
+.hero .scroll-cue {
     position: absolute;
     bottom: 20px;
     left: 50%;
@@ -234,16 +235,19 @@ body {
     color: #000;
     font-size: 1rem;
     z-index: 2;
+    width: 100%;
+    text-align: center;
 }
 
 .hero .powered-by {
-    position: absolute !important;
-    bottom: 20px !important;
-    right: 20px !important;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
     display: flex;
     align-items: center;
     gap: 10px;
     z-index: 2;
+    width: auto;
 }
 
 .powered-by span {
@@ -252,7 +256,7 @@ body {
 }
 
 .integrated-logo {
-    height: 40px;
+    height: 30px;
 }
 
 /* ----------------------------------------
