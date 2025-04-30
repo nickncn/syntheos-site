@@ -141,13 +141,13 @@ body {
 /* ----------------------------------------
    HERO
 ---------------------------------------- */
+
+
+/* Hero Section */
 .hero {
   position: relative;
   width: 100%;
   height: 100vh;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
   padding: 60px;
 }
 
@@ -157,14 +157,15 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Equivalent to background-size: cover */
+  object-fit: cover;
   z-index: 1;
+  display: block;
 }
 
 .hero-content {
   position: absolute;
-  bottom: 40px;
-  left: 40px;
+  bottom: 60px;
+  left: 60px;
   max-width: 400px;
   z-index: 2;
   background: transparent;
@@ -172,6 +173,20 @@ body {
 
 .subtext-block {
   background: transparent;
+  margin-bottom: 20px;
+}
+
+.vaultos-heading {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.vaultos-subtext {
+  font-size: 1rem;
+  color: #fff;
+  line-height: 1.4;
 }
 
 .form-wrapper {
@@ -184,6 +199,29 @@ body {
   background: transparent !important;
   background-color: transparent !important;
 }
+
+.scroll-cue {
+  margin-top: 20px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.powered-by {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.powered-by span {
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.integrated-logo {
+  height: 20px;
+}
+
 
 /* ----------------------------------------
    GENERIC SECTION STYLES
