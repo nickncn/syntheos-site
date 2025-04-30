@@ -188,7 +188,8 @@ body {
 .form-wrapper iframe {
   width: 100%;
   border: none;
-  background: transparent; /* Ensure transparency */
+  background: transparent !important;
+  background-color: transparent !important;
 }
 
 /* ----------------------------------------
@@ -369,9 +370,18 @@ body {
   gap: 40px;
   align-items: flex-start;
 }
+
+.site-footer .footer-container {
+  justify-content: space-between !important;
+}
+
 .footer-column {
   flex: 1 1 200px;
   min-width: 150px;
+}
+
+.footer-column.right {
+  margin-left: auto;
 }
 
 .footer-column.left .footer-logo {
