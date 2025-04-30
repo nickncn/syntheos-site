@@ -779,49 +779,68 @@ body {
 @media (max-width: 768px) {
     /* General Adjustments */
     body {
-        line-height: 1.8; /* More spacious line spacing */
+        line-height: 1.8;
     }
 
     /* Header & Navbar */
     .header {
-        top: 20px;
+        top: 10px;
         left: 20px;
-        right: 20px;
-        justify-content: center;
+        right: auto;
+        justify-content: flex-start;
     }
 
     .logo-container .logo {
-        width: 35px;
-        height: 35px;
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Hamburger Menu (Only on Mobile) */
+    .nav-toggle {
+        display: block;
+        position: fixed;
+        top: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        z-index: 1001;
     }
 
     .nav-bar {
-        top: 60px;
-        left: 0;
-        right: 0;
-        transform: none;
-        width: 100%;
-        padding: 10px;
-        text-align: center;
-        border-radius: 0;
+        display: none; /* Hidden by default on mobile */
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 200px;
+        padding: 15px;
+        background: rgba(0,0,0,0.2);
+        border-radius: 10px;
+        z-index: 1000;
+    }
+
+    .nav-bar.active {
+        display: block; /* Show when toggled */
     }
 
     .nav-bar ul {
-        flex-direction: row;
-        justify-content: center;
-        gap: 20px;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
     }
 
     .nav-bar a {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
     .get-in-touch-btn {
-        top: 100px;
-        left: 50%;
-        transform: translateX(-50%);
-        right: auto;
-        padding: 8px 16px;
+        top: 10px;
+        right: 20px;
+        left: auto;
+        transform: none;
+        padding: 8px 12px;
         font-size: 0.9rem;
     }
 
@@ -843,17 +862,17 @@ body {
 
     /* Hero Section */
     .hero {
-        height: calc(100vh - 80px);
-        height: calc(100dvh - 80px);
+        height: calc(100vh - 60px);
+        height: calc(100dvh - 60px);
     }
 
     .hero-content {
-        left: 0;
-        right: 0;
+        left: 20px;
+        right: auto;
         max-width: 85%;
-        margin: 0 auto;
-        padding: 30px 20px;
-        text-align: center;
+        margin: 0;
+        padding: 30px 0;
+        text-align: left;
     }
 
     .vaultos-heading {
@@ -869,8 +888,11 @@ body {
     }
 
     .form-wrapper {
-        max-width: 300px;
-        margin: 0 auto;
+        max-width: 280px;
+    }
+
+    .form-wrapper iframe {
+        height: 220px;
     }
 
     .hero .scroll-cue {
@@ -897,7 +919,7 @@ body {
 
     /* Generic Section Styles */
     .section {
-        padding: 80px 20px; /* More vertical spacing */
+        padding: 80px 20px;
     }
 
     .yield h2, .transfer h2, .future h2, .faq h2 {
@@ -956,6 +978,32 @@ body {
 
     .web-map-node {
         transform: scale(0.8);
+    }
+
+    /* Adjusted Node Positions to Avoid Stacking */
+    .node-1 {
+        top: 15%;
+        left: 10%;
+    }
+
+    .node-2 {
+        top: 35%;
+        right: 15%;
+    }
+
+    .node-3 {
+        bottom: 50%;
+        left: 20%;
+    }
+
+    .node-4 {
+        top: 25%;
+        right: 35%;
+    }
+
+    .node-5 {
+        bottom: 70%;
+        right: 10%;
     }
 
     .node-icon {
