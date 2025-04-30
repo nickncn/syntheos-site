@@ -111,3 +111,28 @@ if (getInTouchBtn && touchModal && closeTouchModal) {
     sections.forEach(section => {
         sectionObserver.observe(section);
     });
+<!-- JavaScript -->
+  <script>
+    function alertComingSoon(event) {
+      event.preventDefault();
+      alert("Coming soon!");
+    }
+
+    const openModalBtn = document.getElementById("openModal");
+    const closeModalBtn = document.getElementById("closeModal");
+    const modal = document.getElementById("getInTouchModal");
+
+    openModalBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      modal.style.display = "flex";
+    });
+
+    closeModalBtn.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    window.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    });
