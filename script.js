@@ -136,3 +136,4 @@ if (getInTouchBtn && touchModal && closeTouchModal) {
         modal.style.display = "none";
       }
     });
+  <script>
