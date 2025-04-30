@@ -148,7 +148,7 @@ body {
   position: relative;
   width: 100%;
   height: 100vh;
-  padding: 60px;
+  overflow: hidden; /* Prevent content overflow */
 }
 
 .hero-bg-img {
@@ -158,14 +158,16 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center; /* Center the image */
   z-index: 1;
   display: block;
 }
 
 .hero-content {
   position: absolute;
-  bottom: 60px;
+  top: 50%; /* Center vertically */
   left: 60px;
+  transform: translateY(-50%); /* Adjust for vertical centering */
   max-width: 400px;
   z-index: 2;
   background: transparent;
@@ -179,13 +181,13 @@ body {
 .vaultos-heading {
   font-size: 1.75rem;
   font-weight: 700;
-  color: #fff;
+  color: #000; /* Black for contrast against the light background */
   margin-bottom: 0.5rem;
 }
 
 .vaultos-subtext {
   font-size: 1rem;
-  color: #fff;
+  color: #000; /* Black for contrast */
   line-height: 1.4;
 }
 
@@ -202,7 +204,7 @@ body {
 
 .scroll-cue {
   margin-top: 20px;
-  color: #fff;
+  color: #000; /* Black for contrast */
   font-size: 1rem;
 }
 
@@ -214,12 +216,24 @@ body {
 }
 
 .powered-by span {
-  color: #fff;
+  color: #000; /* Black for contrast */
   font-size: 0.9rem;
 }
 
 .integrated-logo {
   height: 20px;
+}
+
+/* Features Section */
+.features {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.features-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
 }
 
 
