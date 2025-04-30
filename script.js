@@ -134,3 +134,25 @@ window.addEventListener("click", (e) => {
     modal.style.display = "none";
   }
 });
+
+
+    // Dynamically Adjust Hero Height
+    const adjustHeroHeight = () => {
+        const hero = document.querySelector('.hero');
+        const header = document.querySelector('.header');
+        if (hero && header) {
+            const headerHeight = header.offsetHeight;
+            hero.style.height = `calc(100vh - ${headerHeight}px)`;
+        }
+    };
+
+    // Adjust height on load and resize
+    adjustHeroHeight();
+    window.addEventListener('resize', adjustHeroHeight);
+});
+
+// Alert Coming Soon Function
+function alertComingSoon(event) {
+    event.preventDefault();
+    alert("Coming soon!");
+}
