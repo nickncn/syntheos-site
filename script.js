@@ -80,16 +80,6 @@ if (getInTouchBtn && touchModal && closeTouchModal) {
         });
     }
 
-    // FAQ Toggle Functionality
-    const faqQuestions = document.querySelectorAll('.faq-question');
-    faqQuestions.forEach(question => {
-        question.addEventListener('click', () => {
-            const answer = question.nextElementSibling;
-            const isVisible = answer.style.display === 'block';
-            answer.style.display = isVisible ? 'none' : 'block';
-            question.classList.toggle('active', !isVisible);
-        });
-    });
 
     // Intersection Observer for scroll-triggered animations
     const sections = document.querySelectorAll('.section, .about-section');
@@ -218,16 +208,6 @@ if (getInTouchBtn && touchModal && closeTouchModal) {
         });
     }
 
-    // FAQ Toggle Functionality
-    const faqQuestions = document.querySelectorAll('.faq-question');
-    faqQuestions.forEach(question => {
-        question.addEventListener('click', () => {
-            const answer = question.nextElementSibling;
-            const isVisible = answer.style.display === 'block';
-            answer.style.display = isVisible ? 'none' : 'block';
-            question.classList.toggle('active', !isVisible);
-        });
-    });
 
     // Intersection Observer for scroll-triggered animations
     const sections = document.querySelectorAll('.section, .about-section');
@@ -293,32 +273,18 @@ window.addEventListener("click", (e) => {
     window.addEventListener('resize', adjustHeroHeight);
 });
 
-// Alert Coming Soon Function
-function alertComingSoon(event) {
-    event.preventDefault();
-    alert("Coming soon!");
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    // FAQ Toggle Functionality (Moved to the top for early execution)
-    const faqQuestions = document.querySelectorAll('.faq-question');
-    console.log('FAQ Questions Found:', faqQuestions);
-    faqQuestions.forEach(question => {
-        question.addEventListener('click', () => {
-            console.log('Question Clicked:', question);
-            const answer = question.nextElementSibling;
-            console.log('Answer Element:', answer);
-            if (answer) {
-                const isVisible = answer.classList.contains('active');
-                console.log('Is Visible:', isVisible);
-                answer.classList.toggle('active', !isVisible);
-                question.classList.toggle('active', !isVisible);
-                console.log('Answer ClassList After Toggle:', answer.classList);
-            } else {
-                console.error('No answer element found for question:', question);
-            }
-        });
+// FAQ Toggle Functionality
+const faqQuestions = document.querySelectorAll('.faq-question');
+faqQuestions.forEach(question => {
+    question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        if (answer) {
+            const isVisible = answer.classList.contains('active');
+            answer.classList.toggle('active', !isVisible);
+            question.classList.toggle('active', !isVisible);
+        }
     });
+});
 
     // Hamburger Menu Toggle
     const navToggle = document.querySelector('.nav-toggle');
